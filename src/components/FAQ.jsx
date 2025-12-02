@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'Can I use these prompts on my phone?',
     answer:
-      'Yes! ChatGPT and Claude have mobile apps, or you can use the websites on your phone\'s browser.',
+      'Yes! ChatGPT, Claude, and Gemini all have mobile apps, or you can use the websites on your phone\'s browser.',
   },
   {
     question: 'What\'s the difference between "Family Friendly" and "Adults" games?',

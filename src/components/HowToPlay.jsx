@@ -106,7 +106,7 @@ export default function HowToPlay({ collapsible = false, defaultExpanded = true 
           Don't have an account yet? Signing up takes about 30 seconds — just an email address.
         </p>
         <p className="text-sm text-mtm-text-secondary">
-          <strong>On mobile?</strong> ChatGPT and Claude have apps, or use the website in your browser. Works great on phones and tablets!
+          <strong>On mobile?</strong> ChatGPT, Claude, and Gemini all have apps, or use the website in your browser. Works great on phones and tablets!
         </p>
       </div>
     </div>
