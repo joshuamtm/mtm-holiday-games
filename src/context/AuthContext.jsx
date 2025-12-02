@@ -2,6 +2,9 @@ import { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
+// Special access key for ungated sharing (change this to any secret you want)
+const SPECIAL_ACCESS_KEY = 'mtm-holiday-2025';
+
 export function AuthProvider({ children }) {
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [email, setEmail] = useState(null);
@@ -12,9 +15,23 @@ export function AuthProvider({ children }) {
     const savedUnlocked = localStorage.getItem('mtm_holiday_games_unlocked');
     const savedEmail = localStorage.getItem('mtm_holiday_games_email');
 
-    // Check URL for magic link token
+    // Check URL for magic link token or special access key
     const params = new URLSearchParams(window.location.search);
     const token = params.get('token');
+    const accessKey = params.get('access');
+
+    // Check for special ungated access link
+    if (accessKey === SPECIAL_ACCESS_KEY) {
+      console.log('Special access granted');
+      localStorage.setItem('mtm_holiday_games_unlocked', 'true');
+      localStorage.setItem('mtm_holiday_games_email', 'special-access');
+      setIsUnlocked(true);
+      setEmail('special-access');
+      // Clean up URL
+      window.history.replaceState({}, '', window.location.pathname);
+      setIsLoading(false);
+      return;
+    }
 
     if (token) {
       // Validate token with API (for now, just accept it)

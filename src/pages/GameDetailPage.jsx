@@ -14,6 +14,9 @@ import {
   Copy,
   Check,
   Lock,
+  Gift,
+  Star,
+  Sparkles,
 } from 'lucide-react';
 
 export default function GameDetailPage() {
@@ -27,12 +30,12 @@ export default function GameDetailPage() {
 
   if (!game) {
     return (
-      <div className="min-h-screen bg-mtm-white flex items-center justify-center">
+      <div className="min-h-screen bg-holiday-snow flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-mtm-navy mb-4">Game Not Found</h1>
+          <h1 className="text-2xl font-bold text-holiday-pine mb-4">Game Not Found</h1>
           <Link
             to="/"
-            className="text-mtm-primary hover:underline inline-flex items-center gap-2"
+            className="text-holiday-green hover:underline inline-flex items-center gap-2"
           >
             <ArrowLeft size={16} />
             Back to Games
@@ -60,12 +63,12 @@ export default function GameDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-mtm-white">
+    <div className="min-h-screen bg-holiday-snow">
       {/* Back Navigation */}
       <div className="max-w-[1200px] mx-auto px-5 py-4">
         <Link
           to="/"
-          className="text-mtm-primary hover:text-mtm-navy transition-colors inline-flex items-center gap-2 text-sm font-medium"
+          className="text-holiday-green hover:text-holiday-pine transition-colors inline-flex items-center gap-2 text-sm font-medium"
         >
           <ArrowLeft size={16} />
           Back to All Games
@@ -79,41 +82,56 @@ export default function GameDetailPage() {
             {/* Badges */}
             <div className="flex flex-wrap gap-2 mb-4">
               {game.free && (
-                <span className="bg-mtm-accent text-white text-xs font-medium px-3 py-1 rounded">
+                <span className="bg-holiday-gold text-holiday-pine text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+                  <Gift size={12} />
                   FREE
                 </span>
               )}
               <span
-                className={`text-white text-xs font-medium px-3 py-1 rounded ${
-                  game.age === 'kids' ? 'bg-mtm-primary' : 'bg-mtm-navy'
+                className={`text-white text-xs font-medium px-3 py-1 rounded-full flex items-center gap-1 ${
+                  game.age === 'kids' ? 'bg-holiday-green' : 'bg-holiday-red'
                 }`}
               >
-                {game.age === 'kids' ? 'Family Friendly' : 'Adults'}
+                {game.age === 'kids' ? (
+                  <>
+                    <Gift size={12} />
+                    Family Friendly
+                  </>
+                ) : (
+                  <>
+                    <Star size={12} />
+                    Adults
+                  </>
+                )}
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl font-bold text-mtm-navy mb-2">{game.title}</h1>
-            <p className="text-lg text-mtm-primary font-medium mb-4">{game.subtitle}</p>
+            <h1 className="text-3xl font-bold text-holiday-pine mb-2">{game.title}</h1>
+            <p className="text-lg text-holiday-red font-medium mb-4">{game.subtitle}</p>
 
             {/* Description */}
             <p className="text-mtm-text-secondary mb-6">{game.description}</p>
 
             {/* Tip */}
             {game.tip && (
-              <div className="bg-mtm-primary/10 border border-mtm-primary/20 rounded-lg p-4 mb-6">
-                <p className="text-sm text-mtm-navy">
-                  <strong>Tip:</strong> {game.tip}
+              <div className="bg-holiday-gold/10 border border-holiday-gold/30 rounded-lg p-4 mb-6">
+                <p className="text-sm text-holiday-pine">
+                  <strong className="flex items-center gap-1">
+                    <Sparkles size={14} className="text-holiday-gold" />
+                    Tip:
+                  </strong>{' '}
+                  {game.tip}
                 </p>
               </div>
             )}
 
             {/* Metadata */}
-            <div className="bg-mtm-cream rounded-lg p-4 mb-6">
-              <h3 className="font-semibold text-mtm-navy mb-3">Game Details</h3>
+            <div className="bg-white rounded-xl p-4 mb-6 border border-holiday-green/20 shadow-sm">
+              <h3 className="font-semibold text-holiday-pine mb-3">Game Details</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Users size={18} className="text-mtm-soft-blue" />
+                  <Users size={18} className="text-holiday-green" />
                   <div>
                     <span className="text-sm text-mtm-text">
                       {game.players.min}-{game.players.max} players
@@ -126,18 +144,18 @@ export default function GameDetailPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock size={18} className="text-mtm-soft-blue" />
+                  <Clock size={18} className="text-holiday-green" />
                   <span className="text-sm text-mtm-text">{game.duration}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin size={18} className="text-mtm-soft-blue" />
+                  <MapPin size={18} className="text-holiday-green" />
                   <span className="text-sm text-mtm-text">
                     {locationLabels[game.location]}
                   </span>
                 </div>
                 {game.requirements.length > 0 && (
                   <div className="flex items-start gap-3">
-                    <FileText size={18} className="text-mtm-soft-blue flex-shrink-0 mt-0.5" />
+                    <FileText size={18} className="text-holiday-green flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="text-sm text-mtm-text font-medium">
                         You'll need:
@@ -155,14 +173,14 @@ export default function GameDetailPage() {
 
             {/* Mode Tags */}
             <div className="mb-6">
-              <h4 className="text-sm font-medium text-mtm-text-secondary mb-2">
+              <h4 className="text-sm font-medium text-holiday-pine/70 mb-2">
                 Game Modes
               </h4>
               <div className="flex flex-wrap gap-2">
                 {game.modes.map((mode) => (
                   <span
                     key={mode}
-                    className="text-sm bg-white border border-mtm-border text-mtm-navy px-3 py-1 rounded"
+                    className="text-sm bg-holiday-snow border border-holiday-green/20 text-holiday-pine px-3 py-1 rounded-full"
                   >
                     {modeLabels[mode]}
                   </span>
@@ -179,15 +197,15 @@ export default function GameDetailPage() {
             {/* Prompt Section */}
             <div className="mt-6">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-mtm-navy">The Prompt</h3>
+                <h3 className="text-lg font-semibold text-holiday-pine">The Prompt</h3>
                 <button
                   onClick={handleCopyPrompt}
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-md font-medium transition-all ${
+                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
                     copied
-                      ? 'bg-green-500 text-white'
+                      ? 'bg-holiday-green text-white'
                       : canAccess
-                      ? 'bg-mtm-primary text-white hover:bg-mtm-primary/90'
-                      : 'bg-mtm-navy text-white hover:bg-mtm-navy/90'
+                      ? 'btn-holiday-gold'
+                      : 'bg-holiday-red text-white hover:bg-holiday-red-dark'
                   }`}
                 >
                   {copied ? (
@@ -212,17 +230,19 @@ export default function GameDetailPage() {
               {/* Prompt Display */}
               <div className="relative">
                 {!canAccess && (
-                  <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-lg flex flex-col items-center justify-center z-10">
-                    <Lock size={32} className="text-mtm-navy mb-3" />
-                    <h4 className="font-semibold text-mtm-navy mb-2">
+                  <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center z-10">
+                    <div className="bg-holiday-red/10 p-4 rounded-full mb-3">
+                      <Gift size={32} className="text-holiday-red" />
+                    </div>
+                    <h4 className="font-semibold text-holiday-pine mb-2">
                       This prompt is locked
                     </h4>
                     <p className="text-sm text-mtm-text-secondary mb-4 text-center max-w-xs">
-                      Enter your email to unlock all 12 games instantly
+                      Enter your email to unwrap all 12 games instantly
                     </p>
                     <button
                       onClick={() => setShowEmailModal(true)}
-                      className="bg-mtm-accent text-white px-6 py-2 rounded-md font-medium hover:bg-mtm-accent/90 transition-colors"
+                      className="btn-holiday-gold px-6 py-2 rounded-lg font-semibold"
                     >
                       Unlock All Games
                     </button>
@@ -230,7 +250,7 @@ export default function GameDetailPage() {
                 )}
 
                 <div
-                  className={`bg-gray-50 border border-mtm-border rounded-lg p-6 max-h-[600px] overflow-y-auto ${
+                  className={`bg-white border border-holiday-green/20 rounded-xl p-6 max-h-[600px] overflow-y-auto shadow-sm ${
                     !canAccess ? 'blur-sm select-none' : ''
                   }`}
                 >
@@ -248,7 +268,7 @@ export default function GameDetailPage() {
                     href="https://chat.openai.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-mtm-primary hover:underline"
+                    className="text-holiday-green hover:underline"
                   >
                     ChatGPT
                   </a>
@@ -257,7 +277,7 @@ export default function GameDetailPage() {
                     href="https://claude.ai"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-mtm-primary hover:underline"
+                    className="text-holiday-green hover:underline"
                   >
                     Claude
                   </a>
@@ -266,7 +286,7 @@ export default function GameDetailPage() {
                     href="https://gemini.google.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-mtm-primary hover:underline"
+                    className="text-holiday-green hover:underline"
                   >
                     Gemini
                   </a>{' '}

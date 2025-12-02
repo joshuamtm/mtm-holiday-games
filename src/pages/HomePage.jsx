@@ -6,7 +6,37 @@ import FilterBar from '../components/FilterBar';
 import HowToPlay from '../components/HowToPlay';
 import EmailModal from '../components/EmailModal';
 import FAQ from '../components/FAQ';
-import { Sparkles, Lock } from 'lucide-react';
+import { Sparkles, Lock, Gift, Star, TreePine } from 'lucide-react';
+
+// Snowflake component for animated snow
+function Snowflakes() {
+  const flakes = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    delay: `${Math.random() * 5}s`,
+    duration: `${5 + Math.random() * 10}s`,
+    size: Math.random() > 0.5 ? '1rem' : '0.75rem',
+  }));
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {flakes.map((flake) => (
+        <span
+          key={flake.id}
+          className="snowflake"
+          style={{
+            left: flake.left,
+            animationDelay: flake.delay,
+            animationDuration: flake.duration,
+            fontSize: flake.size,
+          }}
+        >
+          *
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export default function HomePage() {
   const { isUnlocked, unlock } = useAuth();
@@ -26,13 +56,8 @@ export default function HomePage() {
     };
 
     games.forEach((game) => {
-      // Age
       counts.age[game.age] = (counts.age[game.age] || 0) + 1;
-
-      // Location
       counts.location[game.location] = (counts.location[game.location] || 0) + 1;
-
-      // Modes (game can have multiple)
       game.modes.forEach((mode) => {
         counts.modes[mode] = (counts.modes[mode] || 0) + 1;
       });
@@ -44,57 +69,79 @@ export default function HomePage() {
   // Filter games
   const filteredGames = useMemo(() => {
     return games.filter((game) => {
-      // Age filter
       if (filters.age.length > 0 && !filters.age.includes(game.age)) {
         return false;
       }
-
-      // Location filter
       if (filters.location.length > 0 && !filters.location.includes(game.location)) {
         return false;
       }
-
-      // Mode filter (game must have at least one matching mode)
       if (
         filters.modes.length > 0 &&
         !filters.modes.some((mode) => game.modes.includes(mode))
       ) {
         return false;
       }
-
       return true;
     });
   }, [filters]);
 
-  // Count unlocked vs locked games
   const unlockedCount = filteredGames.filter((g) => g.free || isUnlocked).length;
   const lockedCount = filteredGames.filter((g) => !g.free && !isUnlocked).length;
 
   return (
-    <div className="min-h-screen bg-mtm-white">
+    <div className="min-h-screen bg-holiday-snow">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-mtm-cream to-mtm-white py-12 md:py-16">
-        <div className="max-w-[1200px] mx-auto px-5 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-mtm-navy mb-4">
+      <section className="relative holiday-gradient py-16 md:py-20 overflow-hidden">
+        <Snowflakes />
+
+        {/* Decorative elements */}
+        <div className="absolute top-8 left-8 text-holiday-gold/30 hidden lg:block">
+          <Star size={40} />
+        </div>
+        <div className="absolute top-12 right-12 text-holiday-gold/30 hidden lg:block">
+          <TreePine size={48} />
+        </div>
+        <div className="absolute bottom-8 left-16 text-holiday-gold/20 hidden lg:block">
+          <Gift size={36} />
+        </div>
+
+        <div className="max-w-[1200px] mx-auto px-5 text-center relative z-10">
+          {/* Holiday badge */}
+          <div className="inline-flex items-center gap-2 bg-holiday-gold/20 text-holiday-gold-light px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+            <Sparkles size={16} />
+            <span>Holiday 2025 Edition</span>
+            <Sparkles size={16} />
+          </div>
+
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             AI-Powered Party Games
           </h1>
-          <p className="text-lg text-mtm-text-secondary max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
             Copy a prompt, paste it into ChatGPT, Claude, or Gemini, and let AI host
-            your next game night. No tech skills required!
+            your holiday game night. Gather the family — no tech skills required!
           </p>
+
+          {/* Feature pills */}
           <div className="flex flex-wrap gap-3 justify-center">
-            <span className="inline-flex items-center gap-2 bg-mtm-primary/10 text-mtm-primary px-4 py-2 rounded-full text-sm font-medium">
-              <Sparkles size={16} />
+            <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+              <Gift size={16} />
               12 Unique Games
             </span>
-            <span className="inline-flex items-center gap-2 bg-mtm-accent/10 text-mtm-accent px-4 py-2 rounded-full text-sm font-medium">
+            <span className="inline-flex items-center gap-2 bg-holiday-gold text-holiday-pine px-4 py-2 rounded-full text-sm font-semibold">
+              <Star size={16} />
               Free to Play
             </span>
-            <span className="inline-flex items-center gap-2 bg-mtm-navy/10 text-mtm-navy px-4 py-2 rounded-full text-sm font-medium">
+            <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+              <Sparkles size={16} />
               Works on Any AI
             </span>
           </div>
         </div>
+
+        {/* Bottom wave decoration */}
+        <div className="absolute bottom-0 left-0 right-0 h-8 bg-holiday-snow" style={{
+          clipPath: 'ellipse(60% 100% at 50% 100%)'
+        }} />
       </section>
 
       {/* How to Play (Collapsible) */}
@@ -105,21 +152,23 @@ export default function HomePage() {
       {/* Unlock Banner */}
       {!isUnlocked && (
         <section className="max-w-[1200px] mx-auto px-5 pb-6">
-          <div className="bg-mtm-navy text-white rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="holiday-gradient-red text-white rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg">
             <div className="flex items-center gap-4">
-              <Lock size={24} className="text-mtm-accent" />
+              <div className="bg-white/20 p-3 rounded-full">
+                <Gift size={24} className="text-holiday-gold-light" />
+              </div>
               <div>
                 <h3 className="font-semibold text-lg">
-                  {lockedCount} games are locked
+                  Unwrap all {lockedCount} games!
                 </h3>
                 <p className="text-white/80 text-sm">
-                  Enter your email to unlock all 12 games instantly
+                  Enter your email to unlock the complete collection instantly
                 </p>
               </div>
             </div>
             <button
               onClick={() => setShowEmailModal(true)}
-              className="bg-mtm-accent text-white px-6 py-3 rounded-md font-medium hover:bg-mtm-accent/90 transition-colors whitespace-nowrap"
+              className="btn-holiday-gold px-6 py-3 rounded-lg font-semibold whitespace-nowrap"
             >
               Unlock All Games
             </button>

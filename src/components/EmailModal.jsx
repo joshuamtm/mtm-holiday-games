@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Mail, Check, Loader2 } from 'lucide-react';
+import { X, Gift, Check, Loader2, Sparkles } from 'lucide-react';
 
 export default function EmailModal({ isOpen, onClose, onSuccess }) {
   const [email, setEmail] = useState('');
@@ -62,10 +62,13 @@ export default function EmailModal({ isOpen, onClose, onSuccess }) {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg max-w-md w-full p-6 relative animate-in fade-in zoom-in duration-200">
+      <div className="bg-white rounded-xl max-w-md w-full p-6 relative animate-in fade-in zoom-in duration-200 border-2 border-holiday-gold/30">
+        {/* Decorative top accent */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-holiday-red via-holiday-gold to-holiday-green rounded-t-xl" />
+
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-mtm-text-secondary hover:text-mtm-text transition-colors"
+          className="absolute top-4 right-4 text-mtm-text-secondary hover:text-holiday-red transition-colors"
           aria-label="Close"
         >
           <X size={20} />
@@ -73,26 +76,31 @@ export default function EmailModal({ isOpen, onClose, onSuccess }) {
 
         {status === 'success' ? (
           <div className="text-center py-8">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Check size={32} className="text-green-600" />
+            <div className="w-16 h-16 bg-holiday-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Check size={32} className="text-holiday-green" />
             </div>
-            <h2 className="text-xl font-semibold text-mtm-navy mb-2">You're In!</h2>
+            <h2 className="text-xl font-semibold text-holiday-pine mb-2">You're In!</h2>
             <p className="text-mtm-text-secondary">
-              All games are now unlocked. Have fun!
+              All games are now unlocked. Happy holidays!
             </p>
+            <div className="flex items-center justify-center gap-1 mt-3 text-holiday-gold">
+              <Sparkles size={16} />
+              <span className="text-sm">Let the games begin!</span>
+              <Sparkles size={16} />
+            </div>
           </div>
         ) : (
           <>
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-mtm-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail size={32} className="text-mtm-primary" />
+              <div className="w-16 h-16 bg-holiday-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Gift size={32} className="text-holiday-red" />
               </div>
-              <h2 className="text-xl font-semibold text-mtm-navy mb-2">
-                Unlock All 12 Games
+              <h2 className="text-xl font-semibold text-holiday-pine mb-2">
+                Unwrap All 12 Games
               </h2>
               <p className="text-mtm-text-secondary text-sm">
-                Enter your email to get instant access to our complete library of
-                AI-powered party games.
+                Enter your email to unlock our complete collection of
+                AI-powered holiday party games.
               </p>
             </div>
 
@@ -107,26 +115,29 @@ export default function EmailModal({ isOpen, onClose, onSuccess }) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full px-4 py-3 border border-mtm-border rounded-md text-base focus:outline-none focus:border-mtm-primary focus:ring-2 focus:ring-mtm-primary/20 transition-colors"
+                  className="w-full px-4 py-3 border border-holiday-green/30 rounded-lg text-base focus:outline-none focus:border-holiday-green focus:ring-2 focus:ring-holiday-green/20 transition-colors"
                   disabled={status === 'loading'}
                 />
                 {status === 'error' && errorMessage && (
-                  <p className="text-red-500 text-sm mt-1">{errorMessage}</p>
+                  <p className="text-holiday-red text-sm mt-1">{errorMessage}</p>
                 )}
               </div>
 
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full bg-mtm-primary text-white py-3 rounded-md font-medium hover:bg-mtm-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full btn-holiday-gold py-3 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {status === 'loading' ? (
                   <>
                     <Loader2 size={18} className="animate-spin" />
-                    Unlocking...
+                    Unwrapping...
                   </>
                 ) : (
-                  'Unlock All Games'
+                  <>
+                    <Gift size={18} />
+                    Unlock All Games
+                  </>
                 )}
               </button>
             </form>
@@ -137,7 +148,7 @@ export default function EmailModal({ isOpen, onClose, onSuccess }) {
                 href="https://together.mtm.now"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-mtm-primary hover:underline"
+                className="text-holiday-green hover:underline"
               >
                 MTM Together
               </a>{' '}

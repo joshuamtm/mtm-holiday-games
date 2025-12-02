@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
@@ -43,16 +43,16 @@ function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-mtm-border last:border-b-0">
+    <div className="border-b border-holiday-green/20 last:border-b-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors px-2 -mx-2 rounded"
+        className="w-full py-4 flex items-center justify-between text-left hover:bg-holiday-snow transition-colors px-2 -mx-2 rounded"
       >
-        <span className="font-medium text-mtm-navy pr-4">{question}</span>
+        <span className="font-medium text-holiday-pine pr-4">{question}</span>
         {isOpen ? (
-          <ChevronUp size={20} className="flex-shrink-0 text-mtm-text-secondary" />
+          <ChevronUp size={20} className="flex-shrink-0 text-holiday-green" />
         ) : (
-          <ChevronDown size={20} className="flex-shrink-0 text-mtm-text-secondary" />
+          <ChevronDown size={20} className="flex-shrink-0 text-holiday-green" />
         )}
       </button>
       {isOpen && (
@@ -66,12 +66,15 @@ function FAQItem({ question, answer }) {
 
 export default function FAQ() {
   return (
-    <section className="py-12 bg-mtm-cream">
+    <section className="py-12 bg-gradient-to-b from-holiday-snow to-white">
       <div className="max-w-[800px] mx-auto px-5">
-        <h2 className="text-2xl font-semibold text-mtm-navy text-center mb-8">
-          Frequently Asked Questions
-        </h2>
-        <div className="bg-white rounded-lg p-6 shadow-[0_2px_4px_rgba(0,0,0,0.08)]">
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <HelpCircle size={24} className="text-holiday-gold" />
+          <h2 className="text-2xl font-semibold text-holiday-pine text-center">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div className="bg-white rounded-xl p-6 shadow-sm border border-holiday-green/20">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}
