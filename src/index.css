@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* MTM Brand Colors as CSS Custom Properties */
+@theme {
+  --color-mtm-primary: #1ab1d2;
+  --color-mtm-accent: #f18f38;
+  --color-mtm-navy: #1c487b;
+  --color-mtm-soft-blue: #85abbd;
+  --color-mtm-cream: #fef4e3;
+  --color-mtm-white: #fafdfe;
+  --color-mtm-text: #333333;
+  --color-mtm-text-secondary: #666666;
+  --color-mtm-border: #e5e5e5;
+
+  /* Badge colors */
+  --color-badge-kids: #1ab1d2;
+  --color-badge-adults: #1c487b;
+  --color-badge-free: #f18f38;
+
+  /* Shadows */
+  --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 8px rgba(0, 0, 0, 0.12);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+/* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-mtm-text);
+  background-color: var(--color-mtm-white);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-mtm-primary);
+  outline-offset: 2px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  color: var(--color-mtm-navy);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Prompt text styling */
+.prompt-text {
+  font-family: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
