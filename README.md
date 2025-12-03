@@ -99,7 +99,7 @@ src/
 
 ## Access Control
 
-- **Free Game**: Wild Pitch (Adults) is always accessible
+- **Free Games**: Wild Pitch Kids, Missing Link, and My Category are always accessible
 - **Email Unlock**: Enter email to unlock all games (stored in localStorage)
 - **Special Access**: Add `?access=mtm-holiday-2025` to any URL for instant unlock
 

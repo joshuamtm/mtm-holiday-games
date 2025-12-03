@@ -61,7 +61,7 @@ export const games = [
     optimalPlayers: "3-6",
     duration: "15-30 minutes",
     requirements: [],
-    free: false,
+    free: true,
     tip: "The more specific your category, the more fun! 'History' is boring. 'Weird facts about ancient Roman food' is perfect."
   },
   {
@@ -76,7 +76,7 @@ export const games = [
     optimalPlayers: "4-8",
     duration: "15-30 minutes",
     requirements: [],
-    free: true,
+    free: false,
     tip: "Perfect opener for game night! Works great with mixed ages - older kids can play too."
   },
   {
@@ -91,7 +91,7 @@ export const games = [
     optimalPlayers: "4-8",
     duration: "15-30 minutes",
     requirements: [],
-    free: false,
+    free: true,
     tip: "Great for family movie buffs! Quick rounds keep everyone engaged."
   },
   {
@@ -136,7 +136,7 @@ export const games = [
     optimalPlayers: "4-8",
     duration: "15-30 minutes",
     requirements: [],
-    free: false,
+    free: true,
     tip: "Quick rounds keep everyone engaged. Some puzzles may require adult knowledge - perfect for mixed teams!"
   },
     {
