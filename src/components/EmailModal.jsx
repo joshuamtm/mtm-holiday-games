@@ -96,7 +96,7 @@ export default function EmailModal({ isOpen, onClose, onSuccess }) {
                 <Gift size={32} className="text-holiday-red" />
               </div>
               <h2 className="text-xl font-semibold text-holiday-pine mb-2">
-                Unwrap All 17 Games
+                Unwrap All Games
               </h2>
               <p className="text-mtm-text-secondary text-sm">
                 Enter your email to unlock our complete collection of

@@ -238,7 +238,7 @@ export default function GameDetailPage() {
                       This prompt is locked
                     </h4>
                     <p className="text-sm text-mtm-text-secondary mb-4 text-center max-w-xs">
-                      Enter your email to unwrap all 17 games instantly
+                      Enter your email to unwrap all games instantly
                     </p>
                     <button
                       onClick={() => setShowEmailModal(true)}

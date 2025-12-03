@@ -6,7 +6,7 @@ AI-powered party games for families, friends, and teams. Copy a prompt, paste in
 
 MTM Holiday Games is a festive prompt library website where users copy AI prompts and paste them into their preferred AI assistant (ChatGPT, Claude, or Gemini) to play interactive party games. Perfect for holiday gatherings, family reunions, and virtual celebrations.
 
-### 17 Unique Games
+### 11 Unique Games (17 Total Versions)
 
 | Game | Description |
 |------|-------------|
@@ -26,7 +26,7 @@ MTM Holiday Games is a festive prompt library website where users copy AI prompt
 | **Monster Under the Bed** | Kids decide if adults survive silly monster attacks |
 | **Grown-Up Translator** | Kids explain jargon like "collateralized debt obligation" |
 
-Most games have both a **Family Friendly** and **Adults** version (17 total). Plus 3 special "Kid-Powered" games where kids run the show! Adults versions feature mature humor (dating disasters, work stress, existential moments) but nothing explicit.
+**7 adult versions** and **10 kid-friendly versions** (17 total prompts). 6 games have both versions, plus 4 kid-only games and 1 adults-only game. Adults versions feature mature humor (dating disasters, work stress, existential moments) but nothing explicit.
 
 ## Features
 
@@ -34,7 +34,7 @@ Most games have both a **Family Friendly** and **Adults** version (17 total). Pl
 - **Works with Any AI**: ChatGPT, Claude, or Gemini all work great
 - **Holiday Theme**: Festive design with snowfall animation and seasonal colors
 - **Mobile Friendly**: Play on phones and tablets
-- **Email Unlock**: One free game available; unlock all 17 with email signup
+- **Email Unlock**: One free game available; unlock all games with email signup
 - **Special Access Link**: Share ungated access with `?access=mtm-holiday-2025`
 - **Playtest-Informed**: Tips and optimal player counts based on real user testing
 
@@ -79,7 +79,7 @@ src/
 │   ├── GameDetailPage.jsx # Individual game view with prompt
 │   └── AboutPage.jsx    # About MTM and project background
 ├── data/
-│   ├── games.js         # Game metadata (17 games)
+│   ├── games.js         # Game metadata (11 unique games, 17 versions)
 │   └── prompts.js       # Full AI prompts for each game
 ├── context/
 │   └── AuthContext.jsx  # Unlock state and special access handling
@@ -99,7 +99,7 @@ src/
 ## Access Control
 
 - **Free Game**: Wild Pitch (Adults) is always accessible
-- **Email Unlock**: Enter email to unlock all 17 games (stored in localStorage)
+- **Email Unlock**: Enter email to unlock all games (stored in localStorage)
 - **Special Access**: Add `?access=mtm-holiday-2025` to any URL for instant unlock
 
 ## Holiday Theme
