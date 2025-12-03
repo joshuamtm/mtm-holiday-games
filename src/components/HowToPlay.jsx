@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ExternalLink, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 
-export default function HowToPlay({ collapsible = false, defaultExpanded = true }) {
+export default function HowToPlay({ collapsible = false, defaultExpanded = true, variant = 'default' }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
   const content = (
@@ -112,6 +112,97 @@ export default function HowToPlay({ collapsible = false, defaultExpanded = true 
     </div>
   );
 
+  // Simplified content for homepage that starts with browsing games
+  const homepageContent = (
+    <div className="space-y-4">
+      <div className="flex items-start gap-3">
+        <div className="flex-shrink-0 w-8 h-8 bg-holiday-green text-white rounded-full flex items-center justify-center font-bold text-sm">
+          1
+        </div>
+        <div>
+          <h4 className="font-semibold text-holiday-pine">Pick a Game</h4>
+          <p className="text-sm text-mtm-text-secondary">
+            Browse below and choose a game that fits your group — trivia, creative challenges, party games, and more!
+          </p>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-3">
+        <div className="flex-shrink-0 w-8 h-8 bg-holiday-green text-white rounded-full flex items-center justify-center font-bold text-sm">
+          2
+        </div>
+        <div>
+          <h4 className="font-semibold text-holiday-pine">Copy the Prompt</h4>
+          <p className="text-sm text-mtm-text-secondary">
+            Click the "Copy Prompt" button on the game's page
+          </p>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-3">
+        <div className="flex-shrink-0 w-8 h-8 bg-holiday-green text-white rounded-full flex items-center justify-center font-bold text-sm">
+          3
+        </div>
+        <div>
+          <h4 className="font-semibold text-holiday-pine">Paste into AI</h4>
+          <p className="text-sm text-mtm-text-secondary mb-2">
+            Open any free AI tool and paste the prompt:
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <a
+              href="https://chat.openai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-holiday-green hover:underline"
+            >
+              ChatGPT <ExternalLink size={12} />
+            </a>
+            <span className="text-mtm-text-secondary">|</span>
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-holiday-green hover:underline"
+            >
+              Claude <ExternalLink size={12} />
+            </a>
+            <span className="text-mtm-text-secondary">|</span>
+            <a
+              href="https://gemini.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-holiday-green hover:underline"
+            >
+              Gemini <ExternalLink size={12} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-3">
+        <div className="flex-shrink-0 w-8 h-8 bg-holiday-gold text-holiday-pine rounded-full flex items-center justify-center font-bold text-sm">
+          4
+        </div>
+        <div>
+          <h4 className="font-semibold text-holiday-pine">Let the AI Host!</h4>
+          <p className="text-sm text-mtm-text-secondary">
+            The AI becomes your game host. Share the screen, gather your group, and play!
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-holiday-gold/10 border border-holiday-gold/30 rounded-lg p-4 mt-4">
+        <p className="text-sm text-holiday-pine flex items-center gap-1">
+          <Sparkles size={14} className="text-holiday-gold" />
+          <strong>No account?</strong> All AI tools offer free accounts — signup takes 30 seconds!
+        </p>
+      </div>
+    </div>
+  );
+
+  // Choose which content to display based on variant
+  const displayContent = variant === 'homepage' ? homepageContent : content;
+
   if (collapsible) {
     return (
       <div className="bg-white border border-holiday-green/20 rounded-xl overflow-hidden shadow-sm">
@@ -129,7 +220,7 @@ export default function HowToPlay({ collapsible = false, defaultExpanded = true 
             <ChevronDown size={20} className="text-holiday-green" />
           )}
         </button>
-        {isExpanded && <div className="px-6 pb-6">{content}</div>}
+        {isExpanded && <div className="px-6 pb-6">{displayContent}</div>}
       </div>
     );
   }
@@ -140,7 +231,7 @@ export default function HowToPlay({ collapsible = false, defaultExpanded = true 
         <Sparkles size={18} className="text-holiday-gold" />
         How to Play
       </h3>
-      {content}
+      {displayContent}
     </div>
   );
 }

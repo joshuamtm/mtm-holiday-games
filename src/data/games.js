@@ -178,6 +178,51 @@ export const games = [
     requirements: ["Paper and pens OR space for charades"],
     free: false,
     tip: "Creative types thrive here! Acting option means non-artists can still shine."
+  },
+  {
+    slug: "alibi-kids",
+    title: "Alibi",
+    subtitle: "The Story-Matching Game",
+    description: "Two suspects claim they were together when the cookies disappeared. Can they keep their stories straight under interrogation?",
+    age: "kids",
+    modes: ["multiplayer"],
+    location: "same-room",
+    players: { min: 4, max: 8 },
+    optimalPlayers: "5-7",
+    duration: "20-40 minutes",
+    requirements: [],
+    free: false,
+    tip: "The more detailed the alibi, the harder it is to remember! Watch for the little details that don't match."
+  },
+  {
+    slug: "alibi-adults",
+    title: "Alibi: After Dark",
+    subtitle: "Where Were You Last Night?",
+    description: "Two suspects claim they were together when someone ate the labeled leftovers. The AI detective will interrogate them separately. Will their stories hold up?",
+    age: "adults",
+    modes: ["multiplayer"],
+    location: "same-room",
+    players: { min: 4, max: 8 },
+    optimalPlayers: "5-7",
+    duration: "20-40 minutes",
+    requirements: [],
+    free: false,
+    tip: "The best alibis have specific details — but specific details are the easiest to mess up!"
+  },
+  {
+    slug: "hot-take-tribunal",
+    title: "Hot Take Tribunal",
+    subtitle: "Defend the Indefensible",
+    description: "Passionately argue that cereal is a soup, that the DMV is actually pleasant, or that the snooze button is self-care. The jury decides if you're convincing.",
+    age: "adults",
+    modes: ["multiplayer"],
+    location: "remote-ok",
+    players: { min: 4, max: 8 },
+    optimalPlayers: "5-6",
+    duration: "20-40 minutes",
+    requirements: [],
+    free: false,
+    tip: "Commit fully to your assigned position — the more confident you sound, the more convincing you'll be!"
   }
 ];
 

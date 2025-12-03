@@ -146,7 +146,7 @@ export default function HomePage() {
 
       {/* How to Play (Collapsible) */}
       <section className="max-w-[1200px] mx-auto px-5 py-8">
-        <HowToPlay collapsible defaultExpanded={false} />
+        <HowToPlay collapsible defaultExpanded={false} variant="homepage" />
       </section>
 
       {/* Unlock Banner */}
