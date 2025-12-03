@@ -1,4 +1,4 @@
-import { X, Filter } from 'lucide-react';
+import { X, Filter, Sparkles } from 'lucide-react';
 
 const modeOptions = [
   { value: 'solo-coop', label: 'Solo/Co-op' },
@@ -26,14 +26,19 @@ export default function FilterBar({ filters, onFilterChange, gameCounts }) {
     onFilterChange({ ...filters, [category]: updated });
   };
 
+  const toggleKidPowered = () => {
+    onFilterChange({ ...filters, kidPowered: !filters.kidPowered });
+  };
+
   const clearFilters = () => {
-    onFilterChange({ modes: [], location: [], age: [] });
+    onFilterChange({ modes: [], location: [], age: [], kidPowered: false });
   };
 
   const hasActiveFilters =
     (filters.modes?.length || 0) +
     (filters.location?.length || 0) +
-    (filters.age?.length || 0) > 0;
+    (filters.age?.length || 0) +
+    (filters.kidPowered ? 1 : 0) > 0;
 
   const FilterChip = ({ category, value, label }) => {
     const isActive = (filters[category] || []).includes(value);
@@ -58,6 +63,21 @@ export default function FilterBar({ filters, onFilterChange, gameCounts }) {
         <Filter size={14} />
         <span className="text-xs font-medium">Filter:</span>
       </div>
+
+      {/* Kid-Powered Filter - Special highlight */}
+      <button
+        onClick={toggleKidPowered}
+        className={`px-2.5 py-1 rounded-full text-xs font-medium transition-all flex items-center gap-1 ${
+          filters.kidPowered
+            ? 'bg-holiday-gold text-holiday-pine'
+            : 'bg-holiday-gold/20 text-holiday-pine hover:bg-holiday-gold/40'
+        }`}
+      >
+        <Sparkles size={12} />
+        Kid-Powered
+      </button>
+
+      <span className="text-holiday-green/30">|</span>
 
       {/* Age Filter */}
       <div className="flex items-center gap-1.5">

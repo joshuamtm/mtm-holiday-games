@@ -45,6 +45,7 @@ export default function HomePage() {
     modes: [],
     location: [],
     age: [],
+    kidPowered: false,
   });
 
   // Calculate game counts for filter chips
@@ -69,6 +70,10 @@ export default function HomePage() {
   // Filter games
   const filteredGames = useMemo(() => {
     return games.filter((game) => {
+      // Kid-Powered filter
+      if (filters.kidPowered && !game.kidPowered) {
+        return false;
+      }
       if (filters.age.length > 0 && !filters.age.includes(game.age)) {
         return false;
       }

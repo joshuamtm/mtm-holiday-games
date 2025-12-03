@@ -81,6 +81,12 @@ export default function GameDetailPage() {
           <div className="lg:col-span-1">
             {/* Badges */}
             <div className="flex flex-wrap gap-2 mb-4">
+              {game.kidPowered && (
+                <span className="bg-holiday-gold text-holiday-pine text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+                  <Sparkles size={12} />
+                  Kid-Powered
+                </span>
+              )}
               {game.free && (
                 <span className="bg-holiday-gold text-holiday-pine text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
                   <Gift size={12} />

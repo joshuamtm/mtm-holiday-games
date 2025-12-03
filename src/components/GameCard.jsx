@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Users, Clock, MapPin, Lock, Star, Gift } from 'lucide-react';
+import { Users, Clock, MapPin, Lock, Star, Gift, Sparkles } from 'lucide-react';
 import { modeLabels, locationLabels } from '../data/games';
 
 export default function GameCard({ game, isUnlocked }) {
@@ -21,6 +21,12 @@ export default function GameCard({ game, isUnlocked }) {
 
       {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-3">
+        {game.kidPowered && (
+          <span className="bg-holiday-gold text-holiday-pine text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+            <Sparkles size={12} />
+            Kid-Powered
+          </span>
+        )}
         <span
           className={`text-white text-xs font-medium px-3 py-1 rounded-full flex items-center gap-1 ${
             game.age === 'kids' ? 'bg-holiday-green' : 'bg-holiday-red'
