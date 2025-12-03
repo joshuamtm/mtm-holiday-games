@@ -130,7 +130,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3 justify-center">
             <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
               <Gift size={16} />
-              11 Unique Games
+              12 Unique Games
             </span>
             <span className="inline-flex items-center gap-2 bg-holiday-gold text-holiday-pine px-4 py-2 rounded-full text-sm font-semibold">
               <Star size={16} />

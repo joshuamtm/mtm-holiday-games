@@ -50,6 +50,21 @@ export const games = [
   },
   // ===== FAMILY FRIENDLY GAMES =====
   {
+    slug: "my-category",
+    title: "My Category",
+    subtitle: "Trivia Where YOU Pick the Topic",
+    description: "Finally, trivia about YOUR expertise! Pick any category as specific as you want — 'Minecraft redstone,' '90s sitcom theme songs,' 'my dog' — then choose Easy, Medium, or Hard.",
+    age: "kids",
+    modes: ["solo-coop", "team-vs-team", "player-vs-player"],
+    location: "remote-ok",
+    players: { min: 1, max: 10 },
+    optimalPlayers: "3-6",
+    duration: "15-30 minutes",
+    requirements: [],
+    free: false,
+    tip: "The more specific your category, the more fun! 'History' is boring. 'Weird facts about ancient Roman food' is perfect."
+  },
+  {
     slug: "wild-pitch-adults",
     title: "Wild Pitch",
     subtitle: "Movie Trivia Gone Wrong",

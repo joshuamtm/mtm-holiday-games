@@ -6,7 +6,7 @@ AI-powered party games for families, friends, and teams. Copy a prompt, paste in
 
 MTM Holiday Games is a festive prompt library website where users copy AI prompts and paste them into their preferred AI assistant (ChatGPT, Claude, or Gemini) to play interactive party games. Perfect for holiday gatherings, family reunions, and virtual celebrations.
 
-### 11 Unique Games (17 Total Versions)
+### 12 Unique Games (18 Total Versions)
 
 | Game | Description |
 |------|-------------|
@@ -18,6 +18,7 @@ MTM Holiday Games is a festive prompt library website where users copy AI prompt
 | **Pre-Occupation** | Vote on who in your group fits funny scenarios |
 | **Alibi** | Create and defend alibis under AI interrogation |
 | **Hot Take Tribunal** | Defend absurd opinions in a mock court (Adults only) |
+| **My Category** | Trivia where YOU pick the topic — as specific as you want! |
 
 #### Kid-Powered Games (Kids Run the Show!)
 | Game | Description |
@@ -26,7 +27,7 @@ MTM Holiday Games is a festive prompt library website where users copy AI prompt
 | **Monster Under the Bed** | Kids decide if adults survive silly monster attacks |
 | **Grown-Up Translator** | Kids explain jargon like "collateralized debt obligation" |
 
-**7 adult versions** and **10 kid-friendly versions** (17 total prompts). 6 games have both versions, plus 4 kid-only games and 1 adults-only game. Adults versions feature mature humor (dating disasters, work stress, existential moments) but nothing explicit.
+**7 adult versions** and **11 kid-friendly versions** (18 total prompts). 6 games have both versions, plus 5 kid-only games and 1 adults-only game. Adults versions feature mature humor (dating disasters, work stress, existential moments) but nothing explicit.
 
 ## Features
 
@@ -79,7 +80,7 @@ src/
 │   ├── GameDetailPage.jsx # Individual game view with prompt
 │   └── AboutPage.jsx    # About MTM and project background
 ├── data/
-│   ├── games.js         # Game metadata (11 unique games, 17 versions)
+│   ├── games.js         # Game metadata (12 unique games, 18 versions)
 │   └── prompts.js       # Full AI prompts for each game
 ├── context/
 │   └── AuthContext.jsx  # Unlock state and special access handling
