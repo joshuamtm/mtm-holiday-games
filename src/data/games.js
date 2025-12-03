@@ -1,4 +1,54 @@
 export const games = [
+  // ===== KID-POWERED GAMES (Kids Run the Show!) =====
+  {
+    slug: "kids-win",
+    title: "Kids Win",
+    subtitle: "Riddles Where Being Little Helps",
+    description: "Riddles designed to reward simple, literal thinking. Kids vs Adults - watch the grown-ups overthink while kids nail the obvious answers!",
+    age: "kids",
+    kidPowered: true,
+    modes: ["team-vs-team"],
+    location: "remote-ok",
+    players: { min: 2, max: 12 },
+    optimalPlayers: "4-8",
+    duration: "15-30 minutes",
+    requirements: [],
+    free: false,
+    tip: "Adults: resist the urge to overthink! Kids often see the obvious answer adults miss."
+  },
+  {
+    slug: "monster-under-the-bed",
+    title: "Monster Under the Bed",
+    subtitle: "Kids vs. The Creature",
+    description: "Kids decide if adults survive silly monster attacks! The AI creates ridiculous monsters, kids plan defenses, and then judge whether adults' strategies work. GOBBLED or SURVIVED?",
+    age: "kids",
+    kidPowered: true,
+    modes: ["multiplayer"],
+    location: "same-room",
+    players: { min: 2, max: 8 },
+    optimalPlayers: "3-6",
+    duration: "20-40 minutes",
+    requirements: [],
+    free: false,
+    tip: "Kids have ALL the power here! They decide who survives. Adults, prepare to beg for mercy."
+  },
+  {
+    slug: "grown-up-translator",
+    title: "Grown-Up Translator",
+    subtitle: "Kids Explain Adult Stuff",
+    description: "Kids explain complicated adult concepts like 'collateralized debt obligation' based on what the words sound like. Adults guess the real term. Kids' explanations are often better than reality!",
+    age: "kids",
+    kidPowered: true,
+    modes: ["multiplayer"],
+    location: "remote-ok",
+    players: { min: 3, max: 10 },
+    optimalPlayers: "4-7",
+    duration: "20-40 minutes",
+    requirements: [],
+    free: false,
+    tip: "The magic is in kids' literal interpretations. 'Liquid assets' = wet money? 'Hedge fund' = money for bushes?"
+  },
+  // ===== FAMILY FRIENDLY GAMES =====
   {
     slug: "wild-pitch-adults",
     title: "Wild Pitch",
@@ -74,22 +124,7 @@ export const games = [
     free: false,
     tip: "Quick rounds keep everyone engaged. Some puzzles may require adult knowledge - perfect for mixed teams!"
   },
-  {
-    slug: "kids-win",
-    title: "Kids Win",
-    subtitle: "Riddles Where Being Little Helps",
-    description: "Riddles designed to reward simple, literal thinking. Kids vs Adults - do children really think differently?",
-    age: "kids",
-    modes: ["team-vs-team"],
-    location: "remote-ok",
-    players: { min: 2, max: 12 },
-    optimalPlayers: "4-8",
-    duration: "15-30 minutes",
-    requirements: [],
-    free: false,
-    tip: "Adults: resist the urge to overthink! Kids often see the obvious answer adults miss."
-  },
-  {
+    {
     slug: "yes-chef-kids",
     title: "Yes Chef",
     subtitle: "Ridiculous Recipe Naming",

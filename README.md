@@ -6,7 +6,7 @@ AI-powered party games for families, friends, and teams. Copy a prompt, paste in
 
 MTM Holiday Games is a festive prompt library website where users copy AI prompts and paste them into their preferred AI assistant (ChatGPT, Claude, or Gemini) to play interactive party games. Perfect for holiday gatherings, family reunions, and virtual celebrations.
 
-### 15 Unique Games
+### 17 Unique Games
 
 | Game | Description |
 |------|-------------|
@@ -16,11 +16,17 @@ MTM Holiday Games is a festive prompt library website where users copy AI prompt
 | **Crime Scene Chaos** | Solve wacky mysteries with ridiculous alibis |
 | **Sketch the Unsketchable** | Draw and guess impossible concepts |
 | **Pre-Occupation** | Vote on who in your group fits funny scenarios |
-| **Kids Win** | Riddles that reward simple thinking over overthinking |
 | **Alibi** | Create and defend alibis under AI interrogation |
 | **Hot Take Tribunal** | Defend absurd opinions in a mock court (Adults only) |
 
-Most games have both a **Family Friendly** and **Adults** version (15 total). Adults versions feature mature humor (dating disasters, work stress, existential moments) but nothing explicit.
+#### Kid-Powered Games (Kids Run the Show!)
+| Game | Description |
+|------|-------------|
+| **Kids Win** | Riddles that reward simple thinking — kids beat adults! |
+| **Monster Under the Bed** | Kids decide if adults survive silly monster attacks |
+| **Grown-Up Translator** | Kids explain jargon like "collateralized debt obligation" |
+
+Most games have both a **Family Friendly** and **Adults** version (17 total). Plus 3 special "Kid-Powered" games where kids run the show! Adults versions feature mature humor (dating disasters, work stress, existential moments) but nothing explicit.
 
 ## Features
 
@@ -28,7 +34,7 @@ Most games have both a **Family Friendly** and **Adults** version (15 total). Ad
 - **Works with Any AI**: ChatGPT, Claude, or Gemini all work great
 - **Holiday Theme**: Festive design with snowfall animation and seasonal colors
 - **Mobile Friendly**: Play on phones and tablets
-- **Email Unlock**: One free game available; unlock all 15 with email signup
+- **Email Unlock**: One free game available; unlock all 17 with email signup
 - **Special Access Link**: Share ungated access with `?access=mtm-holiday-2025`
 - **Playtest-Informed**: Tips and optimal player counts based on real user testing
 
@@ -73,7 +79,7 @@ src/
 │   ├── GameDetailPage.jsx # Individual game view with prompt
 │   └── AboutPage.jsx    # About MTM and project background
 ├── data/
-│   ├── games.js         # Game metadata (15 games)
+│   ├── games.js         # Game metadata (17 games)
 │   └── prompts.js       # Full AI prompts for each game
 ├── context/
 │   └── AuthContext.jsx  # Unlock state and special access handling
@@ -93,7 +99,7 @@ src/
 ## Access Control
 
 - **Free Game**: Wild Pitch (Adults) is always accessible
-- **Email Unlock**: Enter email to unlock all 15 games (stored in localStorage)
+- **Email Unlock**: Enter email to unlock all 17 games (stored in localStorage)
 - **Special Access**: Add `?access=mtm-holiday-2025` to any URL for instant unlock
 
 ## Holiday Theme
