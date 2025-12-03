@@ -20,7 +20,7 @@ export const games = [
     slug: "monster-under-the-bed",
     title: "Monster Under the Bed",
     subtitle: "Kids vs. The Creature",
-    description: "Kids decide if adults survive silly monster attacks! The AI creates ridiculous monsters, kids plan defenses, and then judge whether adults' strategies work. GOBBLED or SURVIVED?",
+    description: "Kids control the screen and learn each monster's SECRET WEAKNESS — then watch adults guess blindly! Kids decide: GOBBLED or SURVIVED?",
     age: "kids",
     kidPowered: true,
     modes: ["multiplayer"],
@@ -30,7 +30,7 @@ export const games = [
     duration: "20-40 minutes",
     requirements: [],
     free: false,
-    tip: "Kids have ALL the power here! They decide who survives. Adults, prepare to beg for mercy."
+    tip: "Kids should hold the phone/tablet! Only they see the monster's secret weakness. Adults must look away during the reveal."
   },
   {
     slug: "grown-up-translator",
