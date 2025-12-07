@@ -18,9 +18,29 @@ const faqs = [
       'One person opens the AI and shares their screen. They paste the prompt and everyone plays together, with the host reading questions aloud and typing in answers.',
   },
   {
+    question: 'Can multiple people type in the chat?',
+    answer:
+      'Yes! Multiple people can type answers, though it works best if one person is the "host" who reads questions aloud and types the group\'s answers. For remote play, the host shares their screen.',
+  },
+  {
     question: 'The AI isn\'t following the rules right. What do I do?',
     answer:
-      'Just tell it! Say "you forgot to keep score" or "please give us a hint." The AI will adjust. If it gets really confused, say "let\'s start the game over from the beginning."',
+      'Just tell it! Say "you forgot to keep score" or "please give us a hint." The AI will adjust. If it gets really confused, type "NEW GAME" to start fresh.',
+  },
+  {
+    question: 'What if the AI makes a mistake?',
+    answer:
+      'Just correct it! Say "Actually, that answer was correct" or "We have 5 players, not 4." The AI will adjust. You can also type "SCORE" to see the current standings.',
+  },
+  {
+    question: 'How do I end the game early?',
+    answer:
+      'Just tell the AI: "Let\'s end the game now and announce the winner!" The AI will wrap up gracefully and declare a champion.',
+  },
+  {
+    question: 'How long should I expect to play?',
+    answer:
+      'Most games run 15-40 minutes, but you control the pace! Tell the AI when you\'re ready to wrap up, or ask for "2 more rounds" when you want to keep going.',
   },
   {
     question: 'Can I use these prompts on my phone?',
@@ -35,7 +55,7 @@ const faqs = [
   {
     question: 'Can I modify the prompts?',
     answer:
-      'Absolutely! Feel free to customize the prompts to fit your group. You can change the number of rounds, adjust difficulty, or add your own house rules.',
+      'Absolutely! Feel free to customize the prompts to fit your group. You can change the number of rounds, adjust difficulty, or add your own house rules. The AI is flexible!',
   },
 ];
 

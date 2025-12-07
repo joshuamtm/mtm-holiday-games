@@ -17,6 +17,13 @@ import {
   Gift,
   Star,
   Sparkles,
+  Bot,
+  Gamepad2,
+  Timer,
+  AlertCircle,
+  ChevronDown,
+  ChevronUp,
+  MessageSquare,
 } from 'lucide-react';
 
 export default function GameDetailPage() {
@@ -24,6 +31,7 @@ export default function GameDetailPage() {
   const { isUnlocked, unlock } = useAuth();
   const [copied, setCopied] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
+  const [showSampleOutput, setShowSampleOutput] = useState(false);
 
   const game = getGameBySlug(slug);
   const prompt = getPromptBySlug(slug);
@@ -129,6 +137,89 @@ export default function GameDetailPage() {
                   </strong>{' '}
                   {game.tip}
                 </p>
+              </div>
+            )}
+
+            {/* Requirements Warning - Prominent if has requirements */}
+            {game.requirements && game.requirements.length > 0 && (
+              <div className="bg-holiday-red/10 border border-holiday-red/30 rounded-lg p-4 mb-6">
+                <p className="text-sm text-holiday-red font-semibold flex items-center gap-2 mb-2">
+                  <AlertCircle size={16} />
+                  Before You Start
+                </p>
+                <ul className="text-sm text-holiday-pine space-y-1">
+                  {game.requirements.map((req, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-holiday-red">•</span>
+                      {req}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* What to Expect */}
+            {game.whatToExpect && (
+              <div className="bg-mtm-primary/5 border border-mtm-primary/20 rounded-lg p-4 mb-6">
+                <h4 className="font-semibold text-holiday-pine mb-3 flex items-center gap-2">
+                  <Gamepad2 size={16} className="text-mtm-primary" />
+                  What to Expect
+                </h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-3">
+                    <Bot size={16} className="text-mtm-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-medium text-holiday-pine">The AI will:</span>
+                      <p className="text-mtm-text-secondary">{game.whatToExpect.aiDoes}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Users size={16} className="text-mtm-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-medium text-holiday-pine">You will:</span>
+                      <p className="text-mtm-text-secondary">{game.whatToExpect.playersDo}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Timer size={16} className="text-mtm-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-medium text-holiday-pine">Round length:</span>
+                      <p className="text-mtm-text-secondary">{game.whatToExpect.roundLength}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Sample Output Preview */}
+            {game.sampleOutput && (
+              <div className="mb-6">
+                <button
+                  onClick={() => setShowSampleOutput(!showSampleOutput)}
+                  className="w-full flex items-center justify-between px-4 py-3 bg-white border border-holiday-green/20 rounded-lg hover:bg-holiday-snow transition-colors"
+                >
+                  <span className="flex items-center gap-2 text-sm font-medium text-holiday-pine">
+                    <MessageSquare size={16} className="text-holiday-green" />
+                    See Example AI Response
+                  </span>
+                  {showSampleOutput ? (
+                    <ChevronUp size={16} className="text-holiday-pine/50" />
+                  ) : (
+                    <ChevronDown size={16} className="text-holiday-pine/50" />
+                  )}
+                </button>
+                {showSampleOutput && (
+                  <div className="mt-2 bg-white border border-holiday-green/20 rounded-lg p-4">
+                    <p className="text-xs text-mtm-text-secondary mb-2">
+                      Here's what the AI might say after you paste the prompt:
+                    </p>
+                    <div className="bg-holiday-snow/50 rounded-lg p-4 border border-holiday-green/10">
+                      <pre className="whitespace-pre-wrap text-sm text-holiday-pine font-mono">
+                        {game.sampleOutput}
+                      </pre>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 

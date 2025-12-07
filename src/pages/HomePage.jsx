@@ -45,6 +45,7 @@ export default function HomePage() {
     modes: [],
     location: [],
     age: [],
+    bestFor: [],
     kidPowered: false,
   });
 
@@ -86,6 +87,13 @@ export default function HomePage() {
       ) {
         return false;
       }
+      // Best For filter - matches if game has ANY of the selected bestFor categories
+      if (
+        filters.bestFor.length > 0 &&
+        !filters.bestFor.some((bf) => game.bestFor && game.bestFor.includes(bf))
+      ) {
+        return false;
+      }
       return true;
     });
   }, [filters]);
@@ -119,11 +127,11 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-            AI-Powered Party Games
+            AI Hosts Your Party Games
           </h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-            Copy a prompt, paste it into ChatGPT, Claude, or Gemini, and let AI host
-            your holiday game night. Gather the family — no tech skills required!
+            Pick a game, copy the prompt, paste into any free AI chat — and let the fun begin.
+            The AI becomes your game host. No tech skills needed!
           </p>
 
           {/* Feature pills */}
