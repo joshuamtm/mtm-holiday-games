@@ -6,6 +6,7 @@ import FilterBar from '../components/FilterBar';
 import HowToPlay from '../components/HowToPlay';
 import EmailModal from '../components/EmailModal';
 import FAQ from '../components/FAQ';
+import CaseStudies from '../components/CaseStudies';
 import { Sparkles, Lock, Gift, Star, TreePine } from 'lucide-react';
 
 // Snowflake component for animated snow
@@ -222,6 +223,9 @@ export default function HomePage() {
           </div>
         )}
       </section>
+
+      {/* Case Studies Section */}
+      <CaseStudies />
 
       {/* FAQ Section */}
       <FAQ />
