@@ -8,12 +8,12 @@ export const caseStudies = [
     tagline: "11 players picked their own expert topics. One person scored. The AI host had no mercy.",
     players: 11,
     duration: "~30 minutes",
-    playerNames: ["Alicia", "Martin", "Ruarru", "Monty", "Jacqueline", "Thomas", "Julia", "Ignatius", "Dan", "Ellen", "Jessica"],
+    playerNames: ["Sofia", "Marcus", "Raj", "Charlie", "Nina", "Oliver", "Mia", "Felix", "David", "Claire", "Hannah"],
     ageRange: "Adults",
 
     // Trivia format
     finalScore: {
-      leader: "Alicia",
+      leader: "Sofia",
       leaderPoints: 3,
       totalPlayers: 11,
       playersWhoScored: 4
@@ -24,16 +24,16 @@ export const caseStudies = [
     // Highlight rounds
     highlights: [
       {
-        player: "Alicia",
+        player: "Sofia",
         category: "US Human Resources practices",
         difficulty: "Hard",
         question: "The 'duties test' for administrative exemption from overtime—what's the second requirement?",
         answer: "Exercise of discretion and independent judgment",
         result: "CORRECT",
-        moment: "Alicia opened with a power move—Hard difficulty on a technical HR question—and nailed it. Set the bar impossibly high."
+        moment: "Sofia opened with a power move—Hard difficulty on a technical HR question—and nailed it. Set the bar impossibly high."
       },
       {
-        player: "Martin",
+        player: "Marcus",
         category: "Mets baseball",
         difficulty: "Hard",
         question: "What was historically unique about the June 12, 1999 Yankees-Mets game involving a grand slam?",
@@ -42,7 +42,7 @@ export const caseStudies = [
         moment: "A true Mets fan meets a deep-cut question. The host's commentary: 'Not the Empire State Building. Not the Burj Khalifa. A LIBRARY.'"
       },
       {
-        player: "Ruarru",
+        player: "Raj",
         category: "Micro-aggressions among bros in Queens over 40",
         difficulty: "Easy",
         question: "(Pivoted to) What Queens neighborhood did A Tribe Called Quest put on the map?",
@@ -51,16 +51,16 @@ export const caseStudies = [
         moment: "Started with possibly the most specific category ever attempted. The host had to negotiate: 'This feels less like trivia and more like a sociology dissertation.'"
       },
       {
-        player: "Monty",
+        player: "Charlie",
         category: "Numbers from 1-3",
         difficulty: "Easy",
         question: "What number comes between 1 and 3?",
         answer: "2",
         result: "CORRECT",
-        moment: "The strategic genius play. While others crashed on hard questions about their expertise, Monty simply asked: 'What number comes between 1 and 3?' The host lost it: 'Confetti rains from the ceiling! A single tear rolls down my metaphorical cheek!'"
+        moment: "The strategic genius play. While others crashed on hard questions about their expertise, Charlie simply asked: 'What number comes between 1 and 3?' The host lost it: 'Confetti rains from the ceiling! A single tear rolls down my metaphorical cheek!'"
       },
       {
-        player: "Ignatius",
+        player: "Felix",
         category: "Pokémon Gen 8",
         difficulty: "Hard",
         question: "What are the names of the two ancient heroes who wielded Zacian and Zamazenta?",
@@ -76,8 +76,8 @@ export const caseStudies = [
     successFactors: [
       "The host treated every wrong answer with theatrical sympathy, not mockery",
       "Bonus facts after each question turned losses into learning moments",
-      "The Monty Strategy (numbers 1-3) became an instant legend and inside joke",
-      "Category negotiations (like Ruarru's pivot) showed the AI adapting to players",
+      "The Charlie Strategy (numbers 1-3) became an instant legend and inside joke",
+      "Category negotiations (like Raj's pivot) showed the AI adapting to players",
       "The scoreboard format created natural drama as confident picks failed",
       "Even 'expert' categories produced surprising knowledge gaps"
     ],
@@ -86,18 +86,18 @@ export const caseStudies = [
 
     highlightQuote: "You've watched your competitors struggle with Mets history and Queens hip-hop deep cuts, and you said, 'You know what? I'm going to keep it simple.' This is either the most brilliant move in My Category history... or a trap I'm walking right into.",
 
-    keyLesson: "The genius of My Category is that it flips the script on expertise. Being 'the expert' raises expectations—both the AI's and your own. Sometimes the smartest play is Monty's play: numbers 1-3, easy, confidence secured."
+    keyLesson: "The genius of My Category is that it flips the script on expertise. Being 'the expert' raises expectations—both the AI's and your own. Sometimes the smartest play is Charlie's play: numbers 1-3, easy, confidence secured."
   },
   {
-    id: "kids-win-ignatius",
+    id: "kids-win-showdown",
     type: "competition",
-    title: "The Ignatius Express",
+    title: "The Felix Express",
     game: "Kids Win",
     gameSlug: "kids-win",
     tagline: "Four kids demolished a 'mysterious horde of crotchety adults' 10-4. Overthinking was the real enemy.",
     players: "4 kids vs many adults",
     duration: "~20 minutes",
-    playerNames: ["Ignatius", "Martin", "Thomas", "Monty"],
+    playerNames: ["Felix", "Marcus", "Oliver", "Charlie"],
     ageRange: "Kids vs Adults",
 
     // Competition format
@@ -107,7 +107,7 @@ export const caseStudies = [
     },
 
     // The setup
-    setup: "Four kids—Ignatius, Martin, Thomas, and Monty—faced off against 'a mysterious horde of old, crotchety overthinkers.' The AI host warned the adults: 'These riddles are designed to punish your big, fancy, overthinking brains.'",
+    setup: "Four kids—Felix, Marcus, Oliver, and Charlie—faced off against 'a mysterious horde of old, crotchety overthinkers.' The AI host warned the adults: 'These riddles are designed to punish your big, fancy, overthinking brains.'",
 
     // Key moments
     highlights: [
@@ -125,31 +125,31 @@ export const caseStudies = [
       },
       {
         riddle: "What building has the most stories?",
-        winner: "Kids (Martin)",
+        winner: "Kids (Marcus)",
         answer: "A library",
-        moment: "Adults were calculating skyscraper heights. Martin just heard 'stories' and thought of books."
+        moment: "Adults were calculating skyscraper heights. Marcus just heard 'stories' and thought of books."
       },
       {
         riddle: "What can you hold in your right hand but NEVER in your left hand?",
-        winner: "Kids (Thomas)",
+        winner: "Kids (Oliver)",
         answer: "Your left hand",
-        moment: "Thomas's clutch answer at match point. Go ahead, try holding your left hand IN your left hand."
+        moment: "Oliver's clutch answer at match point. Go ahead, try holding your left hand IN your left hand."
       }
     ],
 
     // MVP breakdown
     mvpBreakdown: [
-      { name: "Ignatius", title: "The Machine", description: "Four or five answers, instant reflexes, zero hesitation. Answered 'towel' before the riddle finished echoing." },
-      { name: "Martin", title: "Clutch Performer", description: "Opened with 'library,' closed with 'air.' Perfect timing." },
-      { name: "Thomas", title: "Left Hand Genius", description: "Emerged at match point with the perfect answer." },
-      { name: "Monty", title: "Silent Strategist", description: "The moral support king." }
+      { name: "Felix", title: "The Machine", description: "Four or five answers, instant reflexes, zero hesitation. Answered 'towel' before the riddle finished echoing." },
+      { name: "Marcus", title: "Clutch Performer", description: "Opened with 'library,' closed with 'air.' Perfect timing." },
+      { name: "Oliver", title: "Left Hand Genius", description: "Emerged at match point with the perfect answer." },
+      { name: "Charlie", title: "Silent Strategist", description: "The moral support king." }
     ],
 
     // What made it work
     successFactors: [
       "The framing explicitly told kids to 'trust your first instinct' while warning adults about overthinking",
       "Riddles genuinely rewarded literal interpretation over clever reasoning",
-      "The AI host celebrated kid victories with escalating enthusiasm ('IGNATIUS IS ON FIRE!')",
+      "The AI host celebrated kid victories with escalating enthusiasm ('FELIX IS ON FIRE!')",
       "Adults' failures were narrated with comedic sympathy ('You were calculating the height of the Burj Khalifa, weren't you?')",
       "Each riddle was a complete micro-story with setup, answer, and commentary",
       "The MVP breakdown at the end gave everyone recognition"
@@ -170,7 +170,7 @@ export const caseStudies = [
     tagline: "Seven players, one quantum mystery, and a cat that refused to observe.",
     players: 7,
     duration: "~25 minutes",
-    playerNames: ["Ignatius", "Martin", "Thomas", "Monty", "Alicia", "Jacqueline", "Ruarri"],
+    playerNames: ["Felix", "Marcus", "Oliver", "Charlie", "Sofia", "Nina", "Raj"],
     ageRange: "Mixed ages (adults and kids)",
 
     // The case details

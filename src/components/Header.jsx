@@ -1,7 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 
 export default function Header() {
+  const location = useLocation();
+
+  const handleCaseStudiesClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const element = document.getElementById('case-studies');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <header className="bg-white border-b border-holiday-gold/30 sticky top-0 z-50 shadow-sm">
       {/* Festive accent bar */}
@@ -30,6 +42,13 @@ export default function Header() {
             className="text-sm font-medium text-mtm-text hover:text-holiday-green transition-colors"
           >
             Games
+          </Link>
+          <Link
+            to="/#case-studies"
+            onClick={handleCaseStudiesClick}
+            className="text-sm font-medium text-mtm-text hover:text-holiday-green transition-colors"
+          >
+            Case Studies
           </Link>
           <Link
             to="/about"

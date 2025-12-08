@@ -469,7 +469,7 @@ export default function CaseStudies() {
   }
 
   return (
-    <section className="py-12 bg-holiday-snow">
+    <section id="case-studies" className="py-12 bg-holiday-snow scroll-mt-20">
       <div className="max-w-[1200px] mx-auto px-5">
         {/* Section Header */}
         <div className="text-center mb-8">
