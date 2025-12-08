@@ -315,14 +315,20 @@ function MysteryContent({ study }) {
         <div className="space-y-4">
           {study.breakthroughs.map((breakthrough, idx) => (
             <div key={idx} className="bg-white rounded-lg p-4 border border-holiday-gold/20">
-              <p className="font-medium text-holiday-pine mb-1">
-                "{breakthrough.question}"
-              </p>
+              {/* Detective Question - prominently displayed */}
+              <div className="bg-holiday-pine/5 -mx-4 -mt-4 px-4 py-3 mb-3 rounded-t-lg border-b border-holiday-gold/20">
+                <p className="text-xs font-semibold text-holiday-green uppercase tracking-wide mb-1">
+                  🔍 Detective Asked:
+                </p>
+                <p className="font-medium text-holiday-pine text-lg">
+                  "{breakthrough.question}"
+                </p>
+              </div>
               <p className="text-sm text-mtm-text-secondary mb-2">
-                <span className="font-medium text-holiday-green">Insight:</span> {breakthrough.insight}
+                <span className="font-medium text-holiday-green">Why it mattered:</span> {breakthrough.insight}
               </p>
               <p className="text-sm text-mtm-text">
-                <span className="font-medium text-holiday-gold">Reveal:</span> {breakthrough.reveal}
+                <span className="font-medium text-holiday-gold">What it revealed:</span> {breakthrough.reveal}
               </p>
             </div>
           ))}
