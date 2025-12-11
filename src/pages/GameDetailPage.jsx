@@ -4,7 +4,6 @@ import { getGameBySlug, modeLabels, locationLabels } from '../data/games';
 import { getPromptBySlug } from '../data/prompts';
 import { useAuth } from '../context/AuthContext';
 import HowToPlay from '../components/HowToPlay';
-import EmailModal from '../components/EmailModal';
 import {
   ArrowLeft,
   Users,
@@ -26,11 +25,12 @@ import {
   MessageSquare,
 } from 'lucide-react';
 
+const HUBSPOT_FORM_URL = 'https://share.hsforms.com/1cpFSWpHiRkOkmEjnznKPtwtu0e4';
+
 export default function GameDetailPage() {
   const { slug } = useParams();
-  const { isUnlocked, unlock } = useAuth();
+  const { isUnlocked } = useAuth();
   const [copied, setCopied] = useState(false);
-  const [showEmailModal, setShowEmailModal] = useState(false);
   const [showSampleOutput, setShowSampleOutput] = useState(false);
 
   const game = getGameBySlug(slug);
@@ -57,7 +57,7 @@ export default function GameDetailPage() {
 
   const handleCopyPrompt = async () => {
     if (!canAccess) {
-      setShowEmailModal(true);
+      window.open(HUBSPOT_FORM_URL, '_blank', 'noopener,noreferrer');
       return;
     }
 
@@ -337,12 +337,14 @@ export default function GameDetailPage() {
                     <p className="text-sm text-mtm-text-secondary mb-4 text-center max-w-xs">
                       Enter your email to unwrap all games instantly
                     </p>
-                    <button
-                      onClick={() => setShowEmailModal(true)}
-                      className="btn-holiday-gold px-6 py-2 rounded-lg font-semibold"
+                    <a
+                      href={HUBSPOT_FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-holiday-gold px-6 py-2 rounded-lg font-semibold inline-block"
                     >
                       Unlock All Games
-                    </button>
+                    </a>
                   </div>
                 )}
 
@@ -395,12 +397,6 @@ export default function GameDetailPage() {
         </div>
       </div>
 
-      {/* Email Modal */}
-      <EmailModal
-        isOpen={showEmailModal}
-        onClose={() => setShowEmailModal(false)}
-        onSuccess={unlock}
-      />
     </div>
   );
 }

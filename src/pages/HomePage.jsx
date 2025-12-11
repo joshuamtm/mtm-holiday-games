@@ -4,10 +4,11 @@ import { useAuth } from '../context/AuthContext';
 import GameCard from '../components/GameCard';
 import FilterBar from '../components/FilterBar';
 import HowToPlay from '../components/HowToPlay';
-import EmailModal from '../components/EmailModal';
 import FAQ from '../components/FAQ';
 import CaseStudies from '../components/CaseStudies';
-import { Sparkles, Lock, Gift, Star, TreePine } from 'lucide-react';
+import { Sparkles, Gift, Star, TreePine } from 'lucide-react';
+
+const HUBSPOT_FORM_URL = 'https://share.hsforms.com/1cpFSWpHiRkOkmEjnznKPtwtu0e4';
 
 // Snowflake component for animated snow
 function Snowflakes() {
@@ -40,8 +41,7 @@ function Snowflakes() {
 }
 
 export default function HomePage() {
-  const { isUnlocked, unlock } = useAuth();
-  const [showEmailModal, setShowEmailModal] = useState(false);
+  const { isUnlocked } = useAuth();
   const [filters, setFilters] = useState({
     modes: [],
     location: [],
@@ -180,12 +180,14 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <button
-              onClick={() => setShowEmailModal(true)}
-              className="btn-holiday-gold px-6 py-3 rounded-lg font-semibold whitespace-nowrap"
+            <a
+              href={HUBSPOT_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-holiday-gold px-6 py-3 rounded-lg font-semibold whitespace-nowrap inline-block"
             >
               Unlock All Games
-            </button>
+            </a>
           </div>
         </section>
       )}
@@ -230,12 +232,6 @@ export default function HomePage() {
       {/* FAQ Section */}
       <FAQ />
 
-      {/* Email Modal */}
-      <EmailModal
-        isOpen={showEmailModal}
-        onClose={() => setShowEmailModal(false)}
-        onSuccess={unlock}
-      />
     </div>
   );
 }
