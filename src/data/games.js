@@ -98,7 +98,7 @@ export const games = [
   },
   {
     slug: "wild-pitch-adults",
-    title: "Wild Pitch",
+    title: "Wild Pitch: After Dark",
     subtitle: "Movie Trivia Gone Wrong",
     description: "A washed-up Hollywood pitch man describes famous movies with technical accuracy and zero shame. Guess the film before your dignity runs out.",
     age: "adults",
@@ -328,7 +328,7 @@ export const games = [
   },
   {
     slug: "sketch-the-unsketchable-adults",
-    title: "Sketch the Unsketchable: After Hours",
+    title: "Sketch the Unsketchable: After Dark",
     subtitle: "Drawing Existential Dread",
     description: "Draw or act out concepts like 'the specific type of tired that sleep doesn't fix' and 'being left on read.'",
     age: "adults",
@@ -397,7 +397,7 @@ export const games = [
   },
   {
     slug: "hot-take-tribunal",
-    title: "Hot Take Tribunal",
+    title: "Hot Take Tribunal: After Dark",
     subtitle: "Defend the Indefensible",
     description: "Passionately argue that cereal is a soup, that the DMV is actually pleasant, or that the snooze button is self-care. The jury decides if you're convincing.",
     age: "adults",
