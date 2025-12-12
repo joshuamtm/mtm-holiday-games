@@ -46,7 +46,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://together.mtm.now"
+                  href="https://mtm-together.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-white/80 hover:text-holiday-gold transition-colors"

@@ -236,7 +236,7 @@ export const games = [
   },
   {
     slug: "yes-chef-adults",
-    title: "Yes Chef: After Hours",
+    title: "Yes Chef: After Dark",
     subtitle: "Existential Recipe Naming",
     description: "Name recipes mixing real ingredients with existential dread. What do you call a dish with flour, eggs, and your therapist's knowing silence?",
     age: "adults",

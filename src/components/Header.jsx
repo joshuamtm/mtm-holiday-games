@@ -57,7 +57,7 @@ export default function Header() {
             About
           </Link>
           <a
-            href="https://together.mtm.now"
+            href="https://mtm-together.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex btn-holiday-secondary px-4 py-2 rounded-md text-sm font-medium"

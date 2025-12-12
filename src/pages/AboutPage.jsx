@@ -190,7 +190,7 @@ export default function AboutPage() {
               locked in for life.
             </p>
             <a
-              href="https://together.mtm.now"
+              href="https://mtm-together.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-mtm-accent text-white px-6 py-3 rounded-md font-medium hover:bg-mtm-accent/90 transition-colors"

@@ -145,7 +145,7 @@ export default function EmailModal({ isOpen, onClose, onSuccess }) {
             <p className="text-xs text-mtm-text-secondary text-center mt-4">
               By signing up, you'll also join the{' '}
               <a
-                href="https://together.mtm.now"
+                href="https://mtm-together.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-holiday-green hover:underline"

@@ -121,7 +121,7 @@ Built by [Meet the Moment](https://mtm.now) as a demonstration of practical AI a
 - **AI-powered persona testing** for user research and playtest feedback
 - **Prompt engineering** for creating engaging, replayable game experiences
 
-Learn more about AI for nonprofits at [MTM Together](https://together.mtm.now).
+Learn more about AI for nonprofits at [MTM Together](https://mtm-together.netlify.app/).
 
 ## License
 
