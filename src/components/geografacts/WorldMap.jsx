@@ -318,7 +318,7 @@ function WorldMap({ highlightedCountry, showAllCountries = true }) {
 
       {/* Highlighted country indicator */}
       {highlightedCountry && (
-        <div className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg animate-bounce">
+        <div className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
           Find this country!
         </div>
       )}
