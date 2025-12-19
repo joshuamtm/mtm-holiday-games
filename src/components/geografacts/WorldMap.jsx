@@ -269,25 +269,22 @@ function WorldMap({ highlightedCountry, showAllCountries = true }) {
           {/* Arrow marker pointing to highlighted country */}
           {highlightedCentroid && (
             <Marker coordinates={highlightedCentroid}>
-              <g transform="translate(-12, -35)">
-                {/* Arrow pointing down */}
-                <path
-                  d="M12 0 L24 20 L16 20 L16 35 L8 35 L8 20 L0 20 Z"
-                  fill="#DC2626"
-                  stroke="#991B1B"
-                  strokeWidth="2"
-                  className="animate-bounce"
+              {/* Positioned to upper-right, pointing down-left at country */}
+              <g transform="translate(20, -45)">
+                {/* Arrow line */}
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="-18"
+                  y2="40"
+                  stroke="#DC2626"
+                  strokeWidth="3"
+                  strokeLinecap="round"
                 />
-                {/* Pulsing circle at the tip */}
-                <circle
-                  cx="12"
-                  cy="40"
-                  r="5"
-                  fill="#EF4444"
-                  stroke="#B91C1C"
-                  strokeWidth="2"
-                  className="animate-ping"
-                  style={{ transformOrigin: '12px 40px' }}
+                {/* Arrowhead pointing at country */}
+                <polygon
+                  points="-18,40 -10,28 -24,32"
+                  fill="#DC2626"
                 />
               </g>
             </Marker>
