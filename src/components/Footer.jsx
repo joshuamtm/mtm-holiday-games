@@ -12,11 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img
-                src="/assets/mtm-logo.png"
-                alt="Meet the Moment"
-                className="h-10 brightness-0 invert"
-              />
+              <span className="text-xl font-bold text-holiday-gold">MTM Holiday Games</span>
               <Snowflake size={20} className="text-holiday-gold" />
             </div>
             <p className="text-sm text-white/80 mb-4">
