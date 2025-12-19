@@ -121,9 +121,16 @@ export default function GameSetup({ onStartGame }) {
         </div>
 
         {/* Hints */}
-        <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+        <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200 mb-4">
           <p className="text-sm text-yellow-800">
             <strong>💡 Need help?</strong> You can use a hint for any question, but using a hint means you can't earn a point for that question (even if you answer correctly after).
+          </p>
+        </div>
+
+        {/* Continent Note */}
+        <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <p className="text-sm text-gray-700">
+            <strong>🗺️ Geography Note:</strong> This game uses 6 continents. <strong>North America</strong> includes Central America (Guatemala, Panama, etc.) and the Caribbean (Cuba, Jamaica, etc.). <strong>Oceania</strong> includes Australia, New Zealand, and Pacific islands.
           </p>
         </div>
       </div>
