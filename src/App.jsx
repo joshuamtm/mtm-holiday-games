@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import GameDetailPage from './pages/GameDetailPage';
 import AboutPage from './pages/AboutPage';
+import GeografactsGame from './pages/GeografactsGame';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/game/:slug" element={<GameDetailPage />} />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/play/geografacts" element={<GeografactsGame />} />
             </Routes>
           </main>
           <Footer />

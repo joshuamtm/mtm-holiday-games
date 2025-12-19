@@ -1,0 +1,2900 @@
+// Comprehensive country database for Geografacts game
+// Each country includes: name, ISO code, continent, capital, currency, language, difficulty, and hints
+
+export const countries = [
+  // ===== EASY COUNTRIES (Major, well-known countries) =====
+  {
+    id: "us",
+    name: "United States",
+    aliases: ["USA", "United States of America", "America", "US", "U.S.", "U.S.A."],
+    continent: "North America",
+    capital: "Washington, D.C.",
+    capitalAliases: ["Washington", "Washington DC", "DC", "D.C."],
+    currency: "United States Dollar",
+    currencyAliases: ["Dollar", "USD", "US Dollar", "American Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "It's in the Western Hemisphere, north of Mexico",
+      country: "This country has 50 states and is known for the Statue of Liberty",
+      capital: "Named after the first president, it's not a state",
+      currency: "The world's most traded currency, symbolized by $",
+      language: "The most widely spoken language in the world"
+    }
+  },
+  {
+    id: "gb",
+    name: "United Kingdom",
+    aliases: ["UK", "Britain", "Great Britain", "England", "U.K."],
+    continent: "Europe",
+    capital: "London",
+    capitalAliases: [],
+    currency: "British Pound",
+    currencyAliases: ["Pound", "Pound Sterling", "GBP", "Sterling"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "It's an island nation west of mainland Europe",
+      country: "Home to the Royal Family and Big Ben",
+      capital: "The River Thames flows through this capital",
+      currency: "One of the oldest currencies still in use, symbol £",
+      language: "Shakespeare wrote in this language"
+    }
+  },
+  {
+    id: "fr",
+    name: "France",
+    aliases: [],
+    continent: "Europe",
+    capital: "Paris",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "French",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "It borders the Mediterranean Sea and the Atlantic Ocean",
+      country: "Famous for the Eiffel Tower and croissants",
+      capital: "Known as the City of Light",
+      currency: "Shared by 20 European countries",
+      language: "The language of love"
+    }
+  },
+  {
+    id: "de",
+    name: "Germany",
+    aliases: ["Deutschland"],
+    continent: "Europe",
+    capital: "Berlin",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "German",
+    languageAliases: ["Deutsch"],
+    difficulty: "easy",
+    hints: {
+      continent: "Located in Central Europe",
+      country: "Known for cars like BMW and Mercedes, and Oktoberfest",
+      capital: "This city was once divided by a famous wall",
+      currency: "Shared by 20 European countries",
+      language: "Einstein spoke this language"
+    }
+  },
+  {
+    id: "it",
+    name: "Italy",
+    aliases: ["Italia"],
+    continent: "Europe",
+    capital: "Rome",
+    capitalAliases: ["Roma"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Italian",
+    languageAliases: ["Italiano"],
+    difficulty: "easy",
+    hints: {
+      continent: "A peninsula extending into the Mediterranean Sea",
+      country: "Shaped like a boot, famous for pizza and pasta",
+      capital: "Home to the Colosseum and Vatican City",
+      currency: "Shared by 20 European countries",
+      language: "The language of opera"
+    }
+  },
+  {
+    id: "es",
+    name: "Spain",
+    aliases: ["Espana", "España"],
+    continent: "Europe",
+    capital: "Madrid",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español", "Castilian"],
+    difficulty: "easy",
+    hints: {
+      continent: "Located on the Iberian Peninsula",
+      country: "Known for flamenco dancing and bullfighting",
+      capital: "Home to the famous Prado Museum",
+      currency: "Shared by 20 European countries",
+      language: "Second most spoken native language in the world"
+    }
+  },
+  {
+    id: "cn",
+    name: "China",
+    aliases: ["People's Republic of China", "PRC"],
+    continent: "Asia",
+    capital: "Beijing",
+    capitalAliases: ["Peking"],
+    currency: "Chinese Yuan",
+    currencyAliases: ["Yuan", "Renminbi", "RMB", "CNY"],
+    language: "Mandarin Chinese",
+    languageAliases: ["Mandarin", "Chinese"],
+    difficulty: "easy",
+    hints: {
+      continent: "The largest continent by population",
+      country: "Home to the Great Wall and the Forbidden City",
+      capital: "Hosted the 2008 and 2022 Olympics",
+      currency: "Its name means 'people's currency'",
+      language: "The most spoken language in the world by native speakers"
+    }
+  },
+  {
+    id: "jp",
+    name: "Japan",
+    aliases: ["Nippon", "Nihon"],
+    continent: "Asia",
+    capital: "Tokyo",
+    capitalAliases: [],
+    currency: "Japanese Yen",
+    currencyAliases: ["Yen", "JPY"],
+    language: "Japanese",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "An island nation in the Pacific Ocean",
+      country: "Known as the Land of the Rising Sun",
+      capital: "The most populous metropolitan area in the world",
+      currency: "Symbol is ¥",
+      language: "Uses three writing systems: hiragana, katakana, and kanji"
+    }
+  },
+  {
+    id: "in",
+    name: "India",
+    aliases: ["Republic of India", "Bharat"],
+    continent: "Asia",
+    capital: "New Delhi",
+    capitalAliases: ["Delhi"],
+    currency: "Indian Rupee",
+    currencyAliases: ["Rupee", "INR"],
+    language: "Hindi",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "A subcontinent in South Asia",
+      country: "Home to the Taj Mahal and Bollywood",
+      capital: "Located in the National Capital Territory",
+      currency: "Symbol is ₹",
+      language: "One of 22 official languages, most widely spoken"
+    }
+  },
+  {
+    id: "br",
+    name: "Brazil",
+    aliases: ["Brasil"],
+    continent: "South America",
+    capital: "Brasilia",
+    capitalAliases: ["Brasília"],
+    currency: "Brazilian Real",
+    currencyAliases: ["Real", "BRL"],
+    language: "Portuguese",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "The largest continent in the Southern Hemisphere",
+      country: "Home to the Amazon Rainforest and Carnival",
+      capital: "A planned city built in the 1960s",
+      currency: "Symbol is R$",
+      language: "The only country in South America that speaks this language"
+    }
+  },
+  {
+    id: "au",
+    name: "Australia",
+    aliases: ["Commonwealth of Australia", "Oz"],
+    continent: "Oceania",
+    capital: "Canberra",
+    capitalAliases: [],
+    currency: "Australian Dollar",
+    currencyAliases: ["AUD", "Aussie Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "The only country that is also a continent",
+      country: "Home to kangaroos, koalas, and the Great Barrier Reef",
+      capital: "Not Sydney or Melbourne, but between them",
+      currency: "First country to use polymer banknotes",
+      language: "Spoken with a distinctive accent, mate"
+    }
+  },
+  {
+    id: "ca",
+    name: "Canada",
+    aliases: [],
+    continent: "North America",
+    capital: "Ottawa",
+    capitalAliases: [],
+    currency: "Canadian Dollar",
+    currencyAliases: ["CAD", "Loonie"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "North of the United States",
+      country: "Second largest country by area, known for maple syrup",
+      capital: "Located in Ontario, not Toronto",
+      currency: "Features a loon bird on the $1 coin",
+      language: "One of two official languages (the other is French)"
+    }
+  },
+  {
+    id: "mx",
+    name: "Mexico",
+    aliases: ["United Mexican States", "México"],
+    continent: "North America",
+    capital: "Mexico City",
+    capitalAliases: ["Ciudad de Mexico", "Ciudad de México", "CDMX"],
+    currency: "Mexican Peso",
+    currencyAliases: ["Peso", "MXN"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "easy",
+    hints: {
+      continent: "Between the US and Central America",
+      country: "Home to ancient Mayan and Aztec civilizations",
+      capital: "Built on the ruins of Tenochtitlan",
+      currency: "Symbol is $, but different from US currency",
+      language: "Most spoken language in the country"
+    }
+  },
+  {
+    id: "ru",
+    name: "Russia",
+    aliases: ["Russian Federation"],
+    continent: "Europe",
+    capital: "Moscow",
+    capitalAliases: ["Moskva"],
+    currency: "Russian Ruble",
+    currencyAliases: ["Ruble", "Rouble", "RUB"],
+    language: "Russian",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "Spans two continents but capital is in this one",
+      country: "The largest country in the world by area",
+      capital: "Home to the Kremlin and Red Square",
+      currency: "Symbol is ₽",
+      language: "Uses the Cyrillic alphabet"
+    }
+  },
+  {
+    id: "eg",
+    name: "Egypt",
+    aliases: ["Arab Republic of Egypt"],
+    continent: "Africa",
+    capital: "Cairo",
+    capitalAliases: [],
+    currency: "Egyptian Pound",
+    currencyAliases: ["EGP"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "In the northeastern corner of this continent",
+      country: "Home to the Pyramids of Giza and the Sphinx",
+      capital: "The largest city in the Arab world",
+      currency: "Shares its name with British currency",
+      language: "Spoken across North Africa and the Middle East"
+    }
+  },
+  {
+    id: "za",
+    name: "South Africa",
+    aliases: ["Republic of South Africa", "RSA"],
+    continent: "Africa",
+    capital: "Pretoria",
+    capitalAliases: [],
+    currency: "South African Rand",
+    currencyAliases: ["Rand", "ZAR"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "At the southern tip of this continent",
+      country: "Home to Nelson Mandela and Table Mountain",
+      capital: "The administrative capital (there are three)",
+      currency: "Named after the Witwatersrand gold mining region",
+      language: "One of 11 official languages"
+    }
+  },
+  {
+    id: "kr",
+    name: "South Korea",
+    aliases: ["Korea", "Republic of Korea", "ROK"],
+    continent: "Asia",
+    capital: "Seoul",
+    capitalAliases: [],
+    currency: "South Korean Won",
+    currencyAliases: ["Won", "KRW"],
+    language: "Korean",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "On a peninsula in East Asia",
+      country: "Home to Samsung, K-pop, and kimchi",
+      capital: "One of the largest metropolitan areas in the world",
+      currency: "Symbol is ₩",
+      language: "Uses the Hangul alphabet"
+    }
+  },
+  {
+    id: "ar",
+    name: "Argentina",
+    aliases: [],
+    continent: "South America",
+    capital: "Buenos Aires",
+    capitalAliases: [],
+    currency: "Argentine Peso",
+    currencyAliases: ["Peso", "ARS"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "easy",
+    hints: {
+      continent: "In the southern part of South America",
+      country: "Home to tango and Lionel Messi",
+      capital: "Known as the 'Paris of South America'",
+      currency: "Has experienced significant inflation",
+      language: "Spoken with a distinctive accent using 'vos'"
+    }
+  },
+  {
+    id: "ng",
+    name: "Nigeria",
+    aliases: ["Federal Republic of Nigeria"],
+    continent: "Africa",
+    capital: "Abuja",
+    capitalAliases: [],
+    currency: "Nigerian Naira",
+    currencyAliases: ["Naira", "NGN"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "In West Africa",
+      country: "Most populous country in Africa",
+      capital: "Not Lagos, but a planned city in the center",
+      currency: "Symbol is ₦",
+      language: "Official language, inherited from colonial era"
+    }
+  },
+  {
+    id: "sa",
+    name: "Saudi Arabia",
+    aliases: ["Kingdom of Saudi Arabia", "KSA"],
+    continent: "Asia",
+    capital: "Riyadh",
+    capitalAliases: [],
+    currency: "Saudi Riyal",
+    currencyAliases: ["Riyal", "SAR"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "easy",
+    hints: {
+      continent: "In the Middle East, on the Arabian Peninsula",
+      country: "Home to Mecca and Medina, holiest cities in Islam",
+      capital: "Located in the center of the country",
+      currency: "Pegged to the US dollar",
+      language: "The language of the Quran"
+    }
+  },
+
+  // ===== MEDIUM COUNTRIES =====
+  {
+    id: "se",
+    name: "Sweden",
+    aliases: ["Kingdom of Sweden", "Sverige"],
+    continent: "Europe",
+    capital: "Stockholm",
+    capitalAliases: [],
+    currency: "Swedish Krona",
+    currencyAliases: ["Krona", "SEK", "Swedish Crown"],
+    language: "Swedish",
+    languageAliases: ["Svenska"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Scandinavia, northern Europe",
+      country: "Home to IKEA, Volvo, and ABBA",
+      capital: "Built on 14 islands",
+      currency: "Means 'crown' in English",
+      language: "One of the Scandinavian languages"
+    }
+  },
+  {
+    id: "no",
+    name: "Norway",
+    aliases: ["Kingdom of Norway", "Norge"],
+    continent: "Europe",
+    capital: "Oslo",
+    capitalAliases: [],
+    currency: "Norwegian Krone",
+    currencyAliases: ["Krone", "NOK", "Norwegian Crown"],
+    language: "Norwegian",
+    languageAliases: ["Norsk"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Scandinavia, northern Europe",
+      country: "Known for fjords and the Northern Lights",
+      capital: "Located at the head of a fjord",
+      currency: "Means 'crown' in English",
+      language: "Has two written forms: Bokmal and Nynorsk"
+    }
+  },
+  {
+    id: "dk",
+    name: "Denmark",
+    aliases: ["Kingdom of Denmark", "Danmark"],
+    continent: "Europe",
+    capital: "Copenhagen",
+    capitalAliases: ["Kobenhavn", "København"],
+    currency: "Danish Krone",
+    currencyAliases: ["Krone", "DKK", "Danish Crown"],
+    language: "Danish",
+    languageAliases: ["Dansk"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Scandinavia, connecting to Germany",
+      country: "Home to LEGO and Hans Christian Andersen",
+      capital: "Has a famous Little Mermaid statue",
+      currency: "Means 'crown' in English",
+      language: "One of the Scandinavian languages"
+    }
+  },
+  {
+    id: "nl",
+    name: "Netherlands",
+    aliases: ["Holland", "The Netherlands"],
+    continent: "Europe",
+    capital: "Amsterdam",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Dutch",
+    languageAliases: ["Nederlands"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Western Europe, very flat",
+      country: "Known for tulips, windmills, and canals",
+      capital: "Built on a system of canals",
+      currency: "Shared by 20 European countries",
+      language: "Similar to German but distinct"
+    }
+  },
+  {
+    id: "be",
+    name: "Belgium",
+    aliases: ["Kingdom of Belgium"],
+    continent: "Europe",
+    capital: "Brussels",
+    capitalAliases: ["Bruxelles", "Brussel"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Dutch",
+    languageAliases: ["Flemish", "Nederlands"],
+    difficulty: "medium",
+    hints: {
+      continent: "Between France, Germany, and Netherlands",
+      country: "Famous for chocolate, waffles, and beer",
+      capital: "Home to the European Union headquarters",
+      currency: "Shared by 20 European countries",
+      language: "Three official languages, this is most spoken"
+    }
+  },
+  {
+    id: "ch",
+    name: "Switzerland",
+    aliases: ["Swiss Confederation", "Schweiz", "Suisse"],
+    continent: "Europe",
+    capital: "Bern",
+    capitalAliases: ["Berne"],
+    currency: "Swiss Franc",
+    currencyAliases: ["Franc", "CHF"],
+    language: "German",
+    languageAliases: ["Deutsch"],
+    difficulty: "medium",
+    hints: {
+      continent: "Landlocked in Central Europe",
+      country: "Famous for chocolate, cheese, and banks",
+      capital: "Not Zurich or Geneva",
+      currency: "One of the world's most stable currencies",
+      language: "Most spoken of four official languages"
+    }
+  },
+  {
+    id: "at",
+    name: "Austria",
+    aliases: ["Republic of Austria", "Osterreich", "Österreich"],
+    continent: "Europe",
+    capital: "Vienna",
+    capitalAliases: ["Wien"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "German",
+    languageAliases: ["Deutsch"],
+    difficulty: "medium",
+    hints: {
+      continent: "Landlocked in Central Europe",
+      country: "Home to Mozart, Freud, and the Alps",
+      capital: "Famous for classical music and coffee houses",
+      currency: "Shared by 20 European countries",
+      language: "Shares its language with its northern neighbor"
+    }
+  },
+  {
+    id: "pl",
+    name: "Poland",
+    aliases: ["Republic of Poland", "Polska"],
+    continent: "Europe",
+    capital: "Warsaw",
+    capitalAliases: ["Warszawa"],
+    currency: "Polish Zloty",
+    currencyAliases: ["Zloty", "PLN"],
+    language: "Polish",
+    languageAliases: ["Polski"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Central/Eastern Europe",
+      country: "Home to Chopin and Marie Curie",
+      capital: "Rebuilt after WWII destruction",
+      currency: "Means 'golden' in Polish",
+      language: "A Slavic language with many consonants"
+    }
+  },
+  {
+    id: "pt",
+    name: "Portugal",
+    aliases: ["Portuguese Republic"],
+    continent: "Europe",
+    capital: "Lisbon",
+    capitalAliases: ["Lisboa"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Portuguese",
+    languageAliases: ["Portugues", "Português"],
+    difficulty: "medium",
+    hints: {
+      continent: "On the Iberian Peninsula, west of Spain",
+      country: "Famous for port wine and pastéis de nata",
+      capital: "Built on seven hills overlooking the Tagus River",
+      currency: "Shared by 20 European countries",
+      language: "Also spoken in Brazil"
+    }
+  },
+  {
+    id: "gr",
+    name: "Greece",
+    aliases: ["Hellenic Republic", "Hellas"],
+    continent: "Europe",
+    capital: "Athens",
+    capitalAliases: ["Athina", "Αθήνα"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Greek",
+    languageAliases: ["Hellenic", "Ελληνικά"],
+    difficulty: "medium",
+    hints: {
+      continent: "Southeastern Europe, many islands",
+      country: "Birthplace of democracy and the Olympics",
+      capital: "Home to the Acropolis and Parthenon",
+      currency: "Shared by 20 European countries",
+      language: "One of the oldest written languages"
+    }
+  },
+  {
+    id: "tr",
+    name: "Turkey",
+    aliases: ["Republic of Turkey", "Turkiye", "Türkiye"],
+    continent: "Asia",
+    capital: "Ankara",
+    capitalAliases: [],
+    currency: "Turkish Lira",
+    currencyAliases: ["Lira", "TRY"],
+    language: "Turkish",
+    languageAliases: ["Turkce", "Türkçe"],
+    difficulty: "medium",
+    hints: {
+      continent: "Spans two continents, mostly in this one",
+      country: "Home to Istanbul, Hagia Sophia, and kebabs",
+      capital: "Not Istanbul, but in central Anatolia",
+      currency: "Has experienced significant inflation recently",
+      language: "Uses Latin alphabet since 1928"
+    }
+  },
+  {
+    id: "th",
+    name: "Thailand",
+    aliases: ["Kingdom of Thailand"],
+    continent: "Asia",
+    capital: "Bangkok",
+    capitalAliases: ["Krung Thep"],
+    currency: "Thai Baht",
+    currencyAliases: ["Baht", "THB"],
+    language: "Thai",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In Southeast Asia",
+      country: "Known as the Land of Smiles",
+      capital: "One of the most visited cities in the world",
+      currency: "Symbol is ฿",
+      language: "A tonal language with its own script"
+    }
+  },
+  {
+    id: "vn",
+    name: "Vietnam",
+    aliases: ["Socialist Republic of Vietnam", "Viet Nam"],
+    continent: "Asia",
+    capital: "Hanoi",
+    capitalAliases: ["Ha Noi"],
+    currency: "Vietnamese Dong",
+    currencyAliases: ["Dong", "VND"],
+    language: "Vietnamese",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In Southeast Asia, S-shaped country",
+      country: "Known for pho, ao dai, and Ha Long Bay",
+      capital: "In the north, not Ho Chi Minh City",
+      currency: "One of the lowest valued currencies",
+      language: "Uses Latin alphabet with diacritical marks"
+    }
+  },
+  {
+    id: "id",
+    name: "Indonesia",
+    aliases: ["Republic of Indonesia"],
+    continent: "Asia",
+    capital: "Jakarta",
+    capitalAliases: [],
+    currency: "Indonesian Rupiah",
+    currencyAliases: ["Rupiah", "IDR"],
+    language: "Indonesian",
+    languageAliases: ["Bahasa Indonesia"],
+    difficulty: "medium",
+    hints: {
+      continent: "Archipelago in Southeast Asia",
+      country: "Largest archipelago nation with 17,000+ islands",
+      capital: "On the island of Java",
+      currency: "Similar name to India's currency",
+      language: "Based on Malay, uses Latin alphabet"
+    }
+  },
+  {
+    id: "my",
+    name: "Malaysia",
+    aliases: [],
+    continent: "Asia",
+    capital: "Kuala Lumpur",
+    capitalAliases: ["KL"],
+    currency: "Malaysian Ringgit",
+    currencyAliases: ["Ringgit", "MYR"],
+    language: "Malay",
+    languageAliases: ["Bahasa Melayu"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Southeast Asia, on a peninsula and island",
+      country: "Home to the Petronas Towers",
+      capital: "Name means 'muddy confluence'",
+      currency: "Means 'jagged' referring to coin edges",
+      language: "Also called Bahasa Malaysia"
+    }
+  },
+  {
+    id: "ph",
+    name: "Philippines",
+    aliases: ["Republic of the Philippines"],
+    continent: "Asia",
+    capital: "Manila",
+    capitalAliases: [],
+    currency: "Philippine Peso",
+    currencyAliases: ["Peso", "PHP"],
+    language: "Filipino",
+    languageAliases: ["Tagalog"],
+    difficulty: "medium",
+    hints: {
+      continent: "Island nation in Southeast Asia",
+      country: "Named after a Spanish king",
+      capital: "Located on the island of Luzon",
+      currency: "Derived from Spanish currency",
+      language: "Based on Tagalog"
+    }
+  },
+  {
+    id: "pk",
+    name: "Pakistan",
+    aliases: ["Islamic Republic of Pakistan"],
+    continent: "Asia",
+    capital: "Islamabad",
+    capitalAliases: [],
+    currency: "Pakistani Rupee",
+    currencyAliases: ["Rupee", "PKR"],
+    language: "Urdu",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In South Asia, west of India",
+      country: "Name means 'Land of the Pure'",
+      capital: "A planned city built in the 1960s",
+      currency: "Similar to Indian currency",
+      language: "National language, similar to Hindi"
+    }
+  },
+  {
+    id: "ir",
+    name: "Iran",
+    aliases: ["Islamic Republic of Iran", "Persia"],
+    continent: "Asia",
+    capital: "Tehran",
+    capitalAliases: ["Teheran"],
+    currency: "Iranian Rial",
+    currencyAliases: ["Rial", "IRR"],
+    language: "Persian",
+    languageAliases: ["Farsi"],
+    difficulty: "medium",
+    hints: {
+      continent: "In the Middle East",
+      country: "Ancient Persia, home to some of the oldest civilizations",
+      capital: "Largest city in Western Asia",
+      currency: "One of the lowest valued currencies",
+      language: "Also known as Farsi"
+    }
+  },
+  {
+    id: "iq",
+    name: "Iraq",
+    aliases: ["Republic of Iraq"],
+    continent: "Asia",
+    capital: "Baghdad",
+    capitalAliases: [],
+    currency: "Iraqi Dinar",
+    currencyAliases: ["Dinar", "IQD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In the Middle East",
+      country: "Home to ancient Mesopotamia between two rivers",
+      capital: "Once the largest city in the world",
+      currency: "Common currency name in Arab countries",
+      language: "Official language of many Middle Eastern countries"
+    }
+  },
+  {
+    id: "il",
+    name: "Israel",
+    aliases: ["State of Israel"],
+    continent: "Asia",
+    capital: "Jerusalem",
+    capitalAliases: [],
+    currency: "Israeli Shekel",
+    currencyAliases: ["Shekel", "New Shekel", "ILS"],
+    language: "Hebrew",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In the Middle East, on the Mediterranean",
+      country: "Holy Land for three major religions",
+      capital: "Sacred city for Jews, Christians, and Muslims",
+      currency: "Ancient currency name revived in modern times",
+      language: "Revived as a spoken language in the 20th century"
+    }
+  },
+  {
+    id: "ae",
+    name: "United Arab Emirates",
+    aliases: ["UAE", "U.A.E.", "Emirates"],
+    continent: "Asia",
+    capital: "Abu Dhabi",
+    capitalAliases: [],
+    currency: "UAE Dirham",
+    currencyAliases: ["Dirham", "AED"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "On the Arabian Peninsula",
+      country: "Home to Dubai and the world's tallest building",
+      capital: "Not Dubai, but the largest emirate",
+      currency: "Used across several emirates",
+      language: "Official language of the country"
+    }
+  },
+  {
+    id: "nz",
+    name: "New Zealand",
+    aliases: ["Aotearoa"],
+    continent: "Oceania",
+    capital: "Wellington",
+    capitalAliases: [],
+    currency: "New Zealand Dollar",
+    currencyAliases: ["NZD", "Kiwi Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In the South Pacific Ocean",
+      country: "Land of the Kiwis and the All Blacks",
+      capital: "The southernmost capital in the world",
+      currency: "Features a kiwi bird",
+      language: "One of three official languages with Maori and NZSL"
+    }
+  },
+  {
+    id: "sg",
+    name: "Singapore",
+    aliases: ["Republic of Singapore"],
+    continent: "Asia",
+    capital: "Singapore",
+    capitalAliases: [],
+    currency: "Singapore Dollar",
+    currencyAliases: ["SGD"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "A city-state in Southeast Asia",
+      country: "Name means 'Lion City'",
+      capital: "The country IS the capital (city-state)",
+      currency: "One of the strongest currencies in Asia",
+      language: "One of four official languages"
+    }
+  },
+  {
+    id: "ke",
+    name: "Kenya",
+    aliases: ["Republic of Kenya"],
+    continent: "Africa",
+    capital: "Nairobi",
+    capitalAliases: [],
+    currency: "Kenyan Shilling",
+    currencyAliases: ["Shilling", "KES"],
+    language: "Swahili",
+    languageAliases: ["Kiswahili"],
+    difficulty: "medium",
+    hints: {
+      continent: "In East Africa, on the equator",
+      country: "Famous for safaris and marathon runners",
+      capital: "One of the largest cities in Africa",
+      currency: "Same name as Tanzanian and Ugandan currencies",
+      language: "Widely spoken across East Africa"
+    }
+  },
+  {
+    id: "ma",
+    name: "Morocco",
+    aliases: ["Kingdom of Morocco"],
+    continent: "Africa",
+    capital: "Rabat",
+    capitalAliases: [],
+    currency: "Moroccan Dirham",
+    currencyAliases: ["Dirham", "MAD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In North Africa, near Spain",
+      country: "Known for Marrakech, tagine, and the Sahara",
+      capital: "Not Casablanca or Marrakech",
+      currency: "Same name as UAE currency",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "gh",
+    name: "Ghana",
+    aliases: ["Republic of Ghana"],
+    continent: "Africa",
+    capital: "Accra",
+    capitalAliases: [],
+    currency: "Ghanaian Cedi",
+    currencyAliases: ["Cedi", "GHS"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In West Africa, on the Gulf of Guinea",
+      country: "First sub-Saharan African country to gain independence",
+      capital: "On the Atlantic coast",
+      currency: "Name means 'cowrie shell' in local language",
+      language: "Official language from colonial era"
+    }
+  },
+  {
+    id: "tz",
+    name: "Tanzania",
+    aliases: ["United Republic of Tanzania"],
+    continent: "Africa",
+    capital: "Dodoma",
+    capitalAliases: [],
+    currency: "Tanzanian Shilling",
+    currencyAliases: ["Shilling", "TZS"],
+    language: "Swahili",
+    languageAliases: ["Kiswahili"],
+    difficulty: "medium",
+    hints: {
+      continent: "In East Africa",
+      country: "Home to Mount Kilimanjaro and the Serengeti",
+      capital: "Not Dar es Salaam (the largest city)",
+      currency: "Same name as Kenyan currency",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "et",
+    name: "Ethiopia",
+    aliases: ["Federal Democratic Republic of Ethiopia"],
+    continent: "Africa",
+    capital: "Addis Ababa",
+    capitalAliases: [],
+    currency: "Ethiopian Birr",
+    currencyAliases: ["Birr", "ETB"],
+    language: "Amharic",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In East Africa, the Horn of Africa",
+      country: "Never colonized, birthplace of coffee",
+      capital: "Name means 'New Flower'",
+      currency: "Name means 'silver' in the local language",
+      language: "Uses its own unique Ge'ez script"
+    }
+  },
+  {
+    id: "co",
+    name: "Colombia",
+    aliases: ["Republic of Colombia"],
+    continent: "South America",
+    capital: "Bogota",
+    capitalAliases: ["Bogotá"],
+    currency: "Colombian Peso",
+    currencyAliases: ["Peso", "COP"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "medium",
+    hints: {
+      continent: "In northwestern South America",
+      country: "Named after Christopher Columbus",
+      capital: "One of the highest capitals in the world",
+      currency: "Common currency name in Latin America",
+      language: "Second most native speakers in South America"
+    }
+  },
+  {
+    id: "pe",
+    name: "Peru",
+    aliases: ["Republic of Peru"],
+    continent: "South America",
+    capital: "Lima",
+    capitalAliases: [],
+    currency: "Peruvian Sol",
+    currencyAliases: ["Sol", "PEN", "Nuevo Sol"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "medium",
+    hints: {
+      continent: "In western South America",
+      country: "Home to Machu Picchu and the Inca Empire",
+      capital: "Largest city on the Pacific coast of South America",
+      currency: "Means 'sun' in Spanish",
+      language: "One of several official languages"
+    }
+  },
+  {
+    id: "cl",
+    name: "Chile",
+    aliases: ["Republic of Chile"],
+    continent: "South America",
+    capital: "Santiago",
+    capitalAliases: [],
+    currency: "Chilean Peso",
+    currencyAliases: ["Peso", "CLP"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "medium",
+    hints: {
+      continent: "Long, narrow country on the Pacific coast",
+      country: "The world's longest country north to south",
+      capital: "In a valley surrounded by the Andes",
+      currency: "Common currency name in Latin America",
+      language: "Official language of the country"
+    }
+  },
+  {
+    id: "ve",
+    name: "Venezuela",
+    aliases: ["Bolivarian Republic of Venezuela"],
+    continent: "South America",
+    capital: "Caracas",
+    capitalAliases: [],
+    currency: "Venezuelan Bolivar",
+    currencyAliases: ["Bolivar", "VES"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "medium",
+    hints: {
+      continent: "In northern South America",
+      country: "Has the world's largest proven oil reserves",
+      capital: "In a valley near the Caribbean coast",
+      currency: "Named after Simon Bolivar",
+      language: "Official language of the country"
+    }
+  },
+  {
+    id: "cu",
+    name: "Cuba",
+    aliases: ["Republic of Cuba"],
+    continent: "North America",
+    capital: "Havana",
+    capitalAliases: ["La Habana"],
+    currency: "Cuban Peso",
+    currencyAliases: ["Peso", "CUP"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "medium",
+    hints: {
+      continent: "Caribbean island nation",
+      country: "Largest island in the Caribbean",
+      capital: "Known for classic cars and colonial architecture",
+      currency: "Common currency name in Latin America",
+      language: "Official language of the country"
+    }
+  },
+  {
+    id: "ie",
+    name: "Ireland",
+    aliases: ["Republic of Ireland", "Eire", "Éire"],
+    continent: "Europe",
+    capital: "Dublin",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "An island nation in Western Europe",
+      country: "The Emerald Isle, famous for St. Patrick's Day",
+      capital: "Home to the Guinness brewery",
+      currency: "Shared by 20 European countries",
+      language: "One of two official languages (the other is Irish)"
+    }
+  },
+  {
+    id: "fi",
+    name: "Finland",
+    aliases: ["Republic of Finland", "Suomi"],
+    continent: "Europe",
+    capital: "Helsinki",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Finnish",
+    languageAliases: ["Suomi"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Northern Europe, thousands of lakes",
+      country: "Home to Nokia, saunas, and Santa Claus Village",
+      capital: "Nicknamed 'Daughter of the Baltic'",
+      currency: "Shared by 20 European countries",
+      language: "Unusual language unrelated to neighbors"
+    }
+  },
+  {
+    id: "cz",
+    name: "Czech Republic",
+    aliases: ["Czechia", "Cesko", "Česko"],
+    continent: "Europe",
+    capital: "Prague",
+    capitalAliases: ["Praha"],
+    currency: "Czech Koruna",
+    currencyAliases: ["Koruna", "Crown", "CZK"],
+    language: "Czech",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In Central Europe, landlocked",
+      country: "Famous for beer, castles, and Kafka",
+      capital: "City of a Hundred Spires",
+      currency: "Means 'crown' in Czech",
+      language: "A West Slavic language"
+    }
+  },
+  {
+    id: "hu",
+    name: "Hungary",
+    aliases: ["Magyarorszag", "Magyarország"],
+    continent: "Europe",
+    capital: "Budapest",
+    capitalAliases: [],
+    currency: "Hungarian Forint",
+    currencyAliases: ["Forint", "HUF"],
+    language: "Hungarian",
+    languageAliases: ["Magyar"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Central Europe, landlocked",
+      country: "Known for thermal baths and goulash",
+      capital: "Two cities (Buda and Pest) united by bridges",
+      currency: "Named after Florence, Italy",
+      language: "Unrelated to surrounding languages"
+    }
+  },
+  {
+    id: "ro",
+    name: "Romania",
+    aliases: [],
+    continent: "Europe",
+    capital: "Bucharest",
+    capitalAliases: ["Bucuresti", "București"],
+    currency: "Romanian Leu",
+    currencyAliases: ["Leu", "RON"],
+    language: "Romanian",
+    languageAliases: ["Romana", "Română"],
+    difficulty: "medium",
+    hints: {
+      continent: "In Southeastern Europe",
+      country: "Home to Transylvania and Dracula's castle",
+      capital: "Known as 'Little Paris'",
+      currency: "Means 'lion' in Romanian",
+      language: "A Romance language descended from Latin"
+    }
+  },
+  {
+    id: "ua",
+    name: "Ukraine",
+    aliases: [],
+    continent: "Europe",
+    capital: "Kyiv",
+    capitalAliases: ["Kiev"],
+    currency: "Ukrainian Hryvnia",
+    currencyAliases: ["Hryvnia", "UAH"],
+    language: "Ukrainian",
+    languageAliases: [],
+    difficulty: "medium",
+    hints: {
+      continent: "In Eastern Europe, second largest country here",
+      country: "Known for sunflowers and the Chernobyl site",
+      capital: "City on the Dnieper River",
+      currency: "Historic currency name meaning 'mane'",
+      language: "An East Slavic language"
+    }
+  },
+
+  // ===== HARD COUNTRIES =====
+  {
+    id: "is",
+    name: "Iceland",
+    aliases: ["Republic of Iceland", "Island", "Ísland"],
+    continent: "Europe",
+    capital: "Reykjavik",
+    capitalAliases: ["Reykjavík"],
+    currency: "Icelandic Krona",
+    currencyAliases: ["Krona", "ISK", "Icelandic Crown"],
+    language: "Icelandic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in the North Atlantic",
+      country: "Land of fire and ice, geysers and glaciers",
+      capital: "Northernmost capital of a sovereign state",
+      currency: "Means 'crown'",
+      language: "Closest living language to Old Norse"
+    }
+  },
+  {
+    id: "lu",
+    name: "Luxembourg",
+    aliases: ["Grand Duchy of Luxembourg", "Letzebuerg", "Lëtzebuerg"],
+    continent: "Europe",
+    capital: "Luxembourg City",
+    capitalAliases: ["Luxembourg"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Luxembourgish",
+    languageAliases: ["Letzebuergesh", "Lëtzebuergesch"],
+    difficulty: "hard",
+    hints: {
+      continent: "Tiny landlocked country in Western Europe",
+      country: "One of the smallest but wealthiest countries",
+      capital: "City and country share the same name",
+      currency: "Shared by 20 European countries",
+      language: "A Germanic language, one of three official"
+    }
+  },
+  {
+    id: "mt",
+    name: "Malta",
+    aliases: ["Republic of Malta"],
+    continent: "Europe",
+    capital: "Valletta",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Maltese",
+    languageAliases: ["Malti"],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in the Mediterranean Sea",
+      country: "Strategic island with Knights Templar history",
+      capital: "Smallest EU capital by area",
+      currency: "Shared by 20 European countries",
+      language: "Only Semitic language with Latin script"
+    }
+  },
+  {
+    id: "cy",
+    name: "Cyprus",
+    aliases: ["Republic of Cyprus"],
+    continent: "Europe",
+    capital: "Nicosia",
+    capitalAliases: ["Lefkosia"],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Greek",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island in the eastern Mediterranean",
+      country: "Third largest island in the Mediterranean",
+      capital: "Last divided capital in the world",
+      currency: "Shared by 20 European countries",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "ee",
+    name: "Estonia",
+    aliases: ["Republic of Estonia", "Eesti"],
+    continent: "Europe",
+    capital: "Tallinn",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Estonian",
+    languageAliases: ["Eesti"],
+    difficulty: "hard",
+    hints: {
+      continent: "Baltic state in Northern Europe",
+      country: "Most digitally advanced society, e-residency pioneer",
+      capital: "Medieval old town, UNESCO World Heritage Site",
+      currency: "Shared by 20 European countries",
+      language: "Related to Finnish, not Slavic"
+    }
+  },
+  {
+    id: "lv",
+    name: "Latvia",
+    aliases: ["Republic of Latvia", "Latvija"],
+    continent: "Europe",
+    capital: "Riga",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Latvian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Baltic state in Northern Europe",
+      country: "Known for Art Nouveau architecture",
+      capital: "Largest city in the Baltic states",
+      currency: "Shared by 20 European countries",
+      language: "One of only two surviving Baltic languages"
+    }
+  },
+  {
+    id: "lt",
+    name: "Lithuania",
+    aliases: ["Republic of Lithuania", "Lietuva"],
+    continent: "Europe",
+    capital: "Vilnius",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Lithuanian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Baltic state, southernmost of the three",
+      country: "Center of Europe (geographically)",
+      capital: "Baroque old town, UNESCO World Heritage Site",
+      currency: "Shared by 20 European countries",
+      language: "One of oldest surviving Indo-European languages"
+    }
+  },
+  {
+    id: "sk",
+    name: "Slovakia",
+    aliases: ["Slovak Republic", "Slovensko"],
+    continent: "Europe",
+    capital: "Bratislava",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Slovak",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Central Europe",
+      country: "Separated from Czechia in 1993",
+      capital: "Only capital bordering two countries",
+      currency: "Shared by 20 European countries",
+      language: "Very similar to Czech"
+    }
+  },
+  {
+    id: "si",
+    name: "Slovenia",
+    aliases: ["Republic of Slovenia", "Slovenija"],
+    continent: "Europe",
+    capital: "Ljubljana",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Slovenian",
+    languageAliases: ["Slovene"],
+    difficulty: "hard",
+    hints: {
+      continent: "Small country in Central Europe",
+      country: "Only country with 'love' in its name",
+      capital: "Name means 'beloved' in Slovenian",
+      currency: "Shared by 20 European countries",
+      language: "South Slavic language"
+    }
+  },
+  {
+    id: "hr",
+    name: "Croatia",
+    aliases: ["Republic of Croatia", "Hrvatska"],
+    continent: "Europe",
+    capital: "Zagreb",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Croatian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Southeastern Europe, on the Adriatic",
+      country: "Famous for Dubrovnik (Game of Thrones filming)",
+      capital: "Largest city, in the north",
+      currency: "Joined Eurozone in 2023",
+      language: "Very similar to Serbian and Bosnian"
+    }
+  },
+  {
+    id: "rs",
+    name: "Serbia",
+    aliases: ["Republic of Serbia", "Srbija"],
+    continent: "Europe",
+    capital: "Belgrade",
+    capitalAliases: ["Beograd"],
+    currency: "Serbian Dinar",
+    currencyAliases: ["Dinar", "RSD"],
+    language: "Serbian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Southeast Europe",
+      country: "Former heart of Yugoslavia",
+      capital: "Name means 'White City'",
+      currency: "Common currency name in Balkans",
+      language: "Can be written in Latin or Cyrillic"
+    }
+  },
+  {
+    id: "ba",
+    name: "Bosnia and Herzegovina",
+    aliases: ["Bosnia", "BiH"],
+    continent: "Europe",
+    capital: "Sarajevo",
+    capitalAliases: [],
+    currency: "Convertible Mark",
+    currencyAliases: ["Mark", "BAM", "Konvertibilna Marka"],
+    language: "Bosnian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In the Balkans, Southeast Europe",
+      country: "Where WWI was sparked in 1914",
+      capital: "Site of the 1984 Winter Olympics",
+      currency: "Pegged to the Euro",
+      language: "One of three official languages"
+    }
+  },
+  {
+    id: "al",
+    name: "Albania",
+    aliases: ["Republic of Albania", "Shqiperia", "Shqipëria"],
+    continent: "Europe",
+    capital: "Tirana",
+    capitalAliases: ["Tirane", "Tiranë"],
+    currency: "Albanian Lek",
+    currencyAliases: ["Lek", "ALL"],
+    language: "Albanian",
+    languageAliases: ["Shqip"],
+    difficulty: "hard",
+    hints: {
+      continent: "In Southeast Europe, on the Adriatic",
+      country: "Land of Eagles, unique language",
+      capital: "Colorful buildings, post-communist",
+      currency: "Named after Alexander the Great",
+      language: "An Indo-European language isolate"
+    }
+  },
+  {
+    id: "mk",
+    name: "North Macedonia",
+    aliases: ["Republic of North Macedonia", "Macedonia", "Makedonija"],
+    continent: "Europe",
+    capital: "Skopje",
+    capitalAliases: [],
+    currency: "Macedonian Denar",
+    currencyAliases: ["Denar", "MKD"],
+    language: "Macedonian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Southeast Europe",
+      country: "Changed name in 2019 due to dispute with Greece",
+      capital: "City with many statues and monuments",
+      currency: "Ancient Roman coin name",
+      language: "South Slavic language"
+    }
+  },
+  {
+    id: "me",
+    name: "Montenegro",
+    aliases: ["Crna Gora"],
+    continent: "Europe",
+    capital: "Podgorica",
+    capitalAliases: [],
+    currency: "Euro",
+    currencyAliases: ["EUR"],
+    language: "Montenegrin",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Small country on the Adriatic coast",
+      country: "Name means 'Black Mountain'",
+      capital: "Not Cetinje (the old royal capital)",
+      currency: "Uses this despite not being in EU",
+      language: "Very similar to Serbian"
+    }
+  },
+  {
+    id: "md",
+    name: "Moldova",
+    aliases: ["Republic of Moldova"],
+    continent: "Europe",
+    capital: "Chisinau",
+    capitalAliases: ["Kishinev", "Chișinău"],
+    currency: "Moldovan Leu",
+    currencyAliases: ["Leu", "MDL"],
+    language: "Romanian",
+    languageAliases: ["Moldovan"],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Eastern Europe",
+      country: "Between Romania and Ukraine",
+      capital: "Largest city, Soviet-era architecture",
+      currency: "Means 'lion', same as Romanian currency",
+      language: "Essentially identical to its western neighbor's language"
+    }
+  },
+  {
+    id: "by",
+    name: "Belarus",
+    aliases: ["Republic of Belarus"],
+    continent: "Europe",
+    capital: "Minsk",
+    capitalAliases: [],
+    currency: "Belarusian Ruble",
+    currencyAliases: ["Ruble", "BYN"],
+    language: "Belarusian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Eastern Europe",
+      country: "Name means 'White Russia'",
+      capital: "Almost entirely rebuilt after WWII",
+      currency: "Same name as Russian currency",
+      language: "An East Slavic language"
+    }
+  },
+  {
+    id: "ge",
+    name: "Georgia",
+    aliases: ["Sakartvelo"],
+    continent: "Asia",
+    capital: "Tbilisi",
+    capitalAliases: [],
+    currency: "Georgian Lari",
+    currencyAliases: ["Lari", "GEL"],
+    language: "Georgian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "At the crossroads of Europe and Asia",
+      country: "Birthplace of wine (8000+ year history)",
+      capital: "Name means 'warm' in old Georgian",
+      currency: "Means 'property' or 'hoard'",
+      language: "Uses its own unique script"
+    }
+  },
+  {
+    id: "am",
+    name: "Armenia",
+    aliases: ["Republic of Armenia", "Hayastan"],
+    continent: "Asia",
+    capital: "Yerevan",
+    capitalAliases: [],
+    currency: "Armenian Dram",
+    currencyAliases: ["Dram", "AMD"],
+    language: "Armenian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In the South Caucasus region",
+      country: "First country to adopt Christianity as state religion",
+      capital: "Known as the 'Pink City' due to stone color",
+      currency: "Ancient Greek word for 'money'",
+      language: "Indo-European language with unique alphabet"
+    }
+  },
+  {
+    id: "az",
+    name: "Azerbaijan",
+    aliases: ["Republic of Azerbaijan", "Azerbaycan"],
+    continent: "Asia",
+    capital: "Baku",
+    capitalAliases: [],
+    currency: "Azerbaijani Manat",
+    currencyAliases: ["Manat", "AZN"],
+    language: "Azerbaijani",
+    languageAliases: ["Azeri"],
+    difficulty: "hard",
+    hints: {
+      continent: "On the Caspian Sea",
+      country: "Land of Fire, oil-rich nation",
+      capital: "Hosted Formula 1 races, Flame Towers landmark",
+      currency: "Means 'money' in Russian",
+      language: "A Turkic language"
+    }
+  },
+  {
+    id: "kz",
+    name: "Kazakhstan",
+    aliases: ["Republic of Kazakhstan", "Qazaqstan"],
+    continent: "Asia",
+    capital: "Astana",
+    capitalAliases: ["Nur-Sultan"],
+    currency: "Kazakhstani Tenge",
+    currencyAliases: ["Tenge", "KZT"],
+    language: "Kazakh",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Largest landlocked country in the world",
+      country: "Spans from Caspian Sea to China",
+      capital: "Futuristic planned city, renamed multiple times",
+      currency: "Ancient Turkic word for 'balance'",
+      language: "A Turkic language"
+    }
+  },
+  {
+    id: "uz",
+    name: "Uzbekistan",
+    aliases: ["Republic of Uzbekistan", "Ozbekiston", "O'zbekiston"],
+    continent: "Asia",
+    capital: "Tashkent",
+    capitalAliases: [],
+    currency: "Uzbek Som",
+    currencyAliases: ["Som", "UZS"],
+    language: "Uzbek",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Doubly landlocked in Central Asia",
+      country: "Silk Road cities like Samarkand and Bukhara",
+      capital: "Largest city in Central Asia",
+      currency: "Means 'pure' in Uzbek",
+      language: "A Turkic language"
+    }
+  },
+  {
+    id: "tm",
+    name: "Turkmenistan",
+    aliases: ["Turkmenistan"],
+    continent: "Asia",
+    capital: "Ashgabat",
+    capitalAliases: [],
+    currency: "Turkmenistani Manat",
+    currencyAliases: ["Manat", "TMT"],
+    language: "Turkmen",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Central Asia, Caspian Sea coast",
+      country: "Has the 'Door to Hell' gas crater",
+      capital: "City of white marble buildings",
+      currency: "Same name as Azerbaijani currency",
+      language: "A Turkic language"
+    }
+  },
+  {
+    id: "kg",
+    name: "Kyrgyzstan",
+    aliases: ["Kyrgyz Republic", "Kirgizija"],
+    continent: "Asia",
+    capital: "Bishkek",
+    capitalAliases: [],
+    currency: "Kyrgyzstani Som",
+    currencyAliases: ["Som", "KGS"],
+    language: "Kyrgyz",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Mountainous country in Central Asia",
+      country: "Known for yurts and nomadic culture",
+      capital: "Formerly called Frunze in Soviet times",
+      currency: "Same name as Uzbek currency",
+      language: "A Turkic language"
+    }
+  },
+  {
+    id: "tj",
+    name: "Tajikistan",
+    aliases: ["Republic of Tajikistan", "Tojikiston"],
+    continent: "Asia",
+    capital: "Dushanbe",
+    capitalAliases: [],
+    currency: "Tajikistani Somoni",
+    currencyAliases: ["Somoni", "TJS"],
+    language: "Tajik",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Mountainous country in Central Asia",
+      country: "Mostly covered by the Pamir Mountains",
+      capital: "Name means 'Monday' in Tajik",
+      currency: "Named after a historical leader",
+      language: "A Persian language, not Turkic"
+    }
+  },
+  {
+    id: "mn",
+    name: "Mongolia",
+    aliases: ["Mongol Uls"],
+    continent: "Asia",
+    capital: "Ulaanbaatar",
+    capitalAliases: ["Ulan Bator"],
+    currency: "Mongolian Tugrik",
+    currencyAliases: ["Tugrik", "MNT", "Togrog"],
+    language: "Mongolian",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Between Russia and China",
+      country: "Land of Genghis Khan and nomads",
+      capital: "Name means 'Red Hero'",
+      currency: "Means 'circle' in Mongolian",
+      language: "Related to Turkic languages"
+    }
+  },
+  {
+    id: "np",
+    name: "Nepal",
+    aliases: ["Federal Democratic Republic of Nepal"],
+    continent: "Asia",
+    capital: "Kathmandu",
+    capitalAliases: [],
+    currency: "Nepalese Rupee",
+    currencyAliases: ["Rupee", "NPR"],
+    language: "Nepali",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Between India and China/Tibet",
+      country: "Home to Mount Everest",
+      capital: "In a valley surrounded by mountains",
+      currency: "Similar to Indian currency",
+      language: "Related to Hindi"
+    }
+  },
+  {
+    id: "bt",
+    name: "Bhutan",
+    aliases: ["Kingdom of Bhutan", "Druk Yul"],
+    continent: "Asia",
+    capital: "Thimphu",
+    capitalAliases: [],
+    currency: "Bhutanese Ngultrum",
+    currencyAliases: ["Ngultrum", "BTN"],
+    language: "Dzongkha",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Himalayan kingdom in South Asia",
+      country: "Measures Gross National Happiness",
+      capital: "One of few capitals without traffic lights",
+      currency: "Pegged to Indian Rupee",
+      language: "National language, Tibetan origin"
+    }
+  },
+  {
+    id: "bd",
+    name: "Bangladesh",
+    aliases: ["People's Republic of Bangladesh"],
+    continent: "Asia",
+    capital: "Dhaka",
+    capitalAliases: ["Dacca"],
+    currency: "Bangladeshi Taka",
+    currencyAliases: ["Taka", "BDT"],
+    language: "Bengali",
+    languageAliases: ["Bangla"],
+    difficulty: "hard",
+    hints: {
+      continent: "In South Asia, surrounded by India",
+      country: "Delta nation with massive population",
+      capital: "One of the most densely populated cities",
+      currency: "Means 'money' in Bengali",
+      language: "One of the most spoken languages in the world"
+    }
+  },
+  {
+    id: "lk",
+    name: "Sri Lanka",
+    aliases: ["Democratic Socialist Republic of Sri Lanka", "Ceylon"],
+    continent: "Asia",
+    capital: "Sri Jayawardenepura Kotte",
+    capitalAliases: ["Kotte", "Colombo"],
+    currency: "Sri Lankan Rupee",
+    currencyAliases: ["Rupee", "LKR"],
+    language: "Sinhala",
+    languageAliases: ["Sinhalese"],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation south of India",
+      country: "Formerly called Ceylon, known for tea",
+      capital: "Commercial capital is Colombo",
+      currency: "Similar to Indian currency",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "mm",
+    name: "Myanmar",
+    aliases: ["Republic of the Union of Myanmar", "Burma"],
+    continent: "Asia",
+    capital: "Naypyidaw",
+    capitalAliases: ["Nay Pyi Taw"],
+    currency: "Myanmar Kyat",
+    currencyAliases: ["Kyat", "MMK"],
+    language: "Burmese",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Southeast Asia, west of Thailand",
+      country: "Formerly known as Burma",
+      capital: "Purpose-built city, replaced Yangon in 2006",
+      currency: "Name derives from Sanskrit for 'royal'",
+      language: "Sino-Tibetan language"
+    }
+  },
+  {
+    id: "kh",
+    name: "Cambodia",
+    aliases: ["Kingdom of Cambodia", "Kampuchea"],
+    continent: "Asia",
+    capital: "Phnom Penh",
+    capitalAliases: [],
+    currency: "Cambodian Riel",
+    currencyAliases: ["Riel", "KHR"],
+    language: "Khmer",
+    languageAliases: ["Cambodian"],
+    difficulty: "hard",
+    hints: {
+      continent: "In Southeast Asia",
+      country: "Home to Angkor Wat temple complex",
+      capital: "Name means 'Penh's Hill'",
+      currency: "US Dollar also widely used",
+      language: "Has the largest alphabet in the world"
+    }
+  },
+  {
+    id: "la",
+    name: "Laos",
+    aliases: ["Lao People's Democratic Republic", "Lao PDR"],
+    continent: "Asia",
+    capital: "Vientiane",
+    capitalAliases: [],
+    currency: "Lao Kip",
+    currencyAliases: ["Kip", "LAK"],
+    language: "Lao",
+    languageAliases: ["Laotian"],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Southeast Asia",
+      country: "Most bombed country in history (Vietnam War)",
+      capital: "On the Mekong River",
+      currency: "One of the lower-valued currencies",
+      language: "Related to Thai"
+    }
+  },
+  {
+    id: "bn",
+    name: "Brunei",
+    aliases: ["Nation of Brunei", "Brunei Darussalam"],
+    continent: "Asia",
+    capital: "Bandar Seri Begawan",
+    capitalAliases: [],
+    currency: "Brunei Dollar",
+    currencyAliases: ["BND"],
+    language: "Malay",
+    languageAliases: ["Bahasa Melayu"],
+    difficulty: "hard",
+    hints: {
+      continent: "On the island of Borneo",
+      country: "Tiny, oil-rich sultanate",
+      capital: "Named after a former sultan",
+      currency: "Interchangeable with Singapore Dollar",
+      language: "Same as Malaysia's official language"
+    }
+  },
+  {
+    id: "tl",
+    name: "Timor-Leste",
+    aliases: ["East Timor", "Democratic Republic of Timor-Leste"],
+    continent: "Asia",
+    capital: "Dili",
+    capitalAliases: [],
+    currency: "United States Dollar",
+    currencyAliases: ["Dollar", "USD"],
+    language: "Portuguese",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in Southeast Asia",
+      country: "One of the youngest nations, independent 2002",
+      capital: "On the north coast of the island",
+      currency: "Uses American currency",
+      language: "Former colonial language, one of two official"
+    }
+  },
+  {
+    id: "mv",
+    name: "Maldives",
+    aliases: ["Republic of Maldives"],
+    continent: "Asia",
+    capital: "Male",
+    capitalAliases: ["Malé"],
+    currency: "Maldivian Rufiyaa",
+    currencyAliases: ["Rufiyaa", "MVR"],
+    language: "Dhivehi",
+    languageAliases: ["Maldivian"],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in the Indian Ocean",
+      country: "Lowest-lying country, threatened by sea rise",
+      capital: "One of the most densely populated cities",
+      currency: "Derived from Sanskrit 'rupya'",
+      language: "Related to Sinhala"
+    }
+  },
+  {
+    id: "af",
+    name: "Afghanistan",
+    aliases: ["Islamic Emirate of Afghanistan"],
+    continent: "Asia",
+    capital: "Kabul",
+    capitalAliases: [],
+    currency: "Afghan Afghani",
+    currencyAliases: ["Afghani", "AFN"],
+    language: "Pashto",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Central/South Asia",
+      country: "Graveyard of empires, mountainous terrain",
+      capital: "Ancient city on the Kabul River",
+      currency: "Named after the country",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "ye",
+    name: "Yemen",
+    aliases: ["Republic of Yemen"],
+    continent: "Asia",
+    capital: "Sanaa",
+    capitalAliases: ["Sana'a"],
+    currency: "Yemeni Rial",
+    currencyAliases: ["Rial", "YER"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "On the Arabian Peninsula",
+      country: "Ancient home of the Queen of Sheba",
+      capital: "One of the world's oldest inhabited cities",
+      currency: "Same name as Saudi and Iranian currencies",
+      language: "Official language"
+    }
+  },
+  {
+    id: "om",
+    name: "Oman",
+    aliases: ["Sultanate of Oman"],
+    continent: "Asia",
+    capital: "Muscat",
+    capitalAliases: [],
+    currency: "Omani Rial",
+    currencyAliases: ["Rial", "OMR"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "On the Arabian Peninsula",
+      country: "Sultanate, frankincense trade history",
+      capital: "Port city on the Gulf of Oman",
+      currency: "One of the highest-valued currencies",
+      language: "Official language"
+    }
+  },
+  {
+    id: "jo",
+    name: "Jordan",
+    aliases: ["Hashemite Kingdom of Jordan"],
+    continent: "Asia",
+    capital: "Amman",
+    capitalAliases: [],
+    currency: "Jordanian Dinar",
+    currencyAliases: ["Dinar", "JOD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In the Middle East",
+      country: "Home to Petra and the Dead Sea",
+      capital: "Built on seven hills like Rome",
+      currency: "One of the highest-valued currencies",
+      language: "Official language"
+    }
+  },
+  {
+    id: "lb",
+    name: "Lebanon",
+    aliases: ["Lebanese Republic"],
+    continent: "Asia",
+    capital: "Beirut",
+    capitalAliases: [],
+    currency: "Lebanese Pound",
+    currencyAliases: ["Lira", "LBP"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "On the Mediterranean coast",
+      country: "Known for cedars and ancient Phoenicia",
+      capital: "Once called the 'Paris of the Middle East'",
+      currency: "Has experienced severe devaluation",
+      language: "Official language"
+    }
+  },
+  {
+    id: "sy",
+    name: "Syria",
+    aliases: ["Syrian Arab Republic"],
+    continent: "Asia",
+    capital: "Damascus",
+    capitalAliases: [],
+    currency: "Syrian Pound",
+    currencyAliases: ["Lira", "SYP"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In the Middle East",
+      country: "Ancient civilization, ongoing conflict",
+      capital: "One of the oldest continuously inhabited cities",
+      currency: "Severely devalued due to conflict",
+      language: "Official language"
+    }
+  },
+  {
+    id: "kw",
+    name: "Kuwait",
+    aliases: ["State of Kuwait"],
+    continent: "Asia",
+    capital: "Kuwait City",
+    capitalAliases: [],
+    currency: "Kuwaiti Dinar",
+    currencyAliases: ["Dinar", "KWD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "On the Arabian Peninsula",
+      country: "Small but oil-rich nation",
+      capital: "Country and capital share name",
+      currency: "Highest-valued currency in the world",
+      language: "Official language"
+    }
+  },
+  {
+    id: "bh",
+    name: "Bahrain",
+    aliases: ["Kingdom of Bahrain"],
+    continent: "Asia",
+    capital: "Manama",
+    capitalAliases: [],
+    currency: "Bahraini Dinar",
+    currencyAliases: ["Dinar", "BHD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in the Persian Gulf",
+      country: "First Gulf state to discover oil",
+      capital: "Connected to Saudi Arabia by bridge",
+      currency: "One of the highest-valued currencies",
+      language: "Official language"
+    }
+  },
+  {
+    id: "qa",
+    name: "Qatar",
+    aliases: ["State of Qatar"],
+    continent: "Asia",
+    capital: "Doha",
+    capitalAliases: [],
+    currency: "Qatari Riyal",
+    currencyAliases: ["Riyal", "QAR"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Peninsula in the Persian Gulf",
+      country: "Hosted 2022 FIFA World Cup",
+      capital: "Home to Al Jazeera news network",
+      currency: "Pegged to US dollar",
+      language: "Official language"
+    }
+  },
+  // African Hard Countries
+  {
+    id: "dz",
+    name: "Algeria",
+    aliases: ["People's Democratic Republic of Algeria"],
+    continent: "Africa",
+    capital: "Algiers",
+    capitalAliases: ["Alger"],
+    currency: "Algerian Dinar",
+    currencyAliases: ["Dinar", "DZD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Largest country in Africa",
+      country: "Mostly Sahara Desert",
+      capital: "Known as 'Algiers the White'",
+      currency: "Common currency name in Arab countries",
+      language: "Official language"
+    }
+  },
+  {
+    id: "tn",
+    name: "Tunisia",
+    aliases: ["Republic of Tunisia"],
+    continent: "Africa",
+    capital: "Tunis",
+    capitalAliases: [],
+    currency: "Tunisian Dinar",
+    currencyAliases: ["Dinar", "TND"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Northernmost country in Africa",
+      country: "Site of ancient Carthage",
+      capital: "Country and capital share similar name",
+      currency: "Common currency name in Arab countries",
+      language: "Official language"
+    }
+  },
+  {
+    id: "ly",
+    name: "Libya",
+    aliases: ["State of Libya"],
+    continent: "Africa",
+    capital: "Tripoli",
+    capitalAliases: [],
+    currency: "Libyan Dinar",
+    currencyAliases: ["Dinar", "LYD"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In North Africa, Mediterranean coast",
+      country: "Mostly desert, rich in oil",
+      capital: "Ancient Phoenician city",
+      currency: "Common currency name in Arab countries",
+      language: "Official language"
+    }
+  },
+  {
+    id: "sd",
+    name: "Sudan",
+    aliases: ["Republic of the Sudan"],
+    continent: "Africa",
+    capital: "Khartoum",
+    capitalAliases: [],
+    currency: "Sudanese Pound",
+    currencyAliases: ["SDG"],
+    language: "Arabic",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Northeast Africa",
+      country: "Where the Blue and White Nile meet",
+      capital: "Name means 'elephant's trunk'",
+      currency: "Replaced the Dinar in 2007",
+      language: "Official language"
+    }
+  },
+  {
+    id: "ug",
+    name: "Uganda",
+    aliases: ["Republic of Uganda"],
+    continent: "Africa",
+    capital: "Kampala",
+    capitalAliases: [],
+    currency: "Ugandan Shilling",
+    currencyAliases: ["Shilling", "UGX"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In East Africa, landlocked",
+      country: "Source of the Nile River",
+      capital: "Built on seven hills",
+      currency: "Same name as Kenyan currency",
+      language: "Official language from colonial era"
+    }
+  },
+  {
+    id: "rw",
+    name: "Rwanda",
+    aliases: ["Republic of Rwanda"],
+    continent: "Africa",
+    capital: "Kigali",
+    capitalAliases: [],
+    currency: "Rwandan Franc",
+    currencyAliases: ["Franc", "RWF"],
+    language: "Kinyarwanda",
+    languageAliases: ["Rwandan"],
+    difficulty: "hard",
+    hints: {
+      continent: "Small landlocked country in East Africa",
+      country: "Land of a thousand hills",
+      capital: "One of Africa's cleanest cities",
+      currency: "French colonial currency name",
+      language: "National language, one of four official"
+    }
+  },
+  {
+    id: "sn",
+    name: "Senegal",
+    aliases: ["Republic of Senegal"],
+    continent: "Africa",
+    capital: "Dakar",
+    capitalAliases: [],
+    currency: "West African CFA Franc",
+    currencyAliases: ["CFA Franc", "XOF"],
+    language: "French",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Westernmost country in mainland Africa",
+      country: "Famous for the Dakar Rally (formerly)",
+      capital: "Peninsula city, important port",
+      currency: "Shared by 8 West African countries",
+      language: "Official language from colonial era"
+    }
+  },
+  {
+    id: "ci",
+    name: "Ivory Coast",
+    aliases: ["Cote d'Ivoire", "Côte d'Ivoire", "Republic of Cote d'Ivoire"],
+    continent: "Africa",
+    capital: "Yamoussoukro",
+    capitalAliases: [],
+    currency: "West African CFA Franc",
+    currencyAliases: ["CFA Franc", "XOF"],
+    language: "French",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In West Africa, on the Atlantic",
+      country: "World's largest cocoa producer",
+      capital: "Not Abidjan (the largest city)",
+      currency: "Shared by 8 West African countries",
+      language: "Official language"
+    }
+  },
+  {
+    id: "cm",
+    name: "Cameroon",
+    aliases: ["Republic of Cameroon"],
+    continent: "Africa",
+    capital: "Yaounde",
+    capitalAliases: ["Yaoundé"],
+    currency: "Central African CFA Franc",
+    currencyAliases: ["CFA Franc", "XAF"],
+    language: "French",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Central/West Africa",
+      country: "Called 'Africa in miniature' for its diversity",
+      capital: "Not Douala (the largest city)",
+      currency: "Shared by 6 Central African countries",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "ao",
+    name: "Angola",
+    aliases: ["Republic of Angola"],
+    continent: "Africa",
+    capital: "Luanda",
+    capitalAliases: [],
+    currency: "Angolan Kwanza",
+    currencyAliases: ["Kwanza", "AOA"],
+    language: "Portuguese",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Southern Africa, Atlantic coast",
+      country: "Former Portuguese colony, oil-rich",
+      capital: "One of the most expensive cities in the world",
+      currency: "Named after the Kwanza River",
+      language: "Official language from colonial era"
+    }
+  },
+  {
+    id: "mz",
+    name: "Mozambique",
+    aliases: ["Republic of Mozambique"],
+    continent: "Africa",
+    capital: "Maputo",
+    capitalAliases: [],
+    currency: "Mozambican Metical",
+    currencyAliases: ["Metical", "MZN"],
+    language: "Portuguese",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "In Southeast Africa, Indian Ocean coast",
+      country: "Former Portuguese colony",
+      capital: "On Maputo Bay",
+      currency: "From Arabic 'mithqal' (unit of weight)",
+      language: "Official language from colonial era"
+    }
+  },
+  {
+    id: "zw",
+    name: "Zimbabwe",
+    aliases: ["Republic of Zimbabwe"],
+    continent: "Africa",
+    capital: "Harare",
+    capitalAliases: [],
+    currency: "United States Dollar",
+    currencyAliases: ["USD", "Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Southern Africa",
+      country: "Home to Victoria Falls (shared)",
+      capital: "Formerly called Salisbury",
+      currency: "Own currency abandoned due to hyperinflation",
+      language: "One of 16 official languages"
+    }
+  },
+  {
+    id: "zm",
+    name: "Zambia",
+    aliases: ["Republic of Zambia"],
+    continent: "Africa",
+    capital: "Lusaka",
+    capitalAliases: [],
+    currency: "Zambian Kwacha",
+    currencyAliases: ["Kwacha", "ZMW"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Southern Africa",
+      country: "Home to Victoria Falls (shared)",
+      capital: "Named after a local chief",
+      currency: "Means 'dawn' in local languages",
+      language: "Official language"
+    }
+  },
+  {
+    id: "bw",
+    name: "Botswana",
+    aliases: ["Republic of Botswana"],
+    continent: "Africa",
+    capital: "Gaborone",
+    capitalAliases: [],
+    currency: "Botswana Pula",
+    currencyAliases: ["Pula", "BWP"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in Southern Africa",
+      country: "Home to the Okavango Delta",
+      capital: "Named after a 19th century chief",
+      currency: "Means 'rain' in Setswana",
+      language: "Official language"
+    }
+  },
+  {
+    id: "na",
+    name: "Namibia",
+    aliases: ["Republic of Namibia"],
+    continent: "Africa",
+    capital: "Windhoek",
+    capitalAliases: [],
+    currency: "Namibian Dollar",
+    currencyAliases: ["NAD", "Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "On the Atlantic coast of Southern Africa",
+      country: "Home to the Namib Desert, one of oldest deserts",
+      capital: "German colonial architecture",
+      currency: "Pegged to South African Rand",
+      language: "Official language"
+    }
+  },
+  {
+    id: "mg",
+    name: "Madagascar",
+    aliases: ["Republic of Madagascar"],
+    continent: "Africa",
+    capital: "Antananarivo",
+    capitalAliases: ["Tana"],
+    currency: "Malagasy Ariary",
+    currencyAliases: ["Ariary", "MGA"],
+    language: "Malagasy",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation off Southeast Africa",
+      country: "Fourth largest island, unique wildlife (lemurs)",
+      capital: "Name means 'city of the thousand'",
+      currency: "One of two non-decimal currencies",
+      language: "Austronesian origin, unusual for Africa"
+    }
+  },
+  {
+    id: "mu",
+    name: "Mauritius",
+    aliases: ["Republic of Mauritius"],
+    continent: "Africa",
+    capital: "Port Louis",
+    capitalAliases: [],
+    currency: "Mauritian Rupee",
+    currencyAliases: ["Rupee", "MUR"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in the Indian Ocean",
+      country: "Home of the extinct dodo bird",
+      capital: "Named after King Louis XV",
+      currency: "Similar to Indian currency",
+      language: "Official language"
+    }
+  },
+  {
+    id: "ls",
+    name: "Lesotho",
+    aliases: ["Kingdom of Lesotho"],
+    continent: "Africa",
+    capital: "Maseru",
+    capitalAliases: [],
+    currency: "Lesotho Loti",
+    currencyAliases: ["Loti", "LSL"],
+    language: "Sesotho",
+    languageAliases: ["Southern Sotho"],
+    difficulty: "hard",
+    hints: {
+      continent: "Completely surrounded by South Africa",
+      country: "Only country entirely above 1000m elevation",
+      capital: "On the Caledon River border",
+      currency: "Pegged to South African Rand",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "sz",
+    name: "Eswatini",
+    aliases: ["Kingdom of Eswatini", "Swaziland"],
+    continent: "Africa",
+    capital: "Mbabane",
+    capitalAliases: [],
+    currency: "Swazi Lilangeni",
+    currencyAliases: ["Lilangeni", "SZL"],
+    language: "Swazi",
+    languageAliases: ["siSwati"],
+    difficulty: "hard",
+    hints: {
+      continent: "Small landlocked kingdom in Southern Africa",
+      country: "One of the last absolute monarchies",
+      capital: "Administrative capital (Lobamba is royal)",
+      currency: "Pegged to South African Rand",
+      language: "One of two official languages"
+    }
+  },
+  // Central American and Caribbean Hard Countries
+  {
+    id: "gt",
+    name: "Guatemala",
+    aliases: ["Republic of Guatemala"],
+    continent: "North America",
+    capital: "Guatemala City",
+    capitalAliases: ["Ciudad de Guatemala"],
+    currency: "Guatemalan Quetzal",
+    currencyAliases: ["Quetzal", "GTQ"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "In Central America",
+      country: "Heart of ancient Mayan civilization",
+      capital: "Largest city in Central America",
+      currency: "Named after the national bird",
+      language: "Official language"
+    }
+  },
+  {
+    id: "hn",
+    name: "Honduras",
+    aliases: ["Republic of Honduras"],
+    continent: "North America",
+    capital: "Tegucigalpa",
+    capitalAliases: [],
+    currency: "Honduran Lempira",
+    currencyAliases: ["Lempira", "HNL"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "In Central America",
+      country: "Home to Mayan ruins of Copan",
+      capital: "One of few capitals not on a railroad",
+      currency: "Named after a native chief",
+      language: "Official language"
+    }
+  },
+  {
+    id: "sv",
+    name: "El Salvador",
+    aliases: ["Republic of El Salvador"],
+    continent: "North America",
+    capital: "San Salvador",
+    capitalAliases: [],
+    currency: "United States Dollar",
+    currencyAliases: ["Dollar", "USD"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Smallest country in Central America",
+      country: "Land of Volcanoes, adopted Bitcoin as legal tender",
+      capital: "Name means 'Holy Savior'",
+      currency: "Adopted US currency in 2001",
+      language: "Official language"
+    }
+  },
+  {
+    id: "ni",
+    name: "Nicaragua",
+    aliases: ["Republic of Nicaragua"],
+    continent: "North America",
+    capital: "Managua",
+    capitalAliases: [],
+    currency: "Nicaraguan Cordoba",
+    currencyAliases: ["Cordoba", "NIO", "Córdoba"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Largest country in Central America",
+      country: "Land of lakes and volcanoes",
+      capital: "On the shore of Lake Managua",
+      currency: "Named after Spanish conquistador",
+      language: "Official language"
+    }
+  },
+  {
+    id: "cr",
+    name: "Costa Rica",
+    aliases: ["Republic of Costa Rica"],
+    continent: "North America",
+    capital: "San Jose",
+    capitalAliases: ["San José"],
+    currency: "Costa Rican Colon",
+    currencyAliases: ["Colon", "CRC", "Colón"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "In Central America",
+      country: "Has no army, known for ecotourism",
+      capital: "In the Central Valley",
+      currency: "Named after Christopher Columbus",
+      language: "Official language"
+    }
+  },
+  {
+    id: "pa",
+    name: "Panama",
+    aliases: ["Republic of Panama"],
+    continent: "North America",
+    capital: "Panama City",
+    capitalAliases: ["Ciudad de Panama", "Ciudad de Panamá"],
+    currency: "Panamanian Balboa",
+    currencyAliases: ["Balboa", "PAB"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Connects Central and South America",
+      country: "Famous for its canal",
+      capital: "Skyline looks like Miami",
+      currency: "US Dollar also legal tender",
+      language: "Official language"
+    }
+  },
+  {
+    id: "jm",
+    name: "Jamaica",
+    aliases: [],
+    continent: "North America",
+    capital: "Kingston",
+    capitalAliases: [],
+    currency: "Jamaican Dollar",
+    currencyAliases: ["JMD", "Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Caribbean island nation",
+      country: "Birthplace of reggae and Bob Marley",
+      capital: "Seventh largest natural harbor",
+      currency: "Uses dollar symbol $",
+      language: "Official language"
+    }
+  },
+  {
+    id: "ht",
+    name: "Haiti",
+    aliases: ["Republic of Haiti"],
+    continent: "North America",
+    capital: "Port-au-Prince",
+    capitalAliases: [],
+    currency: "Haitian Gourde",
+    currencyAliases: ["Gourde", "HTG"],
+    language: "Haitian Creole",
+    languageAliases: ["Creole", "Kreyol"],
+    difficulty: "hard",
+    hints: {
+      continent: "Caribbean, shares island with Dominican Republic",
+      country: "First independent Caribbean nation",
+      capital: "Name means 'Port of the Prince'",
+      currency: "Named after a type of gourd",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "do",
+    name: "Dominican Republic",
+    aliases: ["Republica Dominicana", "República Dominicana"],
+    continent: "North America",
+    capital: "Santo Domingo",
+    capitalAliases: [],
+    currency: "Dominican Peso",
+    currencyAliases: ["Peso", "DOP"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Caribbean, shares island with Haiti",
+      country: "Most visited Caribbean destination",
+      capital: "Oldest European settlement in Americas",
+      currency: "Common currency name in Latin America",
+      language: "Official language"
+    }
+  },
+  {
+    id: "tt",
+    name: "Trinidad and Tobago",
+    aliases: ["Republic of Trinidad and Tobago"],
+    continent: "North America",
+    capital: "Port of Spain",
+    capitalAliases: [],
+    currency: "Trinidad and Tobago Dollar",
+    currencyAliases: ["TTD", "TT Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Twin-island nation in the Caribbean",
+      country: "Birthplace of steel pan drums and limbo",
+      capital: "On the island of Trinidad",
+      currency: "Uses dollar symbol $",
+      language: "Official language"
+    }
+  },
+  // South American Hard Countries
+  {
+    id: "ec",
+    name: "Ecuador",
+    aliases: ["Republic of Ecuador"],
+    continent: "South America",
+    capital: "Quito",
+    capitalAliases: [],
+    currency: "United States Dollar",
+    currencyAliases: ["Dollar", "USD"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "On the equator in South America",
+      country: "Named after the equator, includes Galapagos",
+      capital: "Highest official capital city in the world",
+      currency: "Adopted US currency in 2000",
+      language: "Official language"
+    }
+  },
+  {
+    id: "bo",
+    name: "Bolivia",
+    aliases: ["Plurinational State of Bolivia"],
+    continent: "South America",
+    capital: "Sucre",
+    capitalAliases: [],
+    currency: "Bolivian Boliviano",
+    currencyAliases: ["Boliviano", "BOB"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in South America",
+      country: "Named after Simon Bolivar",
+      capital: "Constitutional capital (La Paz is seat of government)",
+      currency: "Named after Simon Bolivar",
+      language: "One of 37 official languages"
+    }
+  },
+  {
+    id: "py",
+    name: "Paraguay",
+    aliases: ["Republic of Paraguay"],
+    continent: "South America",
+    capital: "Asuncion",
+    capitalAliases: ["Asunción"],
+    currency: "Paraguayan Guarani",
+    currencyAliases: ["Guarani", "PYG", "Guaraní"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Landlocked in South America",
+      country: "One of two landlocked countries in South America",
+      capital: "One of the oldest cities in South America",
+      currency: "Named after indigenous people",
+      language: "One of two official languages"
+    }
+  },
+  {
+    id: "uy",
+    name: "Uruguay",
+    aliases: ["Oriental Republic of Uruguay"],
+    continent: "South America",
+    capital: "Montevideo",
+    capitalAliases: [],
+    currency: "Uruguayan Peso",
+    currencyAliases: ["Peso", "UYU"],
+    language: "Spanish",
+    languageAliases: ["Espanol", "Español"],
+    difficulty: "hard",
+    hints: {
+      continent: "Between Brazil and Argentina",
+      country: "Most secular country in South America",
+      capital: "Southernmost capital in the Americas",
+      currency: "Common currency name in Latin America",
+      language: "Official language"
+    }
+  },
+  {
+    id: "gy",
+    name: "Guyana",
+    aliases: ["Co-operative Republic of Guyana"],
+    continent: "South America",
+    capital: "Georgetown",
+    capitalAliases: [],
+    currency: "Guyanese Dollar",
+    currencyAliases: ["GYD", "Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "On the northern coast of South America",
+      country: "Only English-speaking country in South America",
+      capital: "Named after King George III",
+      currency: "Uses dollar symbol $",
+      language: "Official language"
+    }
+  },
+  {
+    id: "sr",
+    name: "Suriname",
+    aliases: ["Republic of Suriname"],
+    continent: "South America",
+    capital: "Paramaribo",
+    capitalAliases: [],
+    currency: "Surinamese Dollar",
+    currencyAliases: ["SRD", "Dollar"],
+    language: "Dutch",
+    languageAliases: ["Nederlands"],
+    difficulty: "hard",
+    hints: {
+      continent: "On the northern coast of South America",
+      country: "Only Dutch-speaking country in South America",
+      capital: "UNESCO World Heritage center",
+      currency: "Replaced the guilder in 2004",
+      language: "Official language"
+    }
+  },
+  // Pacific Island Nations
+  {
+    id: "fj",
+    name: "Fiji",
+    aliases: ["Republic of Fiji"],
+    continent: "Oceania",
+    capital: "Suva",
+    capitalAliases: [],
+    currency: "Fijian Dollar",
+    currencyAliases: ["FJD", "Dollar"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation in the South Pacific",
+      country: "Over 300 islands, famous for beaches",
+      capital: "On the island of Viti Levu",
+      currency: "Uses dollar symbol $",
+      language: "One of three official languages"
+    }
+  },
+  {
+    id: "pg",
+    name: "Papua New Guinea",
+    aliases: ["Independent State of Papua New Guinea", "PNG"],
+    continent: "Oceania",
+    capital: "Port Moresby",
+    capitalAliases: [],
+    currency: "Papua New Guinean Kina",
+    currencyAliases: ["Kina", "PGK"],
+    language: "English",
+    languageAliases: [],
+    difficulty: "hard",
+    hints: {
+      continent: "Island nation north of Australia",
+      country: "Most linguistically diverse country (800+ languages)",
+      capital: "Named after explorer John Moresby's father",
+      currency: "Named after a type of shell used as money",
+      language: "One of three official languages"
+    }
+  }
+];
+
+// Helper functions
+export function getCountryById(id) {
+  return countries.find(c => c.id === id);
+}
+
+export function getCountriesByDifficulty(difficulty) {
+  return countries.filter(c => c.difficulty === difficulty);
+}
+
+export function getRandomCountry(difficulty = null) {
+  const pool = difficulty ? getCountriesByDifficulty(difficulty) : countries;
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+export function getRandomCountries(count, difficulty = null) {
+  const pool = difficulty ? getCountriesByDifficulty(difficulty) : [...countries];
+  const shuffled = pool.sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
+
+// Answer validation with fuzzy matching
+export function validateAnswer(userAnswer, correctAnswer, aliases = []) {
+  if (!userAnswer) return false;
+
+  const normalize = (str) => str.toLowerCase().trim().replace(/[^a-z0-9\s]/gi, '');
+  const normalizedUser = normalize(userAnswer);
+  const normalizedCorrect = normalize(correctAnswer);
+
+  // Direct match
+  if (normalizedUser === normalizedCorrect) return true;
+
+  // Check aliases
+  for (const alias of aliases) {
+    if (normalize(alias) === normalizedUser) return true;
+  }
+
+  // Partial match for longer answers (e.g., "United States" matches "United States of America")
+  if (normalizedCorrect.includes(normalizedUser) && normalizedUser.length >= 4) return true;
+  if (normalizedUser.includes(normalizedCorrect) && normalizedCorrect.length >= 4) return true;
+
+  return false;
+}
+
+// Get all continents
+export const continents = [
+  "Africa",
+  "Asia",
+  "Europe",
+  "North America",
+  "South America",
+  "Oceania"
+];
+
+// Difficulty labels
+export const difficultyLabels = {
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard"
+};
+
+export const difficultyDescriptions = {
+  easy: "Well-known countries everyone recognizes",
+  medium: "Countries you've probably heard of",
+  hard: "Challenge yourself with lesser-known nations"
+};

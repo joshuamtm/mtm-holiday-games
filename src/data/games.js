@@ -1,4 +1,31 @@
 export const games = [
+  // ===== INTERACTIVE WEB GAMES =====
+  {
+    slug: "geografacts",
+    title: "Geografacts",
+    subtitle: "World Geography Challenge",
+    description: "Test your geography knowledge! A highlighted country appears on the world map - can you name the continent, country, capital, currency, and language? Choose Easy, Medium, or Hard difficulty and compete head-to-head or co-op!",
+    age: "kids",
+    kidPowered: false,
+    modes: ["solo-coop", "team-vs-team"],
+    location: "remote-ok",
+    players: { min: 1, max: 8 },
+    optimalPlayers: "2-4",
+    duration: "15-30 minutes",
+    requirements: [],
+    free: true,
+    tip: "Start with Easy mode to learn the interface, then challenge yourself with Hard mode for lesser-known countries!",
+    complexity: 1,
+    bestFor: ["family-game-night", "brain-teasers", "all-ages"],
+    isInteractive: true, // This is a web app game, not an AI prompt
+    playUrl: "/play/geografacts",
+    whatToExpect: {
+      aiDoes: "This is an interactive web game - no AI needed!",
+      playersDo: "Look at the highlighted country on the map and answer 5 questions about it",
+      roundLength: "2-3 minutes per country"
+    },
+    sampleOutput: "🌍 A country is highlighted on the map!\n\n1️⃣ What continent is it on?\n2️⃣ What country is it?\n3️⃣ What's the capital?\n4️⃣ What currency do they use?\n5️⃣ What language is spoken?\n\nEarn up to 5 points per round!"
+  },
   // ===== KID-POWERED GAMES (Kids Run the Show!) =====
   {
     slug: "kids-win",

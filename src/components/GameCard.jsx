@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Users, Clock, MapPin, Lock, Star, Gift, Sparkles } from 'lucide-react';
+import { Users, Clock, MapPin, Lock, Star, Gift, Sparkles, Gamepad2 } from 'lucide-react';
 import { modeLabels, locationLabels } from '../data/games';
 
 export default function GameCard({ game, isUnlocked }) {
   const canAccess = game.free || isUnlocked;
+  // Interactive games link to their play URL, others to the game detail page
+  const linkTo = game.isInteractive ? game.playUrl : `/game/${game.slug}`;
 
   return (
     <Link
-      to={`/game/${game.slug}`}
+      to={linkTo}
       className="group block bg-white rounded-xl p-6 festive-card relative overflow-hidden"
     >
       {/* Decorative corner ribbon for free game */}
@@ -21,6 +23,12 @@ export default function GameCard({ game, isUnlocked }) {
 
       {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-3">
+        {game.isInteractive && (
+          <span className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
+            <Gamepad2 size={12} />
+            Play Now
+          </span>
+        )}
         {game.kidPowered && (
           <span className="bg-holiday-gold text-holiday-pine text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
             <Sparkles size={12} />
