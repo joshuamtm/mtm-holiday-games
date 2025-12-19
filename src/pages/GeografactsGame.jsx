@@ -236,25 +236,40 @@ export default function GeografactsGame() {
 
         {/* Playing screen */}
         {gameState === 'playing' && currentCountry && (
-          <div className="grid lg:grid-cols-3 gap-6">
-            {/* Left column - Map and Score */}
-            <div className="lg:col-span-1 space-y-6">
-              <ScoreBoard
-                gameMode={gameMode}
-                scores={scores}
-                targetScore={TARGET_SCORE}
-                maxStrikes={MAX_STRIKES}
-                strikes={strikes}
-                currentTeam={currentTeam}
-                roundNumber={roundNumber}
+          <div className="grid lg:grid-cols-2 gap-6">
+            {/* Left column - Map (sticky on desktop) */}
+            <div className="lg:sticky lg:top-20 lg:self-start space-y-4">
+              {/* World Map */}
+              <WorldMap
+                highlightedCountry={currentCountry.id}
+                showAllCountries={true}
               />
 
-              {/* Difficulty indicator */}
-              <div className="bg-white rounded-xl shadow-lg p-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Difficulty</span>
+              {/* Score and Difficulty row */}
+              <div className="grid grid-cols-2 gap-4">
+                {/* Mini Scoreboard */}
+                <div className="bg-white rounded-xl shadow-lg p-4">
+                  <div className="text-xs text-gray-500 mb-1">
+                    {gameMode === 'head-to-head' ? `Team ${currentTeam}` : 'Score'}
+                  </div>
+                  <div className="text-2xl font-bold text-holiday-green">
+                    {gameMode === 'head-to-head'
+                      ? currentTeam === 1 ? scores.team1 : scores.team2
+                      : scores.coop}
+                    <span className="text-sm text-gray-400 font-normal">/{TARGET_SCORE}</span>
+                  </div>
+                  {gameMode === 'coop' && (
+                    <div className="text-xs text-gray-500 mt-1">
+                      Strikes: {strikes}/{MAX_STRIKES}
+                    </div>
+                  )}
+                </div>
+
+                {/* Difficulty indicator */}
+                <div className="bg-white rounded-xl shadow-lg p-4">
+                  <div className="text-xs text-gray-500 mb-1">Difficulty</div>
                   <span
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
                       currentCountry.difficulty === 'easy'
                         ? 'bg-green-100 text-green-700'
                         : currentCountry.difficulty === 'medium'
@@ -265,19 +280,13 @@ export default function GeografactsGame() {
                     {currentCountry.difficulty.charAt(0).toUpperCase() +
                       currentCountry.difficulty.slice(1)}
                   </span>
+                  <div className="text-xs text-gray-500 mt-1">Round {roundNumber}</div>
                 </div>
               </div>
             </div>
 
-            {/* Right column - Map and Questions */}
-            <div className="lg:col-span-2 space-y-6">
-              {/* World Map */}
-              <WorldMap
-                highlightedCountry={currentCountry.id}
-                showAllCountries={true}
-              />
-
-              {/* Question Panel */}
+            {/* Right column - Questions */}
+            <div>
               <QuestionPanel
                 country={currentCountry}
                 onQuestionComplete={handleQuestionComplete}
