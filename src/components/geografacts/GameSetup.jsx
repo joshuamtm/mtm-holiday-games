@@ -64,18 +64,29 @@ export default function GameSetup({ onStartGame }) {
 
       {/* How to Play */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-800 mb-4">How to Play</h2>
-        <div className="grid md:grid-cols-5 gap-4">
+        <h2 className="text-xl font-bold text-gray-800 mb-4">📖 How to Play</h2>
+
+        {/* Game Overview */}
+        <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <p className="text-blue-800">
+            A country will be <strong>highlighted in red</strong> on the world map.
+            Answer 5 questions about that country to earn points. The more you know, the more you score!
+          </p>
+        </div>
+
+        {/* 5 Questions */}
+        <h3 className="font-semibold text-gray-700 mb-3">Answer these 5 questions (1 point each):</h3>
+        <div className="grid md:grid-cols-5 gap-3 mb-6">
           {[
-            { emoji: '🌍', label: 'Continent', desc: '1 point' },
-            { emoji: '🏳️', label: 'Country', desc: '1 point' },
-            { emoji: '🏛️', label: 'Capital', desc: '1 point' },
-            { emoji: '💰', label: 'Currency', desc: '1 point' },
-            { emoji: '🗣️', label: 'Language', desc: '1 point' },
+            { emoji: '🌍', label: 'Continent', desc: 'Which continent?' },
+            { emoji: '🏳️', label: 'Country', desc: 'Name the country' },
+            { emoji: '🏛️', label: 'Capital', desc: 'Capital city?' },
+            { emoji: '💰', label: 'Currency', desc: 'What money?' },
+            { emoji: '🗣️', label: 'Language', desc: 'Official language?' },
           ].map((item, idx) => (
             <div
               key={idx}
-              className="text-center p-3 bg-gray-50 rounded-lg"
+              className="text-center p-3 bg-gray-50 rounded-lg border border-gray-200"
             >
               <div className="text-2xl mb-1">{item.emoji}</div>
               <div className="font-semibold text-gray-800 text-sm">
@@ -85,9 +96,34 @@ export default function GameSetup({ onStartGame }) {
             </div>
           ))}
         </div>
-        <div className="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+
+        {/* Game Modes */}
+        <h3 className="font-semibold text-gray-700 mb-3">Two ways to play:</h3>
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <div className="flex items-center gap-2 mb-2">
+              <Users className="w-5 h-5 text-blue-600" />
+              <span className="font-bold text-blue-800">Head to Head</span>
+            </div>
+            <p className="text-sm text-blue-700">
+              Teams take turns. First team to <strong>20 points</strong> wins!
+            </p>
+          </div>
+          <div className="p-4 bg-green-50 rounded-lg border border-green-200">
+            <div className="flex items-center gap-2 mb-2">
+              <User className="w-5 h-5 text-green-600" />
+              <span className="font-bold text-green-800">Co-op Challenge</span>
+            </div>
+            <p className="text-sm text-green-700">
+              Work together to reach <strong>20 points</strong> before getting <strong>5 wrong answers</strong> (strikes)!
+            </p>
+          </div>
+        </div>
+
+        {/* Hints */}
+        <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
           <p className="text-sm text-yellow-800">
-            <strong>💡 Hints:</strong> You can use one hint per question, but it costs you the point for that question!
+            <strong>💡 Need help?</strong> You can use a hint for any question, but using a hint means you can't earn a point for that question (even if you answer correctly after).
           </p>
         </div>
       </div>

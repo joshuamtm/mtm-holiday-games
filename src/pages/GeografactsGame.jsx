@@ -7,7 +7,7 @@ import ScoreBoard from '../components/geografacts/ScoreBoard';
 import GameSetup from '../components/geografacts/GameSetup';
 import RoundResults from '../components/geografacts/RoundResults';
 import GameOver from '../components/geografacts/GameOver';
-import { getRandomCountry, countries } from '../data/countries';
+import { getCountriesByDifficulty, countries } from '../data/countries';
 
 const TARGET_SCORE = 20;
 const MAX_STRIKES = 5;
@@ -31,17 +31,33 @@ export default function GeografactsGame() {
   const [usedHints, setUsedHints] = useState([]);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
 
-  // History
+  // History - track by ID to avoid repeats
+  const [playedCountryIds, setPlayedCountryIds] = useState(new Set());
   const [countriesPlayed, setCountriesPlayed] = useState([]);
   const [winner, setWinner] = useState(null);
 
-  // Get a random country based on difficulty
-  const getNextCountry = useCallback(() => {
+  // Get a random country that hasn't been played yet
+  const getNextCountry = useCallback((playedIds = playedCountryIds) => {
+    // Get the pool based on difficulty
+    let pool;
     if (difficulty === 'mixed') {
-      return getRandomCountry();
+      pool = [...countries];
+    } else {
+      pool = getCountriesByDifficulty(difficulty);
     }
-    return getRandomCountry(difficulty);
-  }, [difficulty]);
+
+    // Filter out already played countries
+    let available = pool.filter(c => !playedIds.has(c.id));
+
+    // If all countries played, reset the pool (but keep tracking for display)
+    if (available.length === 0) {
+      available = pool;
+    }
+
+    // Shuffle and pick a random one
+    const shuffled = available.sort(() => Math.random() - 0.5);
+    return shuffled[0];
+  }, [difficulty, playedCountryIds]);
 
   // Start a new game
   const handleStartGame = (mode, diff) => {
@@ -51,13 +67,22 @@ export default function GeografactsGame() {
     setCurrentTeam(1);
     setStrikes(0);
     setRoundNumber(1);
+    setPlayedCountryIds(new Set());
     setCountriesPlayed([]);
     setWinner(null);
 
-    // Get first country
-    const firstCountry =
-      diff === 'mixed' ? getRandomCountry() : getRandomCountry(diff);
+    // Get first country from shuffled pool
+    let pool;
+    if (diff === 'mixed') {
+      pool = [...countries];
+    } else {
+      pool = getCountriesByDifficulty(diff);
+    }
+    const shuffled = pool.sort(() => Math.random() - 0.5);
+    const firstCountry = shuffled[0];
+
     setCurrentCountry(firstCountry);
+    setPlayedCountryIds(new Set([firstCountry.id]));
     setCurrentQuestionIndex(0);
     setRoundScore(0);
     setUsedHints([]);
@@ -139,8 +164,12 @@ export default function GeografactsGame() {
 
     setRoundNumber(roundNumber + 1);
 
-    // Get new country
-    const nextCountry = getNextCountry();
+    // Get new country that hasn't been played
+    const newPlayedIds = new Set(playedCountryIds);
+    const nextCountry = getNextCountry(newPlayedIds);
+    newPlayedIds.add(nextCountry.id);
+
+    setPlayedCountryIds(newPlayedIds);
     setCurrentCountry(nextCountry);
     setCurrentQuestionIndex(0);
     setRoundScore(0);
@@ -170,6 +199,8 @@ export default function GeografactsGame() {
     setGameMode(null);
     setDifficulty(null);
     setCurrentCountry(null);
+    setPlayedCountryIds(new Set());
+    setCountriesPlayed([]);
   };
 
   return (
