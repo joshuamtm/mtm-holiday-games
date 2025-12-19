@@ -266,27 +266,17 @@ function WorldMap({ highlightedCountry, showAllCountries = true }) {
             }
           </Geographies>
 
-          {/* Arrow marker pointing to highlighted country */}
+          {/* Dotted circle indicator around highlighted country */}
           {highlightedCentroid && (
             <Marker coordinates={highlightedCentroid}>
-              {/* Positioned to upper-right, pointing down-left at country */}
-              <g transform="translate(20, -45)">
-                {/* Arrow line */}
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="-18"
-                  y2="40"
-                  stroke="#DC2626"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-                {/* Arrowhead pointing at country */}
-                <polygon
-                  points="-18,40 -10,28 -24,32"
-                  fill="#DC2626"
-                />
-              </g>
+              <circle
+                r="35"
+                fill="none"
+                stroke="#DC2626"
+                strokeWidth="2.5"
+                strokeDasharray="6 4"
+                opacity="0.8"
+              />
             </Marker>
           )}
         </ZoomableGroup>
