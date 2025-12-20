@@ -52,13 +52,22 @@ export default function GameSetup({ onStartGame }) {
 
   return (
     <div className="max-w-4xl mx-auto">
-      {/* Header */}
+      {/* Inspiration Note */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-holiday-pine mb-3">
-          🌍 Geografacts
-        </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-600 mb-2">
           Test your geography knowledge! Identify countries, capitals, currencies, and more.
+        </p>
+        <p className="text-sm text-gray-500">
+          Inspired by the classic board game{' '}
+          <a
+            href="https://boardgamegeek.com/boardgame/12378/geografacts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-holiday-blue hover:text-holiday-pine underline"
+          >
+            GeograFacts
+          </a>
+          {' '}(discontinued)
         </p>
       </div>
 
@@ -81,8 +90,8 @@ export default function GameSetup({ onStartGame }) {
             { emoji: '🌍', label: 'Continent', desc: 'Which continent?' },
             { emoji: '🏳️', label: 'Country', desc: 'Name the country' },
             { emoji: '🏛️', label: 'Capital', desc: 'Capital city?' },
-            { emoji: '💰', label: 'Currency', desc: 'What money?' },
             { emoji: '🗣️', label: 'Language', desc: 'Official language?' },
+            { emoji: '💰', label: 'Currency', desc: 'What money?' },
           ].map((item, idx) => (
             <div
               key={idx}

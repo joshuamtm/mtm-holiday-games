@@ -6,8 +6,8 @@ const questions = [
   { id: 'continent', label: 'Continent', points: 1, icon: '🌍' },
   { id: 'country', label: 'Country Name', points: 1, icon: '🏳️' },
   { id: 'capital', label: 'Capital City', points: 1, icon: '🏛️' },
-  { id: 'currency', label: 'Currency', points: 1, icon: '💰' },
   { id: 'language', label: 'Official Language', points: 1, icon: '🗣️' },
+  { id: 'currency', label: 'Currency', points: 1, icon: '💰' },
 ];
 
 export default function QuestionPanel({
