@@ -25,7 +25,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the national bird of this country?",
     bonus: "Bald Eagle",
-    bonusAliases: ["Bald eagle","Eagle"]
+    bonusAliases: ["Bald eagle","Eagle"],
+    bonusOptions: ["Bald Eagle","Golden Eagle","American Robin","Wild Turkey"]
   },
   {
     id: "gb",
@@ -49,7 +50,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the name of the famous clock tower in London (often mistakenly called Big Ben)?",
     bonus: "Elizabeth Tower",
-    bonusAliases: ["Big Ben","The Elizabeth Tower","Clock Tower"]
+    bonusAliases: ["Big Ben","The Elizabeth Tower","Clock Tower"],
+    bonusOptions: ["Elizabeth Tower","Victoria Tower","Westminster Tower","Churchill Tower"]
   },
   {
     id: "fr",
@@ -73,7 +75,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "In what year was the Eiffel Tower completed?",
     bonus: "1889",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["1889","1901","1875","1923"]
   },
   {
     id: "de",
@@ -97,7 +100,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the traditional German celebration held in Munich each fall?",
     bonus: "Oktoberfest",
-    bonusAliases: ["October Fest","October Festival"]
+    bonusAliases: ["October Fest","October Festival"],
+    bonusOptions: ["Oktoberfest","Karneval","Bierfest","Sommerfest"]
   },
   {
     id: "it",
@@ -121,7 +125,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many regions does Italy have?",
     bonus: "20",
-    bonusAliases: ["Twenty"]
+    bonusAliases: ["Twenty"],
+    bonusOptions: ["20","15","25","18"]
   },
   {
     id: "es",
@@ -145,7 +150,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the traditional Spanish tomato-throwing festival called?",
     bonus: "La Tomatina",
-    bonusAliases: ["Tomatina","The Tomatina"]
+    bonusAliases: ["Tomatina","The Tomatina"],
+    bonusOptions: ["La Tomatina","Running of the Bulls","La Feria","Flamenco Festival"]
   },
   {
     id: "cn",
@@ -169,7 +175,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "Approximately how long is the Great Wall of China in miles?",
     bonus: "13000",
-    bonusAliases: ["13,000","13000 miles","13,000 miles","Thirteen thousand"]
+    bonusAliases: ["13,000","13000 miles","13,000 miles","Thirteen thousand"],
+    bonusOptions: ["13000","8000","5000","21000"]
   },
   {
     id: "jp",
@@ -193,7 +200,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Japan's highest mountain called?",
     bonus: "Mount Fuji",
-    bonusAliases: ["Mt Fuji","Mt. Fuji","Fuji","Fujisan","Fuji-san"]
+    bonusAliases: ["Mt Fuji","Mt. Fuji","Fuji","Fujisan","Fuji-san"],
+    bonusOptions: ["Mount Fuji","Mount Takao","Mount Aso","Mount Kita"]
   },
   {
     id: "in",
@@ -217,7 +225,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many UNESCO World Heritage Sites does India have (approximately)?",
     bonus: "42",
-    bonusAliases: ["Forty-two","Forty two","40","41","43"]
+    bonusAliases: ["Forty-two","Forty two","40","41","43"],
+    bonusOptions: ["42","28","35","50"]
   },
   {
     id: "br",
@@ -241,7 +250,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the famous statue overlooking Rio de Janeiro called?",
     bonus: "Christ the Redeemer",
-    bonusAliases: ["Cristo Redentor","The Christ","Christ Redeemer"]
+    bonusAliases: ["Cristo Redentor","The Christ","Christ Redeemer"],
+    bonusOptions: ["Christ the Redeemer","Statue of Liberty","Christ the King","The Savior"]
   },
   {
     id: "au",
@@ -265,7 +275,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What unique animal is found only in Australia and lays eggs?",
     bonus: "Platypus",
-    bonusAliases: ["Duck-billed platypus","Duckbill platypus"]
+    bonusAliases: ["Duck-billed platypus","Duckbill platypus"],
+    bonusOptions: ["Platypus","Koala","Kangaroo","Wombat"]
   },
   {
     id: "ca",
@@ -289,7 +300,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What percentage of the world's maple syrup comes from Canada?",
     bonus: "71",
-    bonusAliases: ["71%","70","70%","Seventy","Seventy-one"]
+    bonusAliases: ["71%","70","70%","Seventy","Seventy-one"],
+    bonusOptions: ["71","45","85","60"]
   },
   {
     id: "mx",
@@ -313,7 +325,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient civilization built the pyramid of Chichen Itza?",
     bonus: "Maya",
-    bonusAliases: ["Mayan","The Maya","Mayans","The Mayans"]
+    bonusAliases: ["Mayan","The Maya","Mayans","The Mayans"],
+    bonusOptions: ["Maya","Aztec","Olmec","Toltec"]
   },
   {
     id: "ru",
@@ -337,7 +350,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many time zones does Russia span?",
     bonus: "11",
-    bonusAliases: ["Eleven"]
+    bonusAliases: ["Eleven"],
+    bonusOptions: ["11","7","9","5"]
   },
   {
     id: "eg",
@@ -361,7 +375,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many pyramids are at Giza?",
     bonus: "3",
-    bonusAliases: ["Three","3 pyramids","Three pyramids"]
+    bonusAliases: ["Three","3 pyramids","Three pyramids"],
+    bonusOptions: ["3","5","7","9"]
   },
   {
     id: "za",
@@ -385,7 +400,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many official languages does South Africa have?",
     bonus: "11",
-    bonusAliases: ["Eleven"]
+    bonusAliases: ["Eleven"],
+    bonusOptions: ["11","5","7","9"]
   },
   {
     id: "kr",
@@ -409,7 +425,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What K-pop group became the first to top the US Billboard Hot 100?",
     bonus: "BTS",
-    bonusAliases: ["Bangtan Boys","Bangtan Sonyeondan"]
+    bonusAliases: ["Bangtan Boys","Bangtan Sonyeondan"],
+    bonusOptions: ["BTS","BLACKPINK","EXO","TWICE"]
   },
   {
     id: "ar",
@@ -433,7 +450,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What dance originated in the working-class neighborhoods of Buenos Aires?",
     bonus: "Tango",
-    bonusAliases: ["The Tango","Argentine Tango"]
+    bonusAliases: ["The Tango","Argentine Tango"],
+    bonusOptions: ["Tango","Salsa","Samba","Cumbia"]
   },
   {
     id: "ng",
@@ -457,7 +475,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the name of the Nigerian film industry?",
     bonus: "Nollywood",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Nollywood","Nairawood","Lagowood","Afrowood"]
   },
   {
     id: "sa",
@@ -481,7 +500,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the name of the annual Islamic pilgrimage to Mecca?",
     bonus: "Hajj",
-    bonusAliases: ["The Hajj","Haj"]
+    bonusAliases: ["The Hajj","Haj"],
+    bonusOptions: ["Hajj","Umrah","Zakat","Eid"]
   },
 
   // ===== MEDIUM COUNTRIES =====
@@ -507,7 +527,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What furniture company was founded in Sweden in 1943?",
     bonus: "IKEA",
-    bonusAliases: ["Ikea"]
+    bonusAliases: ["Ikea"],
+    bonusOptions: ["IKEA","H&M","Volvo","LEGO"]
   },
   {
     id: "no",
@@ -531,7 +552,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What natural light phenomenon is Norway famous for?",
     bonus: "Northern Lights",
-    bonusAliases: ["Aurora Borealis","Aurora","The Northern Lights"]
+    bonusAliases: ["Aurora Borealis","Aurora","The Northern Lights"],
+    bonusOptions: ["Northern Lights","Midnight Sun","Polar Vortex","Arctic Glow"]
   },
   {
     id: "dk",
@@ -555,7 +577,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What toy company that makes building bricks was founded in Denmark?",
     bonus: "LEGO",
-    bonusAliases: ["Lego","The Lego Company","Lego Group"]
+    bonusAliases: ["Lego","The Lego Company","Lego Group"],
+    bonusOptions: ["LEGO","IKEA","Maersk","Carlsberg"]
   },
   {
     id: "nl",
@@ -579,7 +602,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What flower is the Netherlands famous for cultivating and exporting?",
     bonus: "Tulip",
-    bonusAliases: ["Tulips","The Tulip"]
+    bonusAliases: ["Tulips","The Tulip"],
+    bonusOptions: ["Tulip","Rose","Daffodil","Lily"]
   },
   {
     id: "be",
@@ -603,7 +627,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What food item is Belgium most famous for (besides chocolate)?",
     bonus: "Waffles",
-    bonusAliases: ["Belgian Waffles","Waffle","Fries","French Fries","Belgian Fries"]
+    bonusAliases: ["Belgian Waffles","Waffle","Fries","French Fries","Belgian Fries"],
+    bonusOptions: ["Waffles","Croissants","Pancakes","Crepes"]
   },
   {
     id: "ch",
@@ -627,7 +652,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the famous Swiss Army tool called?",
     bonus: "Swiss Army Knife",
-    bonusAliases: ["Swiss knife","Army knife","Pocket knife"]
+    bonusAliases: ["Swiss knife","Army knife","Pocket knife"],
+    bonusOptions: ["Swiss Army Knife","Swiss Watch","Swiss Cheese Cutter","Swiss Compass"]
   },
   {
     id: "at",
@@ -651,7 +677,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous classical composer was born in Salzburg, Austria?",
     bonus: "Mozart",
-    bonusAliases: ["Wolfgang Amadeus Mozart","Wolfgang Mozart","W.A. Mozart"]
+    bonusAliases: ["Wolfgang Amadeus Mozart","Wolfgang Mozart","W.A. Mozart"],
+    bonusOptions: ["Mozart","Beethoven","Bach","Haydn"]
   },
   {
     id: "pl",
@@ -675,7 +702,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "Who was the famous Polish astronomer who proposed the heliocentric model?",
     bonus: "Copernicus",
-    bonusAliases: ["Nicolaus Copernicus","Nicolas Copernicus","Mikolaj Kopernik"]
+    bonusAliases: ["Nicolaus Copernicus","Nicolas Copernicus","Mikolaj Kopernik"],
+    bonusOptions: ["Copernicus","Galileo","Newton","Kepler"]
   },
   {
     id: "pt",
@@ -699,7 +727,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the traditional Portuguese music genre known for its melancholy sound?",
     bonus: "Fado",
-    bonusAliases: ["The Fado"]
+    bonusAliases: ["The Fado"],
+    bonusOptions: ["Fado","Flamenco","Samba","Tango"]
   },
   {
     id: "gr",
@@ -723,7 +752,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient structure sits atop the Acropolis in Athens?",
     bonus: "Parthenon",
-    bonusAliases: ["The Parthenon"]
+    bonusAliases: ["The Parthenon"],
+    bonusOptions: ["Parthenon","Colosseum","Pantheon","Acropolis Temple"]
   },
   {
     id: "tr",
@@ -747,7 +777,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What strait separates the European and Asian parts of Turkey?",
     bonus: "Bosphorus",
-    bonusAliases: ["The Bosphorus","Bosphorus Strait","Bosporus"]
+    bonusAliases: ["The Bosphorus","Bosphorus Strait","Bosporus"],
+    bonusOptions: ["Bosphorus","Dardanelles","Suez","Gibraltar"]
   },
   {
     id: "th",
@@ -771,7 +802,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Thailand's former name?",
     bonus: "Siam",
-    bonusAliases: ["Kingdom of Siam"]
+    bonusAliases: ["Kingdom of Siam"],
+    bonusOptions: ["Siam","Burma","Indochina","Malaya"]
   },
   {
     id: "vn",
@@ -795,7 +827,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the famous Vietnamese soup with rice noodles called?",
     bonus: "Pho",
-    bonusAliases: ["Phở"]
+    bonusAliases: ["Phở"],
+    bonusOptions: ["Pho","Ramen","Laksa","Tom Yum"]
   },
   {
     id: "id",
@@ -819,7 +852,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many islands make up Indonesia (approximately)?",
     bonus: "17000",
-    bonusAliases: ["17,000","17000 islands","Seventeen thousand"]
+    bonusAliases: ["17,000","17000 islands","Seventeen thousand"],
+    bonusOptions: ["17000","5000","10000","25000"]
   },
   {
     id: "my",
@@ -843,7 +877,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What are the famous twin towers in Kuala Lumpur called?",
     bonus: "Petronas Towers",
-    bonusAliases: ["Petronas Twin Towers","The Petronas Towers","Twin Towers"]
+    bonusAliases: ["Petronas Twin Towers","The Petronas Towers","Twin Towers"],
+    bonusOptions: ["Petronas Towers","Taipei 101","Burj Khalifa","Shanghai Tower"]
   },
   {
     id: "ph",
@@ -867,7 +902,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many islands make up the Philippines?",
     bonus: "7641",
-    bonusAliases: ["7,641","7000","7,000","Over 7000"]
+    bonusAliases: ["7,641","7000","7,000","Over 7000"],
+    bonusOptions: ["7641","5000","3000","10000"]
   },
   {
     id: "pk",
@@ -891,7 +927,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the second highest mountain in the world, located in Pakistan?",
     bonus: "K2",
-    bonusAliases: ["Mount K2","Mt K2","K-2"]
+    bonusAliases: ["Mount K2","Mt K2","K-2"],
+    bonusOptions: ["K2","Mount Everest","Nanga Parbat","Annapurna"]
   },
   {
     id: "ir",
@@ -915,7 +952,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient empire was centered in modern-day Iran?",
     bonus: "Persian Empire",
-    bonusAliases: ["Persia","Persian","Achaemenid Empire"]
+    bonusAliases: ["Persia","Persian","Achaemenid Empire"],
+    bonusOptions: ["Persian Empire","Ottoman Empire","Roman Empire","Mongol Empire"]
   },
   {
     id: "iq",
@@ -939,7 +977,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient civilization developed writing in the region now known as Iraq?",
     bonus: "Sumerians",
-    bonusAliases: ["Sumerian","Sumeria","Mesopotamia","Mesopotamians"]
+    bonusAliases: ["Sumerian","Sumeria","Mesopotamia","Mesopotamians"],
+    bonusOptions: ["Sumerians","Egyptians","Greeks","Phoenicians"]
   },
   {
     id: "il",
@@ -963,7 +1002,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What sea borders Israel to the east and is the lowest point on Earth?",
     bonus: "Dead Sea",
-    bonusAliases: ["The Dead Sea"]
+    bonusAliases: ["The Dead Sea"],
+    bonusOptions: ["Dead Sea","Red Sea","Mediterranean Sea","Sea of Galilee"]
   },
   {
     id: "ae",
@@ -987,7 +1027,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the world's tallest building, located in Dubai?",
     bonus: "Burj Khalifa",
-    bonusAliases: ["Burj","The Burj Khalifa"]
+    bonusAliases: ["Burj","The Burj Khalifa"],
+    bonusOptions: ["Burj Khalifa","Shanghai Tower","Petronas Towers","One World Trade Center"]
   },
   {
     id: "nz",
@@ -1011,7 +1052,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What flightless bird is a national symbol of New Zealand?",
     bonus: "Kiwi",
-    bonusAliases: ["Kiwi bird","The Kiwi"]
+    bonusAliases: ["Kiwi bird","The Kiwi"],
+    bonusOptions: ["Kiwi","Emu","Penguin","Kakapo"]
   },
   {
     id: "sg",
@@ -1035,7 +1077,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous hotel has a rooftop infinity pool shaped like a ship?",
     bonus: "Marina Bay Sands",
-    bonusAliases: ["Marina Bay","MBS"]
+    bonusAliases: ["Marina Bay","MBS"],
+    bonusOptions: ["Marina Bay Sands","The Ritz-Carlton","Raffles Hotel","Shangri-La"]
   },
   {
     id: "ke",
@@ -1059,7 +1102,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the famous annual wildebeest migration in Kenya called?",
     bonus: "Great Migration",
-    bonusAliases: ["The Great Migration","Wildebeest Migration"]
+    bonusAliases: ["The Great Migration","Wildebeest Migration"],
+    bonusOptions: ["Great Migration","Big Five Safari","Serengeti Trek","Savanna Journey"]
   },
   {
     id: "ma",
@@ -1083,7 +1127,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous square and market is located in Marrakech?",
     bonus: "Jemaa el-Fnaa",
-    bonusAliases: ["Jemaa el Fna","Djemaa el Fna","Jamaa el Fna","The Square"]
+    bonusAliases: ["Jemaa el Fna","Djemaa el Fna","Jamaa el Fna","The Square"],
+    bonusOptions: ["Jemaa el-Fnaa","Grand Bazaar","Khan el-Khalili","Souq Waqif"]
   },
   {
     id: "gh",
@@ -1107,7 +1152,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What valuable resource made Ghana historically known as the 'Gold Coast'?",
     bonus: "Gold",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Gold","Diamonds","Oil","Cocoa"]
   },
   {
     id: "tz",
@@ -1131,7 +1177,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the highest mountain in Africa, located in Tanzania?",
     bonus: "Mount Kilimanjaro",
-    bonusAliases: ["Kilimanjaro","Mt Kilimanjaro","Mt. Kilimanjaro"]
+    bonusAliases: ["Kilimanjaro","Mt Kilimanjaro","Mt. Kilimanjaro"],
+    bonusOptions: ["Mount Kilimanjaro","Mount Kenya","Mount Meru","Mount Elgon"]
   },
   {
     id: "et",
@@ -1155,7 +1202,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Ethiopia credited with being the birthplace of?",
     bonus: "Coffee",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Coffee","Tea","Cocoa","Wheat"]
   },
   {
     id: "co",
@@ -1179,7 +1227,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What valuable green gemstone is Colombia famous for producing?",
     bonus: "Emerald",
-    bonusAliases: ["Emeralds"]
+    bonusAliases: ["Emeralds"],
+    bonusOptions: ["Emerald","Ruby","Sapphire","Diamond"]
   },
   {
     id: "pe",
@@ -1203,7 +1252,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous Incan citadel is located high in the Andes Mountains?",
     bonus: "Machu Picchu",
-    bonusAliases: ["Macchu Picchu","Machu Pichu"]
+    bonusAliases: ["Macchu Picchu","Machu Pichu"],
+    bonusOptions: ["Machu Picchu","Chichen Itza","Tikal","Cusco"]
   },
   {
     id: "cl",
@@ -1227,7 +1277,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the driest desert in the world, located in Chile?",
     bonus: "Atacama Desert",
-    bonusAliases: ["Atacama","The Atacama"]
+    bonusAliases: ["Atacama","The Atacama"],
+    bonusOptions: ["Atacama Desert","Sahara Desert","Gobi Desert","Mojave Desert"]
   },
   {
     id: "ve",
@@ -1251,7 +1302,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the world's highest waterfall, located in Venezuela?",
     bonus: "Angel Falls",
-    bonusAliases: ["Angel Fall","Salto Angel"]
+    bonusAliases: ["Angel Fall","Salto Angel"],
+    bonusOptions: ["Angel Falls","Niagara Falls","Victoria Falls","Iguazu Falls"]
   },
   {
     id: "cu",
@@ -1275,7 +1327,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What classic American cars from the 1950s are Cuba famous for still using?",
     bonus: "Classic cars",
-    bonusAliases: ["Vintage cars","Old cars","1950s cars","American cars","Chevrolets","Fords"]
+    bonusAliases: ["Vintage cars","Old cars","1950s cars","American cars","Chevrolets","Fords"],
+    bonusOptions: ["Classic cars","Modern cars","Motorcycles","Electric vehicles"]
   },
   {
     id: "ie",
@@ -1299,7 +1352,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the nickname for Ireland?",
     bonus: "Emerald Isle",
-    bonusAliases: ["The Emerald Isle"]
+    bonusAliases: ["The Emerald Isle"],
+    bonusOptions: ["Emerald Isle","Green Island","Celtic Land","Shamrock Nation"]
   },
   {
     id: "fi",
@@ -1323,7 +1377,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What relaxation tradition involving a heated room is Finland famous for?",
     bonus: "Sauna",
-    bonusAliases: ["Saunas","Finnish sauna"]
+    bonusAliases: ["Saunas","Finnish sauna"],
+    bonusOptions: ["Sauna","Hot Tub","Steam Bath","Ice Bath"]
   },
   {
     id: "cz",
@@ -1347,7 +1402,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Prague's famous astronomical clock called?",
     bonus: "Orloj",
-    bonusAliases: ["Prague Orloj","The Orloj","Astronomical Clock"]
+    bonusAliases: ["Prague Orloj","The Orloj","Astronomical Clock"],
+    bonusOptions: ["Orloj","Big Ben","Zytglogge","Rathaus Clock"]
   },
   {
     id: "hu",
@@ -1371,7 +1427,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous cube puzzle was invented by a Hungarian professor?",
     bonus: "Rubik's Cube",
-    bonusAliases: ["Rubiks Cube","Rubik Cube","The Rubik's Cube"]
+    bonusAliases: ["Rubiks Cube","Rubik Cube","The Rubik's Cube"],
+    bonusOptions: ["Rubik's Cube","Tetris","Jenga","Sudoku"]
   },
   {
     id: "ro",
@@ -1395,7 +1452,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What fictional vampire is associated with Romania's Transylvania region?",
     bonus: "Dracula",
-    bonusAliases: ["Count Dracula","Vlad Dracula","Vlad the Impaler"]
+    bonusAliases: ["Count Dracula","Vlad Dracula","Vlad the Impaler"],
+    bonusOptions: ["Dracula","Frankenstein","Werewolf","Mummy"]
   },
   {
     id: "ua",
@@ -1419,7 +1477,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the name of the 1986 nuclear disaster that occurred in Ukraine?",
     bonus: "Chernobyl",
-    bonusAliases: ["Chernobyl disaster","Chornobyl"]
+    bonusAliases: ["Chernobyl disaster","Chornobyl"],
+    bonusOptions: ["Chernobyl","Fukushima","Three Mile Island","Pripyat"]
   },
 
   // ===== HARD COUNTRIES =====
@@ -1445,7 +1504,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What percentage of Iceland's energy comes from renewable sources?",
     bonus: "100",
-    bonusAliases: ["100%","One hundred","Nearly 100%","Almost 100%"]
+    bonusAliases: ["100%","One hundred","Nearly 100%","Almost 100%"],
+    bonusOptions: ["100","75","85","90"]
   },
   {
     id: "lu",
@@ -1469,7 +1529,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Luxembourg one of the smallest and wealthiest in the world?",
     bonus: "Country",
-    bonusAliases: ["Countries","Nation","Nations"]
+    bonusAliases: ["Countries","Nation","Nations"],
+    bonusOptions: ["Country","City","State","Territory"]
   },
   {
     id: "mt",
@@ -1493,7 +1554,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient temples in Malta are among the oldest freestanding structures in the world?",
     bonus: "Megalithic Temples",
-    bonusAliases: ["Megalithic temples","Ggantija","Hagar Qim","Temples"]
+    bonusAliases: ["Megalithic temples","Ggantija","Hagar Qim","Temples"],
+    bonusOptions: ["Megalithic Temples","Roman Ruins","Greek Temples","Stone Circles"]
   },
   {
     id: "cy",
@@ -1517,7 +1579,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What Greek goddess of love is said to have been born off the coast of Cyprus?",
     bonus: "Aphrodite",
-    bonusAliases: ["Venus"]
+    bonusAliases: ["Venus"],
+    bonusOptions: ["Aphrodite","Athena","Artemis","Hera"]
   },
   {
     id: "ee",
@@ -1541,7 +1604,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What communication app was created by Estonian developers?",
     bonus: "Skype",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Skype","WhatsApp","Zoom","Discord"]
   },
   {
     id: "lv",
@@ -1565,7 +1629,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the capital of Latvia known for having one of the best collections of?",
     bonus: "Art Nouveau architecture",
-    bonusAliases: ["Art Nouveau","Art nouveau buildings","Jugendstil"]
+    bonusAliases: ["Art Nouveau","Art nouveau buildings","Jugendstil"],
+    bonusOptions: ["Art Nouveau architecture","Gothic architecture","Baroque architecture","Renaissance architecture"]
   },
   {
     id: "lt",
@@ -1589,7 +1654,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What sport involving throwing a ball into a hoop is extremely popular in Lithuania?",
     bonus: "Basketball",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Basketball","Soccer","Ice Hockey","Volleyball"]
   },
   {
     id: "sk",
@@ -1613,7 +1679,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many castles and chateaux does Slovakia have (approximately)?",
     bonus: "180",
-    bonusAliases: ["Over 100","100+","About 180"]
+    bonusAliases: ["Over 100","100+","About 180"],
+    bonusOptions: ["180","50","100","250"]
   },
   {
     id: "si",
@@ -1637,7 +1704,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What percentage of Slovenia is covered by forests?",
     bonus: "60",
-    bonusAliases: ["60%","Sixty","Over 50%","58%"]
+    bonusAliases: ["60%","Sixty","Over 50%","58%"],
+    bonusOptions: ["60","30","45","75"]
   },
   {
     id: "hr",
@@ -1661,7 +1729,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What HBO fantasy series was partially filmed in Dubrovnik, Croatia?",
     bonus: "Game of Thrones",
-    bonusAliases: ["GOT","GoT"]
+    bonusAliases: ["GOT","GoT"],
+    bonusOptions: ["Game of Thrones","Vikings","The Witcher","House of the Dragon"]
   },
   {
     id: "rs",
@@ -1685,7 +1754,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous inventor known for alternating current was born in Serbia?",
     bonus: "Nikola Tesla",
-    bonusAliases: ["Tesla","Nicolas Tesla"]
+    bonusAliases: ["Tesla","Nicolas Tesla"],
+    bonusOptions: ["Nikola Tesla","Albert Einstein","Thomas Edison","Alexander Graham Bell"]
   },
   {
     id: "ba",
@@ -1709,7 +1779,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What event in Sarajevo in 1914 triggered World War I?",
     bonus: "Assassination of Archduke Franz Ferdinand",
-    bonusAliases: ["Franz Ferdinand assassination","Assassination","Franz Ferdinand"]
+    bonusAliases: ["Franz Ferdinand assassination","Assassination","Franz Ferdinand"],
+    bonusOptions: ["Assassination of Archduke Franz Ferdinand","Treaty of Versailles","Russian Revolution","Battle of Sarajevo"]
   },
   {
     id: "al",
@@ -1733,7 +1804,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous Catholic nun and saint was born in Albania?",
     bonus: "Mother Teresa",
-    bonusAliases: ["Saint Teresa","Teresa of Calcutta","St Teresa"]
+    bonusAliases: ["Saint Teresa","Teresa of Calcutta","St Teresa"],
+    bonusOptions: ["Mother Teresa","Princess Diana","Florence Nightingale","Clara Barton"]
   },
   {
     id: "mk",
@@ -1757,7 +1829,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient king and conqueror is North Macedonia named after?",
     bonus: "Alexander the Great",
-    bonusAliases: ["Alexander","Alexander of Macedon"]
+    bonusAliases: ["Alexander","Alexander of Macedon"],
+    bonusOptions: ["Alexander the Great","Julius Caesar","Genghis Khan","Napoleon"]
   },
   {
     id: "me",
@@ -1781,7 +1854,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the name of the famous bay and UNESCO site on Montenegro's coast?",
     bonus: "Bay of Kotor",
-    bonusAliases: ["Kotor Bay","Boka Bay","Kotor"]
+    bonusAliases: ["Kotor Bay","Boka Bay","Kotor"],
+    bonusOptions: ["Bay of Kotor","Bay of Naples","Amalfi Coast","Croatian Riviera"]
   },
   {
     id: "md",
@@ -1805,7 +1879,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Moldova one of the largest producers of in Europe?",
     bonus: "Wine",
-    bonusAliases: ["Wines","Grapes"]
+    bonusAliases: ["Wines","Grapes"],
+    bonusOptions: ["Wine","Beer","Vodka","Whiskey"]
   },
   {
     id: "by",
@@ -1829,7 +1904,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Europe's largest remaining primeval forest, shared with Poland?",
     bonus: "Bialowieza Forest",
-    bonusAliases: ["Bialowieza","Białowieża Forest","Belovezhskaya Pushcha"]
+    bonusAliases: ["Bialowieza","Białowieża Forest","Belovezhskaya Pushcha"],
+    bonusOptions: ["Bialowieza Forest","Black Forest","Sherwood Forest","Ardennes Forest"]
   },
   {
     id: "ge",
@@ -1853,7 +1929,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What beverage is Georgia considered to be the birthplace of?",
     bonus: "Wine",
-    bonusAliases: ["Wines"]
+    bonusAliases: ["Wines"],
+    bonusOptions: ["Wine","Beer","Coffee","Tea"]
   },
   {
     id: "am",
@@ -1877,7 +1954,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What mountain is a national symbol of Armenia, visible from Yerevan?",
     bonus: "Mount Ararat",
-    bonusAliases: ["Ararat","Mt Ararat","Mt. Ararat"]
+    bonusAliases: ["Ararat","Mt Ararat","Mt. Ararat"],
+    bonusOptions: ["Mount Ararat","Mount Elbrus","Mount Kazbek","Mount Aragats"]
   },
   {
     id: "az",
@@ -1901,7 +1979,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Azerbaijan known as the 'Land of'?",
     bonus: "Fire",
-    bonusAliases: ["Land of Fire","Flames"]
+    bonusAliases: ["Land of Fire","Flames"],
+    bonusOptions: ["Fire","Water","Wind","Earth"]
   },
   {
     id: "kz",
@@ -1925,7 +2004,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous space launch facility is located in Kazakhstan?",
     bonus: "Baikonur Cosmodrome",
-    bonusAliases: ["Baikonur","Cosmodrome"]
+    bonusAliases: ["Baikonur","Cosmodrome"],
+    bonusOptions: ["Baikonur Cosmodrome","Kennedy Space Center","Cape Canaveral","Jiuquan"]
   },
   {
     id: "uz",
@@ -1949,7 +2029,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous ancient trade route passed through Uzbekistan?",
     bonus: "Silk Road",
-    bonusAliases: ["The Silk Road","Silk Route"]
+    bonusAliases: ["The Silk Road","Silk Route"],
+    bonusOptions: ["Silk Road","Spice Route","Tea Road","Amber Road"]
   },
   {
     id: "tm",
@@ -1973,7 +2054,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What burning natural gas crater is called the 'Door to Hell'?",
     bonus: "Darvaza Gas Crater",
-    bonusAliases: ["Darvaza","Door to Hell","Gates of Hell","Derweze"]
+    bonusAliases: ["Darvaza","Door to Hell","Gates of Hell","Derweze"],
+    bonusOptions: ["Darvaza Gas Crater","Grand Canyon","Victoria Falls","Mount Vesuvius"]
   },
   {
     id: "kg",
@@ -1997,7 +2079,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the name of the epic poem that is central to Kyrgyz culture?",
     bonus: "Epic of Manas",
-    bonusAliases: ["Manas","The Manas"]
+    bonusAliases: ["Manas","The Manas"],
+    bonusOptions: ["Epic of Manas","Epic of Gilgamesh","The Iliad","Beowulf"]
   },
   {
     id: "tj",
@@ -2021,7 +2104,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What percentage of Tajikistan is covered by mountains?",
     bonus: "93",
-    bonusAliases: ["93%","Over 90%","90%"]
+    bonusAliases: ["93%","Over 90%","90%"],
+    bonusOptions: ["93","50","70","80"]
   },
   {
     id: "mn",
@@ -2045,7 +2129,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous conqueror created the largest contiguous land empire from Mongolia?",
     bonus: "Genghis Khan",
-    bonusAliases: ["Chinggis Khan","Ghengis Khan","Temujin"]
+    bonusAliases: ["Chinggis Khan","Ghengis Khan","Temujin"],
+    bonusOptions: ["Genghis Khan","Kublai Khan","Attila the Hun","Tamerlane"]
   },
   {
     id: "np",
@@ -2069,7 +2154,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the world's highest mountain, located on Nepal's border?",
     bonus: "Mount Everest",
-    bonusAliases: ["Everest","Mt Everest","Mt. Everest","Sagarmatha"]
+    bonusAliases: ["Everest","Mt Everest","Mt. Everest","Sagarmatha"],
+    bonusOptions: ["Mount Everest","K2","Kangchenjunga","Makalu"]
   },
   {
     id: "bt",
@@ -2093,7 +2179,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What does Bhutan measure instead of GDP to track national success?",
     bonus: "Gross National Happiness",
-    bonusAliases: ["GNH","Happiness","National Happiness"]
+    bonusAliases: ["GNH","Happiness","National Happiness"],
+    bonusOptions: ["Gross National Happiness","GDP","Human Development Index","Quality of Life Index"]
   },
   {
     id: "bd",
@@ -2117,7 +2204,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the world's largest river delta, located in Bangladesh?",
     bonus: "Ganges Delta",
-    bonusAliases: ["Ganges-Brahmaputra Delta","Bengal Delta","Sundarbans"]
+    bonusAliases: ["Ganges-Brahmaputra Delta","Bengal Delta","Sundarbans"],
+    bonusOptions: ["Ganges Delta","Nile Delta","Mississippi Delta","Mekong Delta"]
   },
   {
     id: "lk",
@@ -2141,7 +2229,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What valuable spice was Sri Lanka historically famous for trading?",
     bonus: "Cinnamon",
-    bonusAliases: ["Ceylon Cinnamon"]
+    bonusAliases: ["Ceylon Cinnamon"],
+    bonusOptions: ["Cinnamon","Pepper","Cardamom","Nutmeg"]
   },
   {
     id: "mm",
@@ -2165,7 +2254,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Myanmar's former name?",
     bonus: "Burma",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Burma","Siam","Ceylon","Malaya"]
   },
   {
     id: "kh",
@@ -2189,7 +2279,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous temple complex is the largest religious monument in the world?",
     bonus: "Angkor Wat",
-    bonusAliases: ["Angkor","Angkor wat"]
+    bonusAliases: ["Angkor","Angkor wat"],
+    bonusOptions: ["Angkor Wat","Borobudur","Bagan","Prambanan"]
   },
   {
     id: "la",
@@ -2213,7 +2304,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What unexploded ordnance problem does Laos have from the Vietnam War era?",
     bonus: "Cluster bombs",
-    bonusAliases: ["Bombs","UXO","Unexploded bombs","Landmines"]
+    bonusAliases: ["Bombs","UXO","Unexploded bombs","Landmines"],
+    bonusOptions: ["Cluster bombs","Land mines","Chemical weapons","Nuclear waste"]
   },
   {
     id: "bn",
@@ -2237,7 +2329,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What natural resource made the Sultan of Brunei one of the world's wealthiest people?",
     bonus: "Oil",
-    bonusAliases: ["Petroleum","Oil and gas","Natural gas"]
+    bonusAliases: ["Petroleum","Oil and gas","Natural gas"],
+    bonusOptions: ["Oil","Gold","Diamonds","Natural Gas"]
   },
   {
     id: "tl",
@@ -2261,7 +2354,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "In what year did Timor-Leste gain independence, making it one of the newest countries?",
     bonus: "2002",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["2002","1999","1975","2010"]
   },
   {
     id: "mv",
@@ -2285,7 +2379,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the Maldives at risk of due to rising sea levels (average elevation is 1.5m)?",
     bonus: "Sinking",
-    bonusAliases: ["Flooding","Disappearing","Being submerged","Going underwater"]
+    bonusAliases: ["Flooding","Disappearing","Being submerged","Going underwater"],
+    bonusOptions: ["Sinking","Earthquakes","Volcanoes","Tsunamis"]
   },
   {
     id: "af",
@@ -2309,7 +2404,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What mountain range runs through Afghanistan?",
     bonus: "Hindu Kush",
-    bonusAliases: ["Hindukush","The Hindu Kush"]
+    bonusAliases: ["Hindukush","The Hindu Kush"],
+    bonusOptions: ["Hindu Kush","Himalayas","Karakoram","Pamirs"]
   },
   {
     id: "ye",
@@ -2333,7 +2429,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient multi-story mud-brick buildings is Yemen famous for?",
     bonus: "Tower houses",
-    bonusAliases: ["Mud brick towers","Shibam","Skyscrapers of the desert"]
+    bonusAliases: ["Mud brick towers","Shibam","Skyscrapers of the desert"],
+    bonusOptions: ["Tower houses","Pyramids","Ziggurats","Castles"]
   },
   {
     id: "om",
@@ -2357,7 +2454,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What valuable resin has Oman traded for thousands of years?",
     bonus: "Frankincense",
-    bonusAliases: ["Incense"]
+    bonusAliases: ["Incense"],
+    bonusOptions: ["Frankincense","Myrrh","Sandalwood","Amber"]
   },
   {
     id: "jo",
@@ -2381,7 +2479,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient city carved into rose-red cliffs is Jordan's most famous attraction?",
     bonus: "Petra",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Petra","Palmyra","Jerash","Amman Citadel"]
   },
   {
     id: "lb",
@@ -2405,7 +2504,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What tree appears on the Lebanese flag?",
     bonus: "Cedar",
-    bonusAliases: ["Cedar tree","Cedar of Lebanon","Cedars"]
+    bonusAliases: ["Cedar tree","Cedar of Lebanon","Cedars"],
+    bonusOptions: ["Cedar","Oak","Palm","Olive"]
   },
   {
     id: "sy",
@@ -2429,7 +2529,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is considered one of the oldest continuously inhabited cities in the world?",
     bonus: "Damascus",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Damascus","Baghdad","Cairo","Jerusalem"]
   },
   {
     id: "kw",
@@ -2453,7 +2554,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What valuable natural resource accounts for about 90% of Kuwait's export revenues?",
     bonus: "Oil",
-    bonusAliases: ["Petroleum","Crude oil"]
+    bonusAliases: ["Petroleum","Crude oil"],
+    bonusOptions: ["Oil","Gold","Pearls","Dates"]
   },
   {
     id: "bh",
@@ -2477,7 +2579,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient civilization was Bahrain home to, known for pearl trading?",
     bonus: "Dilmun",
-    bonusAliases: ["Dilmun civilization"]
+    bonusAliases: ["Dilmun civilization"],
+    bonusOptions: ["Dilmun","Phoenicia","Sumeria","Babylon"]
   },
   {
     id: "qa",
@@ -2501,7 +2604,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What major sporting event did Qatar host in 2022?",
     bonus: "FIFA World Cup",
-    bonusAliases: ["World Cup","Soccer World Cup","Football World Cup"]
+    bonusAliases: ["World Cup","Soccer World Cup","Football World Cup"],
+    bonusOptions: ["FIFA World Cup","Olympics","Asian Games","Commonwealth Games"]
   },
   // African Hard Countries
   {
@@ -2526,7 +2630,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the largest country in Africa by area?",
     bonus: "Algeria",
-    bonusAliases: ["It's Algeria","This country"]
+    bonusAliases: ["It's Algeria","This country"],
+    bonusOptions: ["Algeria","Sudan","Libya","Egypt"]
   },
   {
     id: "tn",
@@ -2550,7 +2655,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient city-state and rival of Rome was located in modern-day Tunisia?",
     bonus: "Carthage",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Carthage","Athens","Sparta","Troy"]
   },
   {
     id: "ly",
@@ -2574,7 +2680,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient Roman ruins in Libya are among the best-preserved in the Mediterranean?",
     bonus: "Leptis Magna",
-    bonusAliases: ["Leptis","Lepcis Magna"]
+    bonusAliases: ["Leptis","Lepcis Magna"],
+    bonusOptions: ["Leptis Magna","Pompeii","Ephesus","Carthage"]
   },
   {
     id: "sd",
@@ -2598,7 +2705,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many pyramids does Sudan have, more than any other country?",
     bonus: "255",
-    bonusAliases: ["Over 200","200+","More than 200","About 250"]
+    bonusAliases: ["Over 200","200+","More than 200","About 250"],
+    bonusOptions: ["255","100","150","200"]
   },
   {
     id: "ug",
@@ -2622,7 +2730,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What lake is the source of the Nile River, located in Uganda?",
     bonus: "Lake Victoria",
-    bonusAliases: ["Victoria","Lake victoria"]
+    bonusAliases: ["Victoria","Lake victoria"],
+    bonusOptions: ["Lake Victoria","Lake Tanganyika","Lake Malawi","Lake Chad"]
   },
   {
     id: "rw",
@@ -2646,7 +2755,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What has Rwanda banned nationwide to protect the environment?",
     bonus: "Plastic bags",
-    bonusAliases: ["Plastic","Single-use plastic","Plastics"]
+    bonusAliases: ["Plastic","Single-use plastic","Plastics"],
+    bonusOptions: ["Plastic bags","Straws","Styrofoam","Cigarettes"]
   },
   {
     id: "sn",
@@ -2670,7 +2780,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous car rally used to end in Dakar, Senegal?",
     bonus: "Dakar Rally",
-    bonusAliases: ["Paris-Dakar Rally","Paris-Dakar","The Dakar"]
+    bonusAliases: ["Paris-Dakar Rally","Paris-Dakar","The Dakar"],
+    bonusOptions: ["Dakar Rally","Tour de France","Monaco Grand Prix","Indy 500"]
   },
   {
     id: "ci",
@@ -2694,7 +2805,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What crop is Ivory Coast the world's largest producer of?",
     bonus: "Cocoa",
-    bonusAliases: ["Cacao","Cocoa beans","Chocolate"]
+    bonusAliases: ["Cacao","Cocoa beans","Chocolate"],
+    bonusOptions: ["Cocoa","Coffee","Sugar","Cotton"]
   },
   {
     id: "cm",
@@ -2718,7 +2830,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "Why is Cameroon called 'Africa in miniature'?",
     bonus: "Geographic diversity",
-    bonusAliases: ["Diversity","All of Africa's climates","Varied geography","It has all African landscapes"]
+    bonusAliases: ["Diversity","All of Africa's climates","Varied geography","It has all African landscapes"],
+    bonusOptions: ["Geographic diversity","Wildlife","Population","Economy"]
   },
   {
     id: "ao",
@@ -2742,7 +2855,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Angola one of Africa's largest producers of?",
     bonus: "Oil",
-    bonusAliases: ["Petroleum","Crude oil","Diamonds"]
+    bonusAliases: ["Petroleum","Crude oil","Diamonds"],
+    bonusOptions: ["Oil","Gold","Copper","Uranium"]
   },
   {
     id: "mz",
@@ -2766,7 +2880,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What body of water forms Mozambique's eastern border?",
     bonus: "Indian Ocean",
-    bonusAliases: ["The Indian Ocean"]
+    bonusAliases: ["The Indian Ocean"],
+    bonusOptions: ["Indian Ocean","Atlantic Ocean","Pacific Ocean","Mediterranean Sea"]
   },
   {
     id: "zw",
@@ -2790,7 +2905,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What massive waterfall is shared between Zimbabwe and Zambia?",
     bonus: "Victoria Falls",
-    bonusAliases: ["Victoria falls","Mosi-oa-Tunya"]
+    bonusAliases: ["Victoria falls","Mosi-oa-Tunya"],
+    bonusOptions: ["Victoria Falls","Angel Falls","Niagara Falls","Iguazu Falls"]
   },
   {
     id: "zm",
@@ -2814,7 +2930,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What metal is Zambia one of the world's largest producers of?",
     bonus: "Copper",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Copper","Gold","Silver","Iron"]
   },
   {
     id: "bw",
@@ -2838,7 +2955,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What inland delta in Botswana is a UNESCO World Heritage Site?",
     bonus: "Okavango Delta",
-    bonusAliases: ["Okavango","The Okavango"]
+    bonusAliases: ["Okavango","The Okavango"],
+    bonusOptions: ["Okavango Delta","Nile Delta","Niger Delta","Zambezi Delta"]
   },
   {
     id: "na",
@@ -2862,7 +2980,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is one of the oldest deserts in the world, located in Namibia?",
     bonus: "Namib Desert",
-    bonusAliases: ["Namib","The Namib"]
+    bonusAliases: ["Namib","The Namib"],
+    bonusOptions: ["Namib Desert","Kalahari Desert","Sahara Desert","Gobi Desert"]
   },
   {
     id: "mg",
@@ -2886,7 +3005,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What unique animal species can only be found in Madagascar?",
     bonus: "Lemur",
-    bonusAliases: ["Lemurs"]
+    bonusAliases: ["Lemurs"],
+    bonusOptions: ["Lemur","Monkey","Ape","Sloth"]
   },
   {
     id: "mu",
@@ -2910,7 +3030,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What extinct flightless bird was native to Mauritius?",
     bonus: "Dodo",
-    bonusAliases: ["The Dodo","Dodo bird"]
+    bonusAliases: ["The Dodo","Dodo bird"],
+    bonusOptions: ["Dodo","Passenger Pigeon","Moa","Tasmanian Tiger"]
   },
   {
     id: "ls",
@@ -2934,7 +3055,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What makes Lesotho unique among African countries in terms of elevation?",
     bonus: "Entirely above 1000m",
-    bonusAliases: ["Highest lowest point","All above 1000m","Highest country","Only country entirely above 1000m"]
+    bonusAliases: ["Highest lowest point","All above 1000m","Highest country","Only country entirely above 1000m"],
+    bonusOptions: ["Entirely above 1000m","Below sea level","On an island","In a desert"]
   },
   {
     id: "sz",
@@ -2958,7 +3080,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the annual reed dance ceremony in Eswatini called?",
     bonus: "Umhlanga",
-    bonusAliases: ["Reed Dance","The Reed Dance"]
+    bonusAliases: ["Reed Dance","The Reed Dance"],
+    bonusOptions: ["Umhlanga","Incwala","Marula","Buganu"]
   },
   // Central American and Caribbean Hard Countries
   {
@@ -2983,7 +3106,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient civilization thrived in Guatemala and built Tikal?",
     bonus: "Maya",
-    bonusAliases: ["Mayan","Mayans","The Maya"]
+    bonusAliases: ["Mayan","Mayans","The Maya"],
+    bonusOptions: ["Maya","Aztec","Inca","Olmec"]
   },
   {
     id: "hn",
@@ -3007,7 +3131,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What ancient Mayan ruins are located in Honduras?",
     bonus: "Copan",
-    bonusAliases: ["Copán","Copan Ruinas"]
+    bonusAliases: ["Copán","Copan Ruinas"],
+    bonusOptions: ["Copan","Tikal","Chichen Itza","Palenque"]
   },
   {
     id: "sv",
@@ -3031,7 +3156,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is El Salvador the smallest country in?",
     bonus: "Central America",
-    bonusAliases: ["Central american"]
+    bonusAliases: ["Central american"],
+    bonusOptions: ["Central America","South America","Caribbean","North America"]
   },
   {
     id: "ni",
@@ -3055,7 +3181,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the largest lake in Central America, located in Nicaragua?",
     bonus: "Lake Nicaragua",
-    bonusAliases: ["Nicaragua Lake","Cocibolca","Lake Cocibolca"]
+    bonusAliases: ["Nicaragua Lake","Cocibolca","Lake Cocibolca"],
+    bonusOptions: ["Lake Nicaragua","Lake Titicaca","Lake Atitlan","Lake Managua"]
   },
   {
     id: "cr",
@@ -3079,7 +3206,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What phrase meaning 'pure life' is Costa Rica's national motto?",
     bonus: "Pura Vida",
-    bonusAliases: ["Pura vida"]
+    bonusAliases: ["Pura vida"],
+    bonusOptions: ["Pura Vida","Carpe Diem","Hakuna Matata","C'est La Vie"]
   },
   {
     id: "pa",
@@ -3103,7 +3231,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How long is the Panama Canal in kilometers (approximately)?",
     bonus: "82",
-    bonusAliases: ["80","82 km","80 km","About 80"]
+    bonusAliases: ["80","82 km","80 km","About 80"],
+    bonusOptions: ["82","50","65","100"]
   },
   {
     id: "jm",
@@ -3127,7 +3256,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What music genre originated in Jamaica in the late 1960s?",
     bonus: "Reggae",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Reggae","Ska","Calypso","Soca"]
   },
   {
     id: "ht",
@@ -3151,7 +3281,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What revolution made Haiti the first free Black republic in 1804?",
     bonus: "Haitian Revolution",
-    bonusAliases: ["The Haitian Revolution","Slave revolution","Slave revolt"]
+    bonusAliases: ["The Haitian Revolution","Slave revolution","Slave revolt"],
+    bonusOptions: ["Haitian Revolution","French Revolution","American Revolution","Cuban Revolution"]
   },
   {
     id: "do",
@@ -3175,7 +3306,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What sport is the Dominican Republic famous for producing professional players in?",
     bonus: "Baseball",
-    bonusAliases: []
+    bonusAliases: [],
+    bonusOptions: ["Baseball","Soccer","Basketball","Boxing"]
   },
   {
     id: "tt",
@@ -3199,7 +3331,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous carnival celebration does Trinidad and Tobago host?",
     bonus: "Carnival",
-    bonusAliases: ["Trinidad Carnival","Trinidad and Tobago Carnival"]
+    bonusAliases: ["Trinidad Carnival","Trinidad and Tobago Carnival"],
+    bonusOptions: ["Carnival","Mardi Gras","Junkanoo","Crop Over"]
   },
   // South American Hard Countries
   {
@@ -3224,7 +3357,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What famous islands belonging to Ecuador inspired Darwin's theory of evolution?",
     bonus: "Galapagos Islands",
-    bonusAliases: ["Galapagos","The Galapagos","Galápagos"]
+    bonusAliases: ["Galapagos","The Galapagos","Galápagos"],
+    bonusOptions: ["Galapagos Islands","Easter Island","Hawaiian Islands","Canary Islands"]
   },
   {
     id: "bo",
@@ -3248,7 +3382,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is the world's largest salt flat, located in Bolivia?",
     bonus: "Salar de Uyuni",
-    bonusAliases: ["Uyuni","Uyuni Salt Flats","Salar de uyuni"]
+    bonusAliases: ["Uyuni","Uyuni Salt Flats","Salar de uyuni"],
+    bonusOptions: ["Salar de Uyuni","Bonneville Salt Flats","Etosha Pan","Makgadikgadi Pan"]
   },
   {
     id: "py",
@@ -3272,7 +3407,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What massive dam is shared between Paraguay and Brazil?",
     bonus: "Itaipu Dam",
-    bonusAliases: ["Itaipu","Itaipú"]
+    bonusAliases: ["Itaipu","Itaipú"],
+    bonusOptions: ["Itaipu Dam","Three Gorges Dam","Hoover Dam","Aswan Dam"]
   },
   {
     id: "uy",
@@ -3296,7 +3432,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "Which country hosted and won the first FIFA World Cup in 1930?",
     bonus: "Uruguay",
-    bonusAliases: ["This country","It's Uruguay"]
+    bonusAliases: ["This country","It's Uruguay"],
+    bonusOptions: ["Uruguay","Brazil","Argentina","Chile"]
   },
   {
     id: "gy",
@@ -3320,7 +3457,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What is Guyana the only English-speaking country in?",
     bonus: "South America",
-    bonusAliases: ["South american mainland"]
+    bonusAliases: ["South american mainland"],
+    bonusOptions: ["South America","Central America","Caribbean","North America"]
   },
   {
     id: "sr",
@@ -3344,7 +3482,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "What European country colonized Suriname until 1975?",
     bonus: "Netherlands",
-    bonusAliases: ["The Netherlands","Holland","Dutch"]
+    bonusAliases: ["The Netherlands","Holland","Dutch"],
+    bonusOptions: ["Netherlands","France","United Kingdom","Spain"]
   },
   // Pacific Island Nations
   {
@@ -3369,7 +3508,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many islands make up Fiji?",
     bonus: "333",
-    bonusAliases: ["Over 300","300+","About 330"]
+    bonusAliases: ["Over 300","300+","About 330"],
+    bonusOptions: ["333","100","200","500"]
   },
   {
     id: "pg",
@@ -3393,7 +3533,8 @@ export const countries = [
       bonus: "This is a fun trivia question - take your best guess!"},
     bonusQuestion: "How many languages are spoken in Papua New Guinea, the most in any country?",
     bonus: "840",
-    bonusAliases: ["Over 800","800+","About 850","More than 800"]
+    bonusAliases: ["Over 800","800+","About 850","More than 800"],
+    bonusOptions: ["840","200","400","600"]
   }
 ];
 

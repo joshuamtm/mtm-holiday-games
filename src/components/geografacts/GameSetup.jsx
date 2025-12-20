@@ -112,7 +112,7 @@ export default function GameSetup({ onStartGame }) {
         </div>
         <div className="p-3 bg-purple-50 rounded-lg border border-purple-200 mb-6">
           <p className="text-sm text-purple-800">
-            <strong>⭐ Bonus Question:</strong> A fun trivia question about the country! Worth 1 point, but getting it wrong does NOT count as a strike.
+            <strong>⭐ Bonus Question:</strong> A fun multiple-choice trivia question about the country! Worth 1 point, but getting it wrong does NOT count as a strike.
           </p>
         </div>
 

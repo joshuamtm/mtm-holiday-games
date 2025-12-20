@@ -1,6 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { Check, X, Lightbulb, ChevronRight } from 'lucide-react';
 import { validateAnswer } from '../../data/countries';
+
+// Shuffle array helper
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 const questions = [
   { id: 'continent', label: 'Continent', points: 1, icon: '🌍' },
@@ -26,9 +36,18 @@ export default function QuestionPanel({
   const [feedback, setFeedback] = useState(null); // 'correct', 'incorrect', null
   const [showHint, setShowHint] = useState(false);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(null);
   const inputRef = useRef(null);
 
   const currentQuestion = questions[currentQuestionIndex];
+
+  // Shuffle bonus options when we reach the bonus question
+  const shuffledBonusOptions = useMemo(() => {
+    if (currentQuestion?.isBonus && country?.bonusOptions) {
+      return shuffleArray(country.bonusOptions);
+    }
+    return [];
+  }, [currentQuestion?.isBonus, country?.id]);
 
   // Reset state when country changes
   useEffect(() => {
@@ -36,6 +55,7 @@ export default function QuestionPanel({
     setFeedback(null);
     setShowHint(false);
     setAnsweredQuestions([]);
+    setSelectedOption(null);
     setCurrentQuestionIndex(0);
     setRoundScore(0);
     setUsedHints([]);
@@ -116,9 +136,41 @@ export default function QuestionPanel({
       setUserAnswer('');
       setFeedback(null);
       setShowHint(false);
+      setSelectedOption(null);
     } else {
       // Round complete
       onRoundComplete(roundScore, answeredQuestions);
+    }
+  };
+
+  // Handle multiple choice selection for bonus questions
+  const handleMultipleChoiceSelect = (option) => {
+    if (feedback !== null) return; // Already answered
+
+    setSelectedOption(option);
+    const correctAnswer = country.bonus;
+    const isCorrect = option === correctAnswer;
+    const hintUsed = usedHints.includes(currentQuestion.id);
+    const pointsEarned = isCorrect && !hintUsed ? 1 : 0;
+
+    setFeedback(isCorrect ? 'correct' : 'incorrect');
+    setAnsweredQuestions([
+      ...answeredQuestions,
+      {
+        ...currentQuestion,
+        userAnswer: option,
+        correctAnswer,
+        isCorrect,
+        hintUsed,
+        pointsEarned,
+      },
+    ]);
+
+    if (isCorrect) {
+      setRoundScore(roundScore + pointsEarned);
+      onQuestionComplete(currentQuestion.id, true, pointsEarned, true);
+    } else {
+      onQuestionComplete(currentQuestion.id, false, 0, true);
     }
   };
 
@@ -213,28 +265,69 @@ export default function QuestionPanel({
           </div>
         )}
 
-        {/* Answer form */}
-        <form onSubmit={handleSubmit} className="mb-4">
-          <div className="flex gap-2">
-            <input
-              ref={inputRef}
-              type="text"
-              value={userAnswer}
-              onChange={(e) => setUserAnswer(e.target.value)}
-              placeholder={`Enter the ${currentQuestion.label.toLowerCase()}...`}
-              disabled={feedback !== null}
-              className={`flex-1 px-4 py-3 border-2 rounded-lg text-lg focus:outline-none focus:ring-2 transition-all ${
-                feedback === 'correct'
-                  ? 'border-green-500 bg-green-50'
-                  : feedback === 'incorrect'
-                  ? 'border-red-400 bg-red-50'
-                  : 'border-gray-300 focus:border-holiday-green focus:ring-holiday-green/20'
-              }`}
-            />
-            {feedback === null && (
-              <button
-                type="submit"
-                disabled={!userAnswer.trim()}
+        {/* Answer form - Multiple choice for bonus, text input for others */}
+        {currentQuestion.isBonus && shuffledBonusOptions.length > 0 ? (
+          <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {shuffledBonusOptions.map((option, idx) => {
+              const isSelected = selectedOption === option;
+              const isCorrect = option === country.bonus;
+              const showResult = feedback !== null;
+
+              let buttonClass = 'w-full p-4 text-left rounded-lg border-2 font-medium transition-all ';
+
+              if (showResult) {
+                if (isCorrect) {
+                  buttonClass += 'border-green-500 bg-green-100 text-green-800';
+                } else if (isSelected && !isCorrect) {
+                  buttonClass += 'border-red-400 bg-red-100 text-red-800';
+                } else {
+                  buttonClass += 'border-gray-200 bg-gray-50 text-gray-500';
+                }
+              } else {
+                buttonClass += 'border-gray-300 bg-white hover:border-purple-400 hover:bg-purple-50 text-gray-800';
+              }
+
+              return (
+                <button
+                  key={idx}
+                  onClick={() => handleMultipleChoiceSelect(option)}
+                  disabled={feedback !== null}
+                  className={buttonClass}
+                >
+                  <span className="mr-2 text-gray-400">{String.fromCharCode(65 + idx)}.</span>
+                  {option}
+                  {showResult && isCorrect && (
+                    <Check className="inline-block w-5 h-5 ml-2 text-green-600" />
+                  )}
+                  {showResult && isSelected && !isCorrect && (
+                    <X className="inline-block w-5 h-5 ml-2 text-red-600" />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="mb-4">
+            <div className="flex gap-2">
+              <input
+                ref={inputRef}
+                type="text"
+                value={userAnswer}
+                onChange={(e) => setUserAnswer(e.target.value)}
+                placeholder={`Enter the ${currentQuestion.label.toLowerCase()}...`}
+                disabled={feedback !== null}
+                className={`flex-1 px-4 py-3 border-2 rounded-lg text-lg focus:outline-none focus:ring-2 transition-all ${
+                  feedback === 'correct'
+                    ? 'border-green-500 bg-green-50'
+                    : feedback === 'incorrect'
+                    ? 'border-red-400 bg-red-50'
+                    : 'border-gray-300 focus:border-holiday-green focus:ring-holiday-green/20'
+                }`}
+              />
+              {feedback === null && (
+                <button
+                  type="submit"
+                  disabled={!userAnswer.trim()}
                 className="px-6 py-3 bg-holiday-green text-white font-semibold rounded-lg hover:bg-holiday-green-light disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 Submit
@@ -242,6 +335,7 @@ export default function QuestionPanel({
             )}
           </div>
         </form>
+        )}
 
         {/* Feedback */}
         {feedback && (
