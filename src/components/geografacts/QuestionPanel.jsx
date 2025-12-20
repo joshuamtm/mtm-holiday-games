@@ -8,6 +8,7 @@ const questions = [
   { id: 'capital', label: 'Capital City', points: 1, icon: '🏛️' },
   { id: 'language', label: 'Official Language', points: 1, icon: '🗣️' },
   { id: 'currency', label: 'Currency', points: 1, icon: '💰' },
+  { id: 'bonus', label: 'Bonus Trivia', points: 1, icon: '⭐', isBonus: true },
 ];
 
 export default function QuestionPanel({
@@ -59,6 +60,8 @@ export default function QuestionPanel({
         return { answer: country.currency, aliases: country.currencyAliases };
       case 'language':
         return { answer: country.language, aliases: country.languageAliases };
+      case 'bonus':
+        return { answer: country.bonus, aliases: country.bonusAliases || [] };
       default:
         return { answer: '', aliases: [] };
     }
@@ -88,11 +91,24 @@ export default function QuestionPanel({
 
     if (isCorrect) {
       setRoundScore(roundScore + pointsEarned);
-      onQuestionComplete(currentQuestion.id, true, pointsEarned);
+      onQuestionComplete(currentQuestion.id, true, pointsEarned, currentQuestion.isBonus);
     } else {
-      onQuestionComplete(currentQuestion.id, false, 0);
+      // Pass isBonus flag so bonus questions don't count as strikes
+      onQuestionComplete(currentQuestion.id, false, 0, currentQuestion.isBonus);
     }
   };
+
+  // Handle Enter key to advance to next question after feedback
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Enter' && feedback !== null) {
+        e.preventDefault();
+        handleNext();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [feedback, currentQuestionIndex, roundScore, answeredQuestions]);
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
@@ -135,7 +151,7 @@ export default function QuestionPanel({
             Question {currentQuestionIndex + 1} of {questions.length}
           </span>
           <span className="text-sm font-bold text-holiday-green">
-            Round Score: {roundScore}/5
+            Round Score: {roundScore}/6
           </span>
         </div>
         <div className="flex gap-1">
@@ -164,6 +180,9 @@ export default function QuestionPanel({
           <div>
             <h3 className="text-xl font-bold text-gray-800">
               {currentQuestion.label}
+              {currentQuestion.isBonus && (
+                <span className="ml-2 text-sm font-normal text-purple-600">(No strike if wrong!)</span>
+              )}
             </h3>
             <p className="text-sm text-gray-500">
               {currentQuestion.points} point{' '}
@@ -173,6 +192,13 @@ export default function QuestionPanel({
             </p>
           </div>
         </div>
+
+        {/* Bonus trivia question text */}
+        {currentQuestion.isBonus && country.bonusQuestion && (
+          <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-4">
+            <p className="text-purple-800 font-medium">{country.bonusQuestion}</p>
+          </div>
+        )}
 
         {/* Hint section */}
         {showHint && (

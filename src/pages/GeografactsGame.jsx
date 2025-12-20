@@ -91,9 +91,9 @@ export default function GeografactsGame() {
   };
 
   // Handle question completion
-  const handleQuestionComplete = (questionId, isCorrect, points) => {
-    // Track incorrect answers for co-op mode
-    if (!isCorrect && gameMode === 'coop') {
+  const handleQuestionComplete = (questionId, isCorrect, points, isBonus = false) => {
+    // Track incorrect answers for co-op mode (bonus questions don't count as strikes)
+    if (!isCorrect && gameMode === 'coop' && !isBonus) {
       const newStrikes = strikes + 1;
       setStrikes(newStrikes);
 

@@ -21,7 +21,11 @@ export const countries = [
       capital: "Named after the first president, it's not a state",
       currency: "The world's most traded currency, symbolized by $",
       language: "The most widely spoken language in the world"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the national bird of this country?",
+    bonus: "Bald Eagle",
+    bonusAliases: ["Bald eagle","Eagle"]
   },
   {
     id: "gb",
@@ -41,7 +45,11 @@ export const countries = [
       capital: "The River Thames flows through this capital",
       currency: "One of the oldest currencies still in use, symbol £",
       language: "Shakespeare wrote in this language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the name of the famous clock tower in London (often mistakenly called Big Ben)?",
+    bonus: "Elizabeth Tower",
+    bonusAliases: ["Big Ben","The Elizabeth Tower","Clock Tower"]
   },
   {
     id: "fr",
@@ -61,7 +69,11 @@ export const countries = [
       capital: "Known as the City of Light",
       currency: "Shared by 20 European countries",
       language: "The language of love"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "In what year was the Eiffel Tower completed?",
+    bonus: "1889",
+    bonusAliases: []
   },
   {
     id: "de",
@@ -81,7 +93,11 @@ export const countries = [
       capital: "This city was once divided by a famous wall",
       currency: "Shared by 20 European countries",
       language: "Einstein spoke this language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the traditional German celebration held in Munich each fall?",
+    bonus: "Oktoberfest",
+    bonusAliases: ["October Fest","October Festival"]
   },
   {
     id: "it",
@@ -101,7 +117,11 @@ export const countries = [
       capital: "Home to the Colosseum and Vatican City",
       currency: "Shared by 20 European countries",
       language: "The language of opera"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many regions does Italy have?",
+    bonus: "20",
+    bonusAliases: ["Twenty"]
   },
   {
     id: "es",
@@ -121,7 +141,11 @@ export const countries = [
       capital: "Home to the famous Prado Museum",
       currency: "Shared by 20 European countries",
       language: "Second most spoken native language in the world"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the traditional Spanish tomato-throwing festival called?",
+    bonus: "La Tomatina",
+    bonusAliases: ["Tomatina","The Tomatina"]
   },
   {
     id: "cn",
@@ -141,7 +165,11 @@ export const countries = [
       capital: "Hosted the 2008 and 2022 Olympics",
       currency: "Its name means 'people's currency'",
       language: "The most spoken language in the world by native speakers"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "Approximately how long is the Great Wall of China in miles?",
+    bonus: "13000",
+    bonusAliases: ["13,000","13000 miles","13,000 miles","Thirteen thousand"]
   },
   {
     id: "jp",
@@ -161,7 +189,11 @@ export const countries = [
       capital: "The most populous metropolitan area in the world",
       currency: "Symbol is ¥",
       language: "Uses three writing systems: hiragana, katakana, and kanji"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Japan's highest mountain called?",
+    bonus: "Mount Fuji",
+    bonusAliases: ["Mt Fuji","Mt. Fuji","Fuji","Fujisan","Fuji-san"]
   },
   {
     id: "in",
@@ -181,7 +213,11 @@ export const countries = [
       capital: "Located in the National Capital Territory",
       currency: "Symbol is ₹",
       language: "One of 22 official languages, most widely spoken"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many UNESCO World Heritage Sites does India have (approximately)?",
+    bonus: "42",
+    bonusAliases: ["Forty-two","Forty two","40","41","43"]
   },
   {
     id: "br",
@@ -201,7 +237,11 @@ export const countries = [
       capital: "A planned city built in the 1960s",
       currency: "Symbol is R$",
       language: "The only country in South America that speaks this language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the famous statue overlooking Rio de Janeiro called?",
+    bonus: "Christ the Redeemer",
+    bonusAliases: ["Cristo Redentor","The Christ","Christ Redeemer"]
   },
   {
     id: "au",
@@ -221,7 +261,11 @@ export const countries = [
       capital: "Not Sydney or Melbourne, but between them",
       currency: "First country to use polymer banknotes",
       language: "Spoken with a distinctive accent, mate"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What unique animal is found only in Australia and lays eggs?",
+    bonus: "Platypus",
+    bonusAliases: ["Duck-billed platypus","Duckbill platypus"]
   },
   {
     id: "ca",
@@ -241,7 +285,11 @@ export const countries = [
       capital: "Located in Ontario, not Toronto",
       currency: "Features a loon bird on the $1 coin",
       language: "One of two official languages (the other is French)"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What percentage of the world's maple syrup comes from Canada?",
+    bonus: "71",
+    bonusAliases: ["71%","70","70%","Seventy","Seventy-one"]
   },
   {
     id: "mx",
@@ -261,7 +309,11 @@ export const countries = [
       capital: "Built on the ruins of Tenochtitlan",
       currency: "Symbol is $, but different from US currency",
       language: "Most spoken language in the country"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient civilization built the pyramid of Chichen Itza?",
+    bonus: "Maya",
+    bonusAliases: ["Mayan","The Maya","Mayans","The Mayans"]
   },
   {
     id: "ru",
@@ -281,7 +333,11 @@ export const countries = [
       capital: "Home to the Kremlin and Red Square",
       currency: "Symbol is ₽",
       language: "Uses the Cyrillic alphabet"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many time zones does Russia span?",
+    bonus: "11",
+    bonusAliases: ["Eleven"]
   },
   {
     id: "eg",
@@ -301,7 +357,11 @@ export const countries = [
       capital: "The largest city in the Arab world",
       currency: "Shares its name with British currency",
       language: "Spoken across North Africa and the Middle East"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many pyramids are at Giza?",
+    bonus: "3",
+    bonusAliases: ["Three","3 pyramids","Three pyramids"]
   },
   {
     id: "za",
@@ -321,7 +381,11 @@ export const countries = [
       capital: "The administrative capital (there are three)",
       currency: "Named after the Witwatersrand gold mining region",
       language: "One of 11 official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many official languages does South Africa have?",
+    bonus: "11",
+    bonusAliases: ["Eleven"]
   },
   {
     id: "kr",
@@ -341,7 +405,11 @@ export const countries = [
       capital: "One of the largest metropolitan areas in the world",
       currency: "Symbol is ₩",
       language: "Uses the Hangul alphabet"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What K-pop group became the first to top the US Billboard Hot 100?",
+    bonus: "BTS",
+    bonusAliases: ["Bangtan Boys","Bangtan Sonyeondan"]
   },
   {
     id: "ar",
@@ -361,7 +429,11 @@ export const countries = [
       capital: "Known as the 'Paris of South America'",
       currency: "Has experienced significant inflation",
       language: "Spoken with a distinctive accent using 'vos'"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What dance originated in the working-class neighborhoods of Buenos Aires?",
+    bonus: "Tango",
+    bonusAliases: ["The Tango","Argentine Tango"]
   },
   {
     id: "ng",
@@ -381,7 +453,11 @@ export const countries = [
       capital: "Not Lagos, but a planned city in the center",
       currency: "Symbol is ₦",
       language: "Official language, inherited from colonial era"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the name of the Nigerian film industry?",
+    bonus: "Nollywood",
+    bonusAliases: []
   },
   {
     id: "sa",
@@ -401,7 +477,11 @@ export const countries = [
       capital: "Located in the center of the country",
       currency: "Pegged to the US dollar",
       language: "The language of the Quran"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the name of the annual Islamic pilgrimage to Mecca?",
+    bonus: "Hajj",
+    bonusAliases: ["The Hajj","Haj"]
   },
 
   // ===== MEDIUM COUNTRIES =====
@@ -423,7 +503,11 @@ export const countries = [
       capital: "Built on 14 islands",
       currency: "Means 'crown' in English",
       language: "One of the Scandinavian languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What furniture company was founded in Sweden in 1943?",
+    bonus: "IKEA",
+    bonusAliases: ["Ikea"]
   },
   {
     id: "no",
@@ -443,7 +527,11 @@ export const countries = [
       capital: "Located at the head of a fjord",
       currency: "Means 'crown' in English",
       language: "Has two written forms: Bokmal and Nynorsk"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What natural light phenomenon is Norway famous for?",
+    bonus: "Northern Lights",
+    bonusAliases: ["Aurora Borealis","Aurora","The Northern Lights"]
   },
   {
     id: "dk",
@@ -463,7 +551,11 @@ export const countries = [
       capital: "Has a famous Little Mermaid statue",
       currency: "Means 'crown' in English",
       language: "One of the Scandinavian languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What toy company that makes building bricks was founded in Denmark?",
+    bonus: "LEGO",
+    bonusAliases: ["Lego","The Lego Company","Lego Group"]
   },
   {
     id: "nl",
@@ -483,7 +575,11 @@ export const countries = [
       capital: "Built on a system of canals",
       currency: "Shared by 20 European countries",
       language: "Similar to German but distinct"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What flower is the Netherlands famous for cultivating and exporting?",
+    bonus: "Tulip",
+    bonusAliases: ["Tulips","The Tulip"]
   },
   {
     id: "be",
@@ -503,7 +599,11 @@ export const countries = [
       capital: "Home to the European Union headquarters",
       currency: "Shared by 20 European countries",
       language: "Three official languages, this is most spoken"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What food item is Belgium most famous for (besides chocolate)?",
+    bonus: "Waffles",
+    bonusAliases: ["Belgian Waffles","Waffle","Fries","French Fries","Belgian Fries"]
   },
   {
     id: "ch",
@@ -523,7 +623,11 @@ export const countries = [
       capital: "Not Zurich or Geneva",
       currency: "One of the world's most stable currencies",
       language: "Most spoken of four official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the famous Swiss Army tool called?",
+    bonus: "Swiss Army Knife",
+    bonusAliases: ["Swiss knife","Army knife","Pocket knife"]
   },
   {
     id: "at",
@@ -543,7 +647,11 @@ export const countries = [
       capital: "Famous for classical music and coffee houses",
       currency: "Shared by 20 European countries",
       language: "Shares its language with its northern neighbor"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous classical composer was born in Salzburg, Austria?",
+    bonus: "Mozart",
+    bonusAliases: ["Wolfgang Amadeus Mozart","Wolfgang Mozart","W.A. Mozart"]
   },
   {
     id: "pl",
@@ -563,7 +671,11 @@ export const countries = [
       capital: "Rebuilt after WWII destruction",
       currency: "Means 'golden' in Polish",
       language: "A Slavic language with many consonants"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "Who was the famous Polish astronomer who proposed the heliocentric model?",
+    bonus: "Copernicus",
+    bonusAliases: ["Nicolaus Copernicus","Nicolas Copernicus","Mikolaj Kopernik"]
   },
   {
     id: "pt",
@@ -583,7 +695,11 @@ export const countries = [
       capital: "Built on seven hills overlooking the Tagus River",
       currency: "Shared by 20 European countries",
       language: "Also spoken in Brazil"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the traditional Portuguese music genre known for its melancholy sound?",
+    bonus: "Fado",
+    bonusAliases: ["The Fado"]
   },
   {
     id: "gr",
@@ -603,7 +719,11 @@ export const countries = [
       capital: "Home to the Acropolis and Parthenon",
       currency: "Shared by 20 European countries",
       language: "One of the oldest written languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient structure sits atop the Acropolis in Athens?",
+    bonus: "Parthenon",
+    bonusAliases: ["The Parthenon"]
   },
   {
     id: "tr",
@@ -623,7 +743,11 @@ export const countries = [
       capital: "Not Istanbul, but in central Anatolia",
       currency: "Has experienced significant inflation recently",
       language: "Uses Latin alphabet since 1928"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What strait separates the European and Asian parts of Turkey?",
+    bonus: "Bosphorus",
+    bonusAliases: ["The Bosphorus","Bosphorus Strait","Bosporus"]
   },
   {
     id: "th",
@@ -643,7 +767,11 @@ export const countries = [
       capital: "One of the most visited cities in the world",
       currency: "Symbol is ฿",
       language: "A tonal language with its own script"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Thailand's former name?",
+    bonus: "Siam",
+    bonusAliases: ["Kingdom of Siam"]
   },
   {
     id: "vn",
@@ -663,7 +791,11 @@ export const countries = [
       capital: "In the north, not Ho Chi Minh City",
       currency: "One of the lowest valued currencies",
       language: "Uses Latin alphabet with diacritical marks"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the famous Vietnamese soup with rice noodles called?",
+    bonus: "Pho",
+    bonusAliases: ["Phở"]
   },
   {
     id: "id",
@@ -683,7 +815,11 @@ export const countries = [
       capital: "On the island of Java",
       currency: "Similar name to India's currency",
       language: "Based on Malay, uses Latin alphabet"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many islands make up Indonesia (approximately)?",
+    bonus: "17000",
+    bonusAliases: ["17,000","17000 islands","Seventeen thousand"]
   },
   {
     id: "my",
@@ -703,7 +839,11 @@ export const countries = [
       capital: "Name means 'muddy confluence'",
       currency: "Means 'jagged' referring to coin edges",
       language: "Also called Bahasa Malaysia"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What are the famous twin towers in Kuala Lumpur called?",
+    bonus: "Petronas Towers",
+    bonusAliases: ["Petronas Twin Towers","The Petronas Towers","Twin Towers"]
   },
   {
     id: "ph",
@@ -723,7 +863,11 @@ export const countries = [
       capital: "Located on the island of Luzon",
       currency: "Derived from Spanish currency",
       language: "Based on Tagalog"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many islands make up the Philippines?",
+    bonus: "7641",
+    bonusAliases: ["7,641","7000","7,000","Over 7000"]
   },
   {
     id: "pk",
@@ -743,7 +887,11 @@ export const countries = [
       capital: "A planned city built in the 1960s",
       currency: "Similar to Indian currency",
       language: "National language, similar to Hindi"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the second highest mountain in the world, located in Pakistan?",
+    bonus: "K2",
+    bonusAliases: ["Mount K2","Mt K2","K-2"]
   },
   {
     id: "ir",
@@ -763,7 +911,11 @@ export const countries = [
       capital: "Largest city in Western Asia",
       currency: "One of the lowest valued currencies",
       language: "Also known as Farsi"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient empire was centered in modern-day Iran?",
+    bonus: "Persian Empire",
+    bonusAliases: ["Persia","Persian","Achaemenid Empire"]
   },
   {
     id: "iq",
@@ -783,7 +935,11 @@ export const countries = [
       capital: "Once the largest city in the world",
       currency: "Common currency name in Arab countries",
       language: "Official language of many Middle Eastern countries"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient civilization developed writing in the region now known as Iraq?",
+    bonus: "Sumerians",
+    bonusAliases: ["Sumerian","Sumeria","Mesopotamia","Mesopotamians"]
   },
   {
     id: "il",
@@ -803,7 +959,11 @@ export const countries = [
       capital: "Sacred city for Jews, Christians, and Muslims",
       currency: "Ancient currency name revived in modern times",
       language: "Revived as a spoken language in the 20th century"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What sea borders Israel to the east and is the lowest point on Earth?",
+    bonus: "Dead Sea",
+    bonusAliases: ["The Dead Sea"]
   },
   {
     id: "ae",
@@ -823,7 +983,11 @@ export const countries = [
       capital: "Not Dubai, but the largest emirate",
       currency: "Used across several emirates",
       language: "Official language of the country"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the world's tallest building, located in Dubai?",
+    bonus: "Burj Khalifa",
+    bonusAliases: ["Burj","The Burj Khalifa"]
   },
   {
     id: "nz",
@@ -843,7 +1007,11 @@ export const countries = [
       capital: "The southernmost capital in the world",
       currency: "Features a kiwi bird",
       language: "One of three official languages with Maori and NZSL"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What flightless bird is a national symbol of New Zealand?",
+    bonus: "Kiwi",
+    bonusAliases: ["Kiwi bird","The Kiwi"]
   },
   {
     id: "sg",
@@ -863,7 +1031,11 @@ export const countries = [
       capital: "The country IS the capital (city-state)",
       currency: "One of the strongest currencies in Asia",
       language: "One of four official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous hotel has a rooftop infinity pool shaped like a ship?",
+    bonus: "Marina Bay Sands",
+    bonusAliases: ["Marina Bay","MBS"]
   },
   {
     id: "ke",
@@ -883,7 +1055,11 @@ export const countries = [
       capital: "One of the largest cities in Africa",
       currency: "Same name as Tanzanian and Ugandan currencies",
       language: "Widely spoken across East Africa"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the famous annual wildebeest migration in Kenya called?",
+    bonus: "Great Migration",
+    bonusAliases: ["The Great Migration","Wildebeest Migration"]
   },
   {
     id: "ma",
@@ -903,7 +1079,11 @@ export const countries = [
       capital: "Not Casablanca or Marrakech",
       currency: "Same name as UAE currency",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous square and market is located in Marrakech?",
+    bonus: "Jemaa el-Fnaa",
+    bonusAliases: ["Jemaa el Fna","Djemaa el Fna","Jamaa el Fna","The Square"]
   },
   {
     id: "gh",
@@ -923,7 +1103,11 @@ export const countries = [
       capital: "On the Atlantic coast",
       currency: "Name means 'cowrie shell' in local language",
       language: "Official language from colonial era"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What valuable resource made Ghana historically known as the 'Gold Coast'?",
+    bonus: "Gold",
+    bonusAliases: []
   },
   {
     id: "tz",
@@ -943,7 +1127,11 @@ export const countries = [
       capital: "Not Dar es Salaam (the largest city)",
       currency: "Same name as Kenyan currency",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the highest mountain in Africa, located in Tanzania?",
+    bonus: "Mount Kilimanjaro",
+    bonusAliases: ["Kilimanjaro","Mt Kilimanjaro","Mt. Kilimanjaro"]
   },
   {
     id: "et",
@@ -963,7 +1151,11 @@ export const countries = [
       capital: "Name means 'New Flower'",
       currency: "Name means 'silver' in the local language",
       language: "Uses its own unique Ge'ez script"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Ethiopia credited with being the birthplace of?",
+    bonus: "Coffee",
+    bonusAliases: []
   },
   {
     id: "co",
@@ -983,7 +1175,11 @@ export const countries = [
       capital: "One of the highest capitals in the world",
       currency: "Common currency name in Latin America",
       language: "Second most native speakers in South America"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What valuable green gemstone is Colombia famous for producing?",
+    bonus: "Emerald",
+    bonusAliases: ["Emeralds"]
   },
   {
     id: "pe",
@@ -1003,7 +1199,11 @@ export const countries = [
       capital: "Largest city on the Pacific coast of South America",
       currency: "Means 'sun' in Spanish",
       language: "One of several official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous Incan citadel is located high in the Andes Mountains?",
+    bonus: "Machu Picchu",
+    bonusAliases: ["Macchu Picchu","Machu Pichu"]
   },
   {
     id: "cl",
@@ -1023,7 +1223,11 @@ export const countries = [
       capital: "In a valley surrounded by the Andes",
       currency: "Common currency name in Latin America",
       language: "Official language of the country"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the driest desert in the world, located in Chile?",
+    bonus: "Atacama Desert",
+    bonusAliases: ["Atacama","The Atacama"]
   },
   {
     id: "ve",
@@ -1043,7 +1247,11 @@ export const countries = [
       capital: "In a valley near the Caribbean coast",
       currency: "Named after Simon Bolivar",
       language: "Official language of the country"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the world's highest waterfall, located in Venezuela?",
+    bonus: "Angel Falls",
+    bonusAliases: ["Angel Fall","Salto Angel"]
   },
   {
     id: "cu",
@@ -1063,7 +1271,11 @@ export const countries = [
       capital: "Known for classic cars and colonial architecture",
       currency: "Common currency name in Latin America",
       language: "Official language of the country"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What classic American cars from the 1950s are Cuba famous for still using?",
+    bonus: "Classic cars",
+    bonusAliases: ["Vintage cars","Old cars","1950s cars","American cars","Chevrolets","Fords"]
   },
   {
     id: "ie",
@@ -1083,7 +1295,11 @@ export const countries = [
       capital: "Home to the Guinness brewery",
       currency: "Shared by 20 European countries",
       language: "One of two official languages (the other is Irish)"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the nickname for Ireland?",
+    bonus: "Emerald Isle",
+    bonusAliases: ["The Emerald Isle"]
   },
   {
     id: "fi",
@@ -1103,7 +1319,11 @@ export const countries = [
       capital: "Nicknamed 'Daughter of the Baltic'",
       currency: "Shared by 20 European countries",
       language: "Unusual language unrelated to neighbors"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What relaxation tradition involving a heated room is Finland famous for?",
+    bonus: "Sauna",
+    bonusAliases: ["Saunas","Finnish sauna"]
   },
   {
     id: "cz",
@@ -1123,7 +1343,11 @@ export const countries = [
       capital: "City of a Hundred Spires",
       currency: "Means 'crown' in Czech",
       language: "A West Slavic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Prague's famous astronomical clock called?",
+    bonus: "Orloj",
+    bonusAliases: ["Prague Orloj","The Orloj","Astronomical Clock"]
   },
   {
     id: "hu",
@@ -1143,7 +1367,11 @@ export const countries = [
       capital: "Two cities (Buda and Pest) united by bridges",
       currency: "Named after Florence, Italy",
       language: "Unrelated to surrounding languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous cube puzzle was invented by a Hungarian professor?",
+    bonus: "Rubik's Cube",
+    bonusAliases: ["Rubiks Cube","Rubik Cube","The Rubik's Cube"]
   },
   {
     id: "ro",
@@ -1163,7 +1391,11 @@ export const countries = [
       capital: "Known as 'Little Paris'",
       currency: "Means 'lion' in Romanian",
       language: "A Romance language descended from Latin"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What fictional vampire is associated with Romania's Transylvania region?",
+    bonus: "Dracula",
+    bonusAliases: ["Count Dracula","Vlad Dracula","Vlad the Impaler"]
   },
   {
     id: "ua",
@@ -1183,7 +1415,11 @@ export const countries = [
       capital: "City on the Dnieper River",
       currency: "Historic currency name meaning 'mane'",
       language: "An East Slavic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the name of the 1986 nuclear disaster that occurred in Ukraine?",
+    bonus: "Chernobyl",
+    bonusAliases: ["Chernobyl disaster","Chornobyl"]
   },
 
   // ===== HARD COUNTRIES =====
@@ -1205,7 +1441,11 @@ export const countries = [
       capital: "Northernmost capital of a sovereign state",
       currency: "Means 'crown'",
       language: "Closest living language to Old Norse"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What percentage of Iceland's energy comes from renewable sources?",
+    bonus: "100",
+    bonusAliases: ["100%","One hundred","Nearly 100%","Almost 100%"]
   },
   {
     id: "lu",
@@ -1225,7 +1465,11 @@ export const countries = [
       capital: "City and country share the same name",
       currency: "Shared by 20 European countries",
       language: "A Germanic language, one of three official"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Luxembourg one of the smallest and wealthiest in the world?",
+    bonus: "Country",
+    bonusAliases: ["Countries","Nation","Nations"]
   },
   {
     id: "mt",
@@ -1245,7 +1489,11 @@ export const countries = [
       capital: "Smallest EU capital by area",
       currency: "Shared by 20 European countries",
       language: "Only Semitic language with Latin script"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient temples in Malta are among the oldest freestanding structures in the world?",
+    bonus: "Megalithic Temples",
+    bonusAliases: ["Megalithic temples","Ggantija","Hagar Qim","Temples"]
   },
   {
     id: "cy",
@@ -1265,7 +1513,11 @@ export const countries = [
       capital: "Last divided capital in the world",
       currency: "Shared by 20 European countries",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What Greek goddess of love is said to have been born off the coast of Cyprus?",
+    bonus: "Aphrodite",
+    bonusAliases: ["Venus"]
   },
   {
     id: "ee",
@@ -1285,7 +1537,11 @@ export const countries = [
       capital: "Medieval old town, UNESCO World Heritage Site",
       currency: "Shared by 20 European countries",
       language: "Related to Finnish, not Slavic"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What communication app was created by Estonian developers?",
+    bonus: "Skype",
+    bonusAliases: []
   },
   {
     id: "lv",
@@ -1305,7 +1561,11 @@ export const countries = [
       capital: "Largest city in the Baltic states",
       currency: "Shared by 20 European countries",
       language: "One of only two surviving Baltic languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the capital of Latvia known for having one of the best collections of?",
+    bonus: "Art Nouveau architecture",
+    bonusAliases: ["Art Nouveau","Art nouveau buildings","Jugendstil"]
   },
   {
     id: "lt",
@@ -1325,7 +1585,11 @@ export const countries = [
       capital: "Baroque old town, UNESCO World Heritage Site",
       currency: "Shared by 20 European countries",
       language: "One of oldest surviving Indo-European languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What sport involving throwing a ball into a hoop is extremely popular in Lithuania?",
+    bonus: "Basketball",
+    bonusAliases: []
   },
   {
     id: "sk",
@@ -1345,7 +1609,11 @@ export const countries = [
       capital: "Only capital bordering two countries",
       currency: "Shared by 20 European countries",
       language: "Very similar to Czech"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many castles and chateaux does Slovakia have (approximately)?",
+    bonus: "180",
+    bonusAliases: ["Over 100","100+","About 180"]
   },
   {
     id: "si",
@@ -1365,7 +1633,11 @@ export const countries = [
       capital: "Name means 'beloved' in Slovenian",
       currency: "Shared by 20 European countries",
       language: "South Slavic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What percentage of Slovenia is covered by forests?",
+    bonus: "60",
+    bonusAliases: ["60%","Sixty","Over 50%","58%"]
   },
   {
     id: "hr",
@@ -1385,7 +1657,11 @@ export const countries = [
       capital: "Largest city, in the north",
       currency: "Joined Eurozone in 2023",
       language: "Very similar to Serbian and Bosnian"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What HBO fantasy series was partially filmed in Dubrovnik, Croatia?",
+    bonus: "Game of Thrones",
+    bonusAliases: ["GOT","GoT"]
   },
   {
     id: "rs",
@@ -1405,7 +1681,11 @@ export const countries = [
       capital: "Name means 'White City'",
       currency: "Common currency name in Balkans",
       language: "Can be written in Latin or Cyrillic"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous inventor known for alternating current was born in Serbia?",
+    bonus: "Nikola Tesla",
+    bonusAliases: ["Tesla","Nicolas Tesla"]
   },
   {
     id: "ba",
@@ -1425,7 +1705,11 @@ export const countries = [
       capital: "Site of the 1984 Winter Olympics",
       currency: "Pegged to the Euro",
       language: "One of three official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What event in Sarajevo in 1914 triggered World War I?",
+    bonus: "Assassination of Archduke Franz Ferdinand",
+    bonusAliases: ["Franz Ferdinand assassination","Assassination","Franz Ferdinand"]
   },
   {
     id: "al",
@@ -1445,7 +1729,11 @@ export const countries = [
       capital: "Colorful buildings, post-communist",
       currency: "Named after Alexander the Great",
       language: "An Indo-European language isolate"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous Catholic nun and saint was born in Albania?",
+    bonus: "Mother Teresa",
+    bonusAliases: ["Saint Teresa","Teresa of Calcutta","St Teresa"]
   },
   {
     id: "mk",
@@ -1465,7 +1753,11 @@ export const countries = [
       capital: "City with many statues and monuments",
       currency: "Ancient Roman coin name",
       language: "South Slavic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient king and conqueror is North Macedonia named after?",
+    bonus: "Alexander the Great",
+    bonusAliases: ["Alexander","Alexander of Macedon"]
   },
   {
     id: "me",
@@ -1485,7 +1777,11 @@ export const countries = [
       capital: "Not Cetinje (the old royal capital)",
       currency: "Uses this despite not being in EU",
       language: "Very similar to Serbian"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the name of the famous bay and UNESCO site on Montenegro's coast?",
+    bonus: "Bay of Kotor",
+    bonusAliases: ["Kotor Bay","Boka Bay","Kotor"]
   },
   {
     id: "md",
@@ -1505,7 +1801,11 @@ export const countries = [
       capital: "Largest city, Soviet-era architecture",
       currency: "Means 'lion', same as Romanian currency",
       language: "Essentially identical to its western neighbor's language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Moldova one of the largest producers of in Europe?",
+    bonus: "Wine",
+    bonusAliases: ["Wines","Grapes"]
   },
   {
     id: "by",
@@ -1525,7 +1825,11 @@ export const countries = [
       capital: "Almost entirely rebuilt after WWII",
       currency: "Same name as Russian currency",
       language: "An East Slavic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Europe's largest remaining primeval forest, shared with Poland?",
+    bonus: "Bialowieza Forest",
+    bonusAliases: ["Bialowieza","Białowieża Forest","Belovezhskaya Pushcha"]
   },
   {
     id: "ge",
@@ -1545,7 +1849,11 @@ export const countries = [
       capital: "Name means 'warm' in old Georgian",
       currency: "Means 'property' or 'hoard'",
       language: "Uses its own unique script"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What beverage is Georgia considered to be the birthplace of?",
+    bonus: "Wine",
+    bonusAliases: ["Wines"]
   },
   {
     id: "am",
@@ -1565,7 +1873,11 @@ export const countries = [
       capital: "Known as the 'Pink City' due to stone color",
       currency: "Ancient Greek word for 'money'",
       language: "Indo-European language with unique alphabet"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What mountain is a national symbol of Armenia, visible from Yerevan?",
+    bonus: "Mount Ararat",
+    bonusAliases: ["Ararat","Mt Ararat","Mt. Ararat"]
   },
   {
     id: "az",
@@ -1585,7 +1897,11 @@ export const countries = [
       capital: "Hosted Formula 1 races, Flame Towers landmark",
       currency: "Means 'money' in Russian",
       language: "A Turkic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Azerbaijan known as the 'Land of'?",
+    bonus: "Fire",
+    bonusAliases: ["Land of Fire","Flames"]
   },
   {
     id: "kz",
@@ -1605,7 +1921,11 @@ export const countries = [
       capital: "Futuristic planned city, renamed multiple times",
       currency: "Ancient Turkic word for 'balance'",
       language: "A Turkic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous space launch facility is located in Kazakhstan?",
+    bonus: "Baikonur Cosmodrome",
+    bonusAliases: ["Baikonur","Cosmodrome"]
   },
   {
     id: "uz",
@@ -1625,7 +1945,11 @@ export const countries = [
       capital: "Largest city in Central Asia",
       currency: "Means 'pure' in Uzbek",
       language: "A Turkic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous ancient trade route passed through Uzbekistan?",
+    bonus: "Silk Road",
+    bonusAliases: ["The Silk Road","Silk Route"]
   },
   {
     id: "tm",
@@ -1645,7 +1969,11 @@ export const countries = [
       capital: "City of white marble buildings",
       currency: "Same name as Azerbaijani currency",
       language: "A Turkic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What burning natural gas crater is called the 'Door to Hell'?",
+    bonus: "Darvaza Gas Crater",
+    bonusAliases: ["Darvaza","Door to Hell","Gates of Hell","Derweze"]
   },
   {
     id: "kg",
@@ -1665,7 +1993,11 @@ export const countries = [
       capital: "Formerly called Frunze in Soviet times",
       currency: "Same name as Uzbek currency",
       language: "A Turkic language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the name of the epic poem that is central to Kyrgyz culture?",
+    bonus: "Epic of Manas",
+    bonusAliases: ["Manas","The Manas"]
   },
   {
     id: "tj",
@@ -1685,7 +2017,11 @@ export const countries = [
       capital: "Name means 'Monday' in Tajik",
       currency: "Named after a historical leader",
       language: "A Persian language, not Turkic"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What percentage of Tajikistan is covered by mountains?",
+    bonus: "93",
+    bonusAliases: ["93%","Over 90%","90%"]
   },
   {
     id: "mn",
@@ -1705,7 +2041,11 @@ export const countries = [
       capital: "Name means 'Red Hero'",
       currency: "Means 'circle' in Mongolian",
       language: "Related to Turkic languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous conqueror created the largest contiguous land empire from Mongolia?",
+    bonus: "Genghis Khan",
+    bonusAliases: ["Chinggis Khan","Ghengis Khan","Temujin"]
   },
   {
     id: "np",
@@ -1725,7 +2065,11 @@ export const countries = [
       capital: "In a valley surrounded by mountains",
       currency: "Similar to Indian currency",
       language: "Related to Hindi"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the world's highest mountain, located on Nepal's border?",
+    bonus: "Mount Everest",
+    bonusAliases: ["Everest","Mt Everest","Mt. Everest","Sagarmatha"]
   },
   {
     id: "bt",
@@ -1745,7 +2089,11 @@ export const countries = [
       capital: "One of few capitals without traffic lights",
       currency: "Pegged to Indian Rupee",
       language: "National language, Tibetan origin"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What does Bhutan measure instead of GDP to track national success?",
+    bonus: "Gross National Happiness",
+    bonusAliases: ["GNH","Happiness","National Happiness"]
   },
   {
     id: "bd",
@@ -1765,7 +2113,11 @@ export const countries = [
       capital: "One of the most densely populated cities",
       currency: "Means 'money' in Bengali",
       language: "One of the most spoken languages in the world"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the world's largest river delta, located in Bangladesh?",
+    bonus: "Ganges Delta",
+    bonusAliases: ["Ganges-Brahmaputra Delta","Bengal Delta","Sundarbans"]
   },
   {
     id: "lk",
@@ -1785,7 +2137,11 @@ export const countries = [
       capital: "Commercial capital is Colombo",
       currency: "Similar to Indian currency",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What valuable spice was Sri Lanka historically famous for trading?",
+    bonus: "Cinnamon",
+    bonusAliases: ["Ceylon Cinnamon"]
   },
   {
     id: "mm",
@@ -1805,7 +2161,11 @@ export const countries = [
       capital: "Purpose-built city, replaced Yangon in 2006",
       currency: "Name derives from Sanskrit for 'royal'",
       language: "Sino-Tibetan language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Myanmar's former name?",
+    bonus: "Burma",
+    bonusAliases: []
   },
   {
     id: "kh",
@@ -1825,7 +2185,11 @@ export const countries = [
       capital: "Name means 'Penh's Hill'",
       currency: "US Dollar also widely used",
       language: "Has the largest alphabet in the world"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous temple complex is the largest religious monument in the world?",
+    bonus: "Angkor Wat",
+    bonusAliases: ["Angkor","Angkor wat"]
   },
   {
     id: "la",
@@ -1845,7 +2209,11 @@ export const countries = [
       capital: "On the Mekong River",
       currency: "One of the lower-valued currencies",
       language: "Related to Thai"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What unexploded ordnance problem does Laos have from the Vietnam War era?",
+    bonus: "Cluster bombs",
+    bonusAliases: ["Bombs","UXO","Unexploded bombs","Landmines"]
   },
   {
     id: "bn",
@@ -1865,7 +2233,11 @@ export const countries = [
       capital: "Named after a former sultan",
       currency: "Interchangeable with Singapore Dollar",
       language: "Same as Malaysia's official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What natural resource made the Sultan of Brunei one of the world's wealthiest people?",
+    bonus: "Oil",
+    bonusAliases: ["Petroleum","Oil and gas","Natural gas"]
   },
   {
     id: "tl",
@@ -1885,7 +2257,11 @@ export const countries = [
       capital: "On the north coast of the island",
       currency: "Uses American currency",
       language: "Former colonial language, one of two official"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "In what year did Timor-Leste gain independence, making it one of the newest countries?",
+    bonus: "2002",
+    bonusAliases: []
   },
   {
     id: "mv",
@@ -1905,7 +2281,11 @@ export const countries = [
       capital: "One of the most densely populated cities",
       currency: "Derived from Sanskrit 'rupya'",
       language: "Related to Sinhala"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the Maldives at risk of due to rising sea levels (average elevation is 1.5m)?",
+    bonus: "Sinking",
+    bonusAliases: ["Flooding","Disappearing","Being submerged","Going underwater"]
   },
   {
     id: "af",
@@ -1925,7 +2305,11 @@ export const countries = [
       capital: "Ancient city on the Kabul River",
       currency: "Named after the country",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What mountain range runs through Afghanistan?",
+    bonus: "Hindu Kush",
+    bonusAliases: ["Hindukush","The Hindu Kush"]
   },
   {
     id: "ye",
@@ -1945,7 +2329,11 @@ export const countries = [
       capital: "One of the world's oldest inhabited cities",
       currency: "Same name as Saudi and Iranian currencies",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient multi-story mud-brick buildings is Yemen famous for?",
+    bonus: "Tower houses",
+    bonusAliases: ["Mud brick towers","Shibam","Skyscrapers of the desert"]
   },
   {
     id: "om",
@@ -1965,7 +2353,11 @@ export const countries = [
       capital: "Port city on the Gulf of Oman",
       currency: "One of the highest-valued currencies",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What valuable resin has Oman traded for thousands of years?",
+    bonus: "Frankincense",
+    bonusAliases: ["Incense"]
   },
   {
     id: "jo",
@@ -1985,7 +2377,11 @@ export const countries = [
       capital: "Built on seven hills like Rome",
       currency: "One of the highest-valued currencies",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient city carved into rose-red cliffs is Jordan's most famous attraction?",
+    bonus: "Petra",
+    bonusAliases: []
   },
   {
     id: "lb",
@@ -2005,7 +2401,11 @@ export const countries = [
       capital: "Once called the 'Paris of the Middle East'",
       currency: "Has experienced severe devaluation",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What tree appears on the Lebanese flag?",
+    bonus: "Cedar",
+    bonusAliases: ["Cedar tree","Cedar of Lebanon","Cedars"]
   },
   {
     id: "sy",
@@ -2025,7 +2425,11 @@ export const countries = [
       capital: "One of the oldest continuously inhabited cities",
       currency: "Severely devalued due to conflict",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is considered one of the oldest continuously inhabited cities in the world?",
+    bonus: "Damascus",
+    bonusAliases: []
   },
   {
     id: "kw",
@@ -2045,7 +2449,11 @@ export const countries = [
       capital: "Country and capital share name",
       currency: "Highest-valued currency in the world",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What valuable natural resource accounts for about 90% of Kuwait's export revenues?",
+    bonus: "Oil",
+    bonusAliases: ["Petroleum","Crude oil"]
   },
   {
     id: "bh",
@@ -2065,7 +2473,11 @@ export const countries = [
       capital: "Connected to Saudi Arabia by bridge",
       currency: "One of the highest-valued currencies",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient civilization was Bahrain home to, known for pearl trading?",
+    bonus: "Dilmun",
+    bonusAliases: ["Dilmun civilization"]
   },
   {
     id: "qa",
@@ -2085,7 +2497,11 @@ export const countries = [
       capital: "Home to Al Jazeera news network",
       currency: "Pegged to US dollar",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What major sporting event did Qatar host in 2022?",
+    bonus: "FIFA World Cup",
+    bonusAliases: ["World Cup","Soccer World Cup","Football World Cup"]
   },
   // African Hard Countries
   {
@@ -2106,7 +2522,11 @@ export const countries = [
       capital: "Known as 'Algiers the White'",
       currency: "Common currency name in Arab countries",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the largest country in Africa by area?",
+    bonus: "Algeria",
+    bonusAliases: ["It's Algeria","This country"]
   },
   {
     id: "tn",
@@ -2126,7 +2546,11 @@ export const countries = [
       capital: "Country and capital share similar name",
       currency: "Common currency name in Arab countries",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient city-state and rival of Rome was located in modern-day Tunisia?",
+    bonus: "Carthage",
+    bonusAliases: []
   },
   {
     id: "ly",
@@ -2146,7 +2570,11 @@ export const countries = [
       capital: "Ancient Phoenician city",
       currency: "Common currency name in Arab countries",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient Roman ruins in Libya are among the best-preserved in the Mediterranean?",
+    bonus: "Leptis Magna",
+    bonusAliases: ["Leptis","Lepcis Magna"]
   },
   {
     id: "sd",
@@ -2166,7 +2594,11 @@ export const countries = [
       capital: "Name means 'elephant's trunk'",
       currency: "Replaced the Dinar in 2007",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many pyramids does Sudan have, more than any other country?",
+    bonus: "255",
+    bonusAliases: ["Over 200","200+","More than 200","About 250"]
   },
   {
     id: "ug",
@@ -2186,7 +2618,11 @@ export const countries = [
       capital: "Built on seven hills",
       currency: "Same name as Kenyan currency",
       language: "Official language from colonial era"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What lake is the source of the Nile River, located in Uganda?",
+    bonus: "Lake Victoria",
+    bonusAliases: ["Victoria","Lake victoria"]
   },
   {
     id: "rw",
@@ -2206,7 +2642,11 @@ export const countries = [
       capital: "One of Africa's cleanest cities",
       currency: "French colonial currency name",
       language: "National language, one of four official"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What has Rwanda banned nationwide to protect the environment?",
+    bonus: "Plastic bags",
+    bonusAliases: ["Plastic","Single-use plastic","Plastics"]
   },
   {
     id: "sn",
@@ -2226,7 +2666,11 @@ export const countries = [
       capital: "Peninsula city, important port",
       currency: "Shared by 8 West African countries",
       language: "Official language from colonial era"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous car rally used to end in Dakar, Senegal?",
+    bonus: "Dakar Rally",
+    bonusAliases: ["Paris-Dakar Rally","Paris-Dakar","The Dakar"]
   },
   {
     id: "ci",
@@ -2246,7 +2690,11 @@ export const countries = [
       capital: "Not Abidjan (the largest city)",
       currency: "Shared by 8 West African countries",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What crop is Ivory Coast the world's largest producer of?",
+    bonus: "Cocoa",
+    bonusAliases: ["Cacao","Cocoa beans","Chocolate"]
   },
   {
     id: "cm",
@@ -2266,7 +2714,11 @@ export const countries = [
       capital: "Not Douala (the largest city)",
       currency: "Shared by 6 Central African countries",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "Why is Cameroon called 'Africa in miniature'?",
+    bonus: "Geographic diversity",
+    bonusAliases: ["Diversity","All of Africa's climates","Varied geography","It has all African landscapes"]
   },
   {
     id: "ao",
@@ -2286,7 +2738,11 @@ export const countries = [
       capital: "One of the most expensive cities in the world",
       currency: "Named after the Kwanza River",
       language: "Official language from colonial era"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Angola one of Africa's largest producers of?",
+    bonus: "Oil",
+    bonusAliases: ["Petroleum","Crude oil","Diamonds"]
   },
   {
     id: "mz",
@@ -2306,7 +2762,11 @@ export const countries = [
       capital: "On Maputo Bay",
       currency: "From Arabic 'mithqal' (unit of weight)",
       language: "Official language from colonial era"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What body of water forms Mozambique's eastern border?",
+    bonus: "Indian Ocean",
+    bonusAliases: ["The Indian Ocean"]
   },
   {
     id: "zw",
@@ -2326,7 +2786,11 @@ export const countries = [
       capital: "Formerly called Salisbury",
       currency: "Own currency abandoned due to hyperinflation",
       language: "One of 16 official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What massive waterfall is shared between Zimbabwe and Zambia?",
+    bonus: "Victoria Falls",
+    bonusAliases: ["Victoria falls","Mosi-oa-Tunya"]
   },
   {
     id: "zm",
@@ -2346,7 +2810,11 @@ export const countries = [
       capital: "Named after a local chief",
       currency: "Means 'dawn' in local languages",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What metal is Zambia one of the world's largest producers of?",
+    bonus: "Copper",
+    bonusAliases: []
   },
   {
     id: "bw",
@@ -2366,7 +2834,11 @@ export const countries = [
       capital: "Named after a 19th century chief",
       currency: "Means 'rain' in Setswana",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What inland delta in Botswana is a UNESCO World Heritage Site?",
+    bonus: "Okavango Delta",
+    bonusAliases: ["Okavango","The Okavango"]
   },
   {
     id: "na",
@@ -2386,7 +2858,11 @@ export const countries = [
       capital: "German colonial architecture",
       currency: "Pegged to South African Rand",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is one of the oldest deserts in the world, located in Namibia?",
+    bonus: "Namib Desert",
+    bonusAliases: ["Namib","The Namib"]
   },
   {
     id: "mg",
@@ -2406,7 +2882,11 @@ export const countries = [
       capital: "Name means 'city of the thousand'",
       currency: "One of two non-decimal currencies",
       language: "Austronesian origin, unusual for Africa"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What unique animal species can only be found in Madagascar?",
+    bonus: "Lemur",
+    bonusAliases: ["Lemurs"]
   },
   {
     id: "mu",
@@ -2426,7 +2906,11 @@ export const countries = [
       capital: "Named after King Louis XV",
       currency: "Similar to Indian currency",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What extinct flightless bird was native to Mauritius?",
+    bonus: "Dodo",
+    bonusAliases: ["The Dodo","Dodo bird"]
   },
   {
     id: "ls",
@@ -2446,7 +2930,11 @@ export const countries = [
       capital: "On the Caledon River border",
       currency: "Pegged to South African Rand",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What makes Lesotho unique among African countries in terms of elevation?",
+    bonus: "Entirely above 1000m",
+    bonusAliases: ["Highest lowest point","All above 1000m","Highest country","Only country entirely above 1000m"]
   },
   {
     id: "sz",
@@ -2466,7 +2954,11 @@ export const countries = [
       capital: "Administrative capital (Lobamba is royal)",
       currency: "Pegged to South African Rand",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the annual reed dance ceremony in Eswatini called?",
+    bonus: "Umhlanga",
+    bonusAliases: ["Reed Dance","The Reed Dance"]
   },
   // Central American and Caribbean Hard Countries
   {
@@ -2487,7 +2979,11 @@ export const countries = [
       capital: "Largest city in Central America",
       currency: "Named after the national bird",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient civilization thrived in Guatemala and built Tikal?",
+    bonus: "Maya",
+    bonusAliases: ["Mayan","Mayans","The Maya"]
   },
   {
     id: "hn",
@@ -2507,7 +3003,11 @@ export const countries = [
       capital: "One of few capitals not on a railroad",
       currency: "Named after a native chief",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What ancient Mayan ruins are located in Honduras?",
+    bonus: "Copan",
+    bonusAliases: ["Copán","Copan Ruinas"]
   },
   {
     id: "sv",
@@ -2527,7 +3027,11 @@ export const countries = [
       capital: "Name means 'Holy Savior'",
       currency: "Adopted US currency in 2001",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is El Salvador the smallest country in?",
+    bonus: "Central America",
+    bonusAliases: ["Central american"]
   },
   {
     id: "ni",
@@ -2547,7 +3051,11 @@ export const countries = [
       capital: "On the shore of Lake Managua",
       currency: "Named after Spanish conquistador",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the largest lake in Central America, located in Nicaragua?",
+    bonus: "Lake Nicaragua",
+    bonusAliases: ["Nicaragua Lake","Cocibolca","Lake Cocibolca"]
   },
   {
     id: "cr",
@@ -2567,7 +3075,11 @@ export const countries = [
       capital: "In the Central Valley",
       currency: "Named after Christopher Columbus",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What phrase meaning 'pure life' is Costa Rica's national motto?",
+    bonus: "Pura Vida",
+    bonusAliases: ["Pura vida"]
   },
   {
     id: "pa",
@@ -2587,7 +3099,11 @@ export const countries = [
       capital: "Skyline looks like Miami",
       currency: "US Dollar also legal tender",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How long is the Panama Canal in kilometers (approximately)?",
+    bonus: "82",
+    bonusAliases: ["80","82 km","80 km","About 80"]
   },
   {
     id: "jm",
@@ -2607,7 +3123,11 @@ export const countries = [
       capital: "Seventh largest natural harbor",
       currency: "Uses dollar symbol $",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What music genre originated in Jamaica in the late 1960s?",
+    bonus: "Reggae",
+    bonusAliases: []
   },
   {
     id: "ht",
@@ -2627,7 +3147,11 @@ export const countries = [
       capital: "Name means 'Port of the Prince'",
       currency: "Named after a type of gourd",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What revolution made Haiti the first free Black republic in 1804?",
+    bonus: "Haitian Revolution",
+    bonusAliases: ["The Haitian Revolution","Slave revolution","Slave revolt"]
   },
   {
     id: "do",
@@ -2647,7 +3171,11 @@ export const countries = [
       capital: "Oldest European settlement in Americas",
       currency: "Common currency name in Latin America",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What sport is the Dominican Republic famous for producing professional players in?",
+    bonus: "Baseball",
+    bonusAliases: []
   },
   {
     id: "tt",
@@ -2667,7 +3195,11 @@ export const countries = [
       capital: "On the island of Trinidad",
       currency: "Uses dollar symbol $",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous carnival celebration does Trinidad and Tobago host?",
+    bonus: "Carnival",
+    bonusAliases: ["Trinidad Carnival","Trinidad and Tobago Carnival"]
   },
   // South American Hard Countries
   {
@@ -2688,7 +3220,11 @@ export const countries = [
       capital: "Highest official capital city in the world",
       currency: "Adopted US currency in 2000",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What famous islands belonging to Ecuador inspired Darwin's theory of evolution?",
+    bonus: "Galapagos Islands",
+    bonusAliases: ["Galapagos","The Galapagos","Galápagos"]
   },
   {
     id: "bo",
@@ -2708,7 +3244,11 @@ export const countries = [
       capital: "Constitutional capital (La Paz is seat of government)",
       currency: "Named after Simon Bolivar",
       language: "One of 37 official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is the world's largest salt flat, located in Bolivia?",
+    bonus: "Salar de Uyuni",
+    bonusAliases: ["Uyuni","Uyuni Salt Flats","Salar de uyuni"]
   },
   {
     id: "py",
@@ -2728,7 +3268,11 @@ export const countries = [
       capital: "One of the oldest cities in South America",
       currency: "Named after indigenous people",
       language: "One of two official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What massive dam is shared between Paraguay and Brazil?",
+    bonus: "Itaipu Dam",
+    bonusAliases: ["Itaipu","Itaipú"]
   },
   {
     id: "uy",
@@ -2748,7 +3292,11 @@ export const countries = [
       capital: "Southernmost capital in the Americas",
       currency: "Common currency name in Latin America",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "Which country hosted and won the first FIFA World Cup in 1930?",
+    bonus: "Uruguay",
+    bonusAliases: ["This country","It's Uruguay"]
   },
   {
     id: "gy",
@@ -2768,7 +3316,11 @@ export const countries = [
       capital: "Named after King George III",
       currency: "Uses dollar symbol $",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What is Guyana the only English-speaking country in?",
+    bonus: "South America",
+    bonusAliases: ["South american mainland"]
   },
   {
     id: "sr",
@@ -2788,7 +3340,11 @@ export const countries = [
       capital: "UNESCO World Heritage center",
       currency: "Replaced the guilder in 2004",
       language: "Official language"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "What European country colonized Suriname until 1975?",
+    bonus: "Netherlands",
+    bonusAliases: ["The Netherlands","Holland","Dutch"]
   },
   // Pacific Island Nations
   {
@@ -2809,7 +3365,11 @@ export const countries = [
       capital: "On the island of Viti Levu",
       currency: "Uses dollar symbol $",
       language: "One of three official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many islands make up Fiji?",
+    bonus: "333",
+    bonusAliases: ["Over 300","300+","About 330"]
   },
   {
     id: "pg",
@@ -2829,7 +3389,11 @@ export const countries = [
       capital: "Named after explorer John Moresby's father",
       currency: "Named after a type of shell used as money",
       language: "One of three official languages"
-    }
+    ,
+      bonus: "This is a fun trivia question - take your best guess!"},
+    bonusQuestion: "How many languages are spoken in Papua New Guinea, the most in any country?",
+    bonus: "840",
+    bonusAliases: ["Over 800","800+","About 850","More than 800"]
   }
 ];
 

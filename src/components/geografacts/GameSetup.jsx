@@ -79,31 +79,41 @@ export default function GameSetup({ onStartGame }) {
         <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <p className="text-blue-800">
             A country will be <strong>highlighted in red</strong> on the world map.
-            Answer 5 questions about that country to earn points. The more you know, the more you score!
+            Answer 6 questions about that country to earn points. The more you know, the more you score!
           </p>
         </div>
 
-        {/* 5 Questions */}
-        <h3 className="font-semibold text-gray-700 mb-3">Answer these 5 questions (1 point each):</h3>
-        <div className="grid md:grid-cols-5 gap-3 mb-6">
+        {/* 6 Questions */}
+        <h3 className="font-semibold text-gray-700 mb-3">Answer these 6 questions (1 point each):</h3>
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mb-4">
           {[
             { emoji: '🌍', label: 'Continent', desc: 'Which continent?' },
             { emoji: '🏳️', label: 'Country', desc: 'Name the country' },
             { emoji: '🏛️', label: 'Capital', desc: 'Capital city?' },
             { emoji: '🗣️', label: 'Language', desc: 'Official language?' },
             { emoji: '💰', label: 'Currency', desc: 'What money?' },
+            { emoji: '⭐', label: 'Bonus', desc: 'Fun trivia!', isBonus: true },
           ].map((item, idx) => (
             <div
               key={idx}
-              className="text-center p-3 bg-gray-50 rounded-lg border border-gray-200"
+              className={`text-center p-3 rounded-lg border ${
+                item.isBonus
+                  ? 'bg-purple-50 border-purple-200'
+                  : 'bg-gray-50 border-gray-200'
+              }`}
             >
               <div className="text-2xl mb-1">{item.emoji}</div>
-              <div className="font-semibold text-gray-800 text-sm">
+              <div className={`font-semibold text-sm ${item.isBonus ? 'text-purple-700' : 'text-gray-800'}`}>
                 {item.label}
               </div>
-              <div className="text-xs text-gray-500">{item.desc}</div>
+              <div className={`text-xs ${item.isBonus ? 'text-purple-500' : 'text-gray-500'}`}>{item.desc}</div>
             </div>
           ))}
+        </div>
+        <div className="p-3 bg-purple-50 rounded-lg border border-purple-200 mb-6">
+          <p className="text-sm text-purple-800">
+            <strong>⭐ Bonus Question:</strong> A fun trivia question about the country! Worth 1 point, but getting it wrong does NOT count as a strike.
+          </p>
         </div>
 
         {/* Game Modes */}
