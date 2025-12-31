@@ -101,6 +101,30 @@ export const games = [
   },
   // ===== FAMILY FRIENDLY GAMES =====
   {
+    slug: "emoji-decoder",
+    title: "Emoji Decoder",
+    subtitle: "Guess the Movie, Song, Book, or Phrase!",
+    description: "Can you crack the emoji code? Guess famous movies, songs, books, and phrases represented entirely by emojis. Is 🦁👑🌅 The Lion King? You decide!",
+    age: "kids",
+    kidPowered: false,
+    modes: ["solo-coop", "team-vs-team", "player-vs-player"],
+    location: "remote-ok",
+    players: { min: 1, max: 10 },
+    optimalPlayers: "2-6",
+    duration: "15-30 minutes",
+    requirements: [],
+    free: true,
+    tip: "Think both literally AND thematically! 🍯🐝 could be 'Honeybee' (literal) while 🚢🧊🎻 is 'Titanic' (thematic plot).",
+    complexity: 1,
+    bestFor: ["starting-the-party", "all-ages", "brain-teasers"],
+    whatToExpect: {
+      aiDoes: "Presents emoji puzzles by category (Movies, Songs, Books, Phrases), gives hints if stuck, tracks scores",
+      playersDo: "Decode the emojis to guess the title or phrase, ask for hints when needed",
+      roundLength: "1-2 minutes per puzzle"
+    },
+    sampleOutput: "🎬 **MOVIE TIME!**\n\n🦁👑🌅\n\n━━━━━━━━━━━━━━━━━\n\nWhat movie is this? Take your best guess!"
+  },
+  {
     slug: "my-category",
     title: "My Category",
     subtitle: "Trivia Where YOU Pick the Topic",
