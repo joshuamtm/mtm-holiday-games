@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Users, Clock, MapPin, Lock, Star, Gift, Sparkles, Gamepad2 } from 'lucide-react';
 import { modeLabels, locationLabels } from '../data/games';
+import StarRating from './StarRating';
 
-export default function GameCard({ game, isUnlocked }) {
+export default function GameCard({ game, isUnlocked, rating }) {
   const canAccess = game.free || isUnlocked;
   // Interactive games link to their play URL, others to the game detail page
   const linkTo = game.isInteractive ? game.playUrl : `/game/${game.slug}`;
@@ -64,7 +66,17 @@ export default function GameCard({ game, isUnlocked }) {
       <h3 className="text-xl font-semibold text-holiday-pine mb-1 group-hover:text-holiday-green transition-colors">
         {game.title}
       </h3>
-      <p className="text-sm text-holiday-red font-medium mb-2">{game.subtitle}</p>
+      <p className="text-sm text-holiday-red font-medium mb-1">{game.subtitle}</p>
+
+      {/* Rating */}
+      {rating && rating.reviewCount > 0 && (
+        <div className="flex items-center gap-2 mb-2">
+          <StarRating value={rating.averageRating} readonly size={14} />
+          <span className="text-xs text-mtm-text-secondary">
+            ({rating.reviewCount})
+          </span>
+        </div>
+      )}
 
       {/* Description */}
       <p className="text-sm text-mtm-text-secondary mb-4 line-clamp-2">
@@ -104,3 +116,29 @@ export default function GameCard({ game, isUnlocked }) {
     </Link>
   );
 }
+
+GameCard.propTypes = {
+  game: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    description: PropTypes.string,
+    age: PropTypes.string,
+    kidPowered: PropTypes.bool,
+    free: PropTypes.bool,
+    isInteractive: PropTypes.bool,
+    playUrl: PropTypes.string,
+    modes: PropTypes.arrayOf(PropTypes.string),
+    location: PropTypes.string,
+    players: PropTypes.shape({
+      min: PropTypes.number,
+      max: PropTypes.number,
+    }),
+    duration: PropTypes.string,
+  }).isRequired,
+  isUnlocked: PropTypes.bool,
+  rating: PropTypes.shape({
+    averageRating: PropTypes.number,
+    reviewCount: PropTypes.number,
+  }),
+};

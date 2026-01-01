@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { games } from '../data/games';
 import { useAuth } from '../context/AuthContext';
+import { useGameRatings } from '../hooks/useReviews';
 import GameCard from '../components/GameCard';
 import FilterBar from '../components/FilterBar';
 import HowToPlay from '../components/HowToPlay';
@@ -49,6 +50,10 @@ export default function HomePage() {
     bestFor: [],
     kidPowered: false,
   });
+
+  // Fetch ratings for all games
+  const gameSlugs = useMemo(() => games.map((g) => g.slug), []);
+  const { ratings } = useGameRatings(gameSlugs);
 
   // Calculate game counts for filter chips
   const gameCounts = useMemo(() => {
@@ -213,6 +218,7 @@ export default function HomePage() {
               key={game.slug}
               game={game}
               isUnlocked={isUnlocked}
+              rating={ratings[game.slug]}
             />
           ))}
         </div>

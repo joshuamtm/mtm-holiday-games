@@ -4,6 +4,9 @@ import { getGameBySlug, modeLabels, locationLabels } from '../data/games';
 import { getPromptBySlug } from '../data/prompts';
 import { useAuth } from '../context/AuthContext';
 import HowToPlay from '../components/HowToPlay';
+import ReviewForm from '../components/ReviewForm';
+import ReviewList from '../components/ReviewList';
+import { useReviews } from '../hooks/useReviews';
 import {
   ArrowLeft,
   Users,
@@ -29,12 +32,16 @@ const HUBSPOT_FORM_URL = 'https://share.hsforms.com/1cpFSWpHiRkOkmEjnznKPtwtu0e4
 
 export default function GameDetailPage() {
   const { slug } = useParams();
-  const { isUnlocked } = useAuth();
+  const { isUnlocked, email } = useAuth();
   const [copied, setCopied] = useState(false);
   const [showSampleOutput, setShowSampleOutput] = useState(false);
 
   const game = getGameBySlug(slug);
   const prompt = getPromptBySlug(slug);
+
+  // Reviews hook
+  const { reviews, stats, loading: reviewsLoading, submitReview, getUserReview, isConfigured } = useReviews(slug);
+  const userReview = getUserReview(email);
 
   if (!game) {
     return (
@@ -391,6 +398,24 @@ export default function GameDetailPage() {
                   </a>{' '}
                   to start playing!
                 </p>
+              )}
+
+              {/* Reviews Section */}
+              {isConfigured && (
+                <div className="mt-10 pt-8 border-t border-holiday-green/20">
+                  <ReviewForm
+                    gameSlug={slug}
+                    onSubmit={submitReview}
+                    existingReview={userReview}
+                  />
+
+                  <ReviewList
+                    reviews={reviews}
+                    stats={stats}
+                    loading={reviewsLoading}
+                    currentUserEmail={email}
+                  />
+                </div>
               )}
             </div>
           </div>
