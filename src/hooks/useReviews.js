@@ -1,5 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
+import { games } from '../data/games';
+
+// Valid game slugs for validation
+const validGameSlugs = new Set(games.map(g => g.slug));
 
 // Moderate review content using Supabase Edge Function
 async function moderateReview(text) {
@@ -85,9 +89,17 @@ export function useReviews(gameSlug) {
       throw new Error('Please select a rating');
     }
 
+    // Validate game slug exists
+    if (!validGameSlugs.has(gameSlug)) {
+      throw new Error('Invalid game');
+    }
+
+    // Sanitize comment
+    const sanitizedComment = comment?.trim().slice(0, 280) || null;
+
     // Moderate the comment if provided
-    if (comment && comment.trim().length > 0) {
-      const moderation = await moderateReview(comment);
+    if (sanitizedComment && sanitizedComment.length > 0) {
+      const moderation = await moderateReview(sanitizedComment);
       if (!moderation.approved) {
         throw new Error(
           moderation.reason ||
@@ -102,9 +114,9 @@ export function useReviews(gameSlug) {
       .upsert(
         {
           game_slug: gameSlug,
-          user_email: userEmail,
-          rating,
-          comment: comment?.trim() || null,
+          user_email: userEmail.toLowerCase().trim(), // Normalize email
+          rating: Math.min(5, Math.max(1, Math.round(rating))), // Ensure 1-5
+          comment: sanitizedComment,
         },
         {
           onConflict: 'game_slug,user_email',
