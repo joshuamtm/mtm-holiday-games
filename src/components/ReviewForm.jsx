@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 
 const MAX_COMMENT_LENGTH = 280;
 
-export default function ReviewForm({ gameSlug, onSubmit, existingReview }) {
+export default function ReviewForm({ gameSlug, onSubmit, existingReview, isConfigured = true }) {
   const { isUnlocked, email } = useAuth();
   const [rating, setRating] = useState(existingReview?.rating || 0);
   const [comment, setComment] = useState(existingReview?.comment || '');
@@ -47,6 +47,18 @@ export default function ReviewForm({ gameSlug, onSubmit, existingReview }) {
       setSubmitting(false);
     }
   };
+
+  // Supabase not configured - show coming soon message
+  if (!isConfigured) {
+    return (
+      <div className="bg-holiday-snow/50 border border-holiday-green/20 rounded-xl p-6 text-center">
+        <h4 className="font-semibold text-holiday-pine mb-2">Reviews Coming Soon!</h4>
+        <p className="text-mtm-text-secondary text-sm">
+          We're setting up the review system. Check back shortly!
+        </p>
+      </div>
+    );
+  }
 
   // Not unlocked - show prompt to unlock
   if (!isUnlocked) {
@@ -153,4 +165,5 @@ ReviewForm.propTypes = {
     rating: PropTypes.number,
     comment: PropTypes.string,
   }),
+  isConfigured: PropTypes.bool,
 };

@@ -401,22 +401,21 @@ export default function GameDetailPage() {
               )}
 
               {/* Reviews Section */}
-              {isConfigured && (
-                <div className="mt-10 pt-8 border-t border-holiday-green/20">
-                  <ReviewForm
-                    gameSlug={slug}
-                    onSubmit={submitReview}
-                    existingReview={userReview}
-                  />
+              <div className="mt-10 pt-8 border-t border-holiday-green/20">
+                <ReviewForm
+                  gameSlug={slug}
+                  onSubmit={submitReview}
+                  existingReview={userReview}
+                  isConfigured={isConfigured}
+                />
 
-                  <ReviewList
-                    reviews={reviews}
-                    stats={stats}
-                    loading={reviewsLoading}
-                    currentUserEmail={email}
-                  />
-                </div>
-              )}
+                <ReviewList
+                  reviews={reviews}
+                  stats={stats}
+                  loading={reviewsLoading}
+                  currentUserEmail={email}
+                />
+              </div>
             </div>
           </div>
         </div>
